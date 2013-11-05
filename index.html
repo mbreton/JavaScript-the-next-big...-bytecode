@@ -5,21 +5,14 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=1024"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <title>JavaScript the next big ... Byte Code | by Mathieu Breton @MatBreton</title>
+    <title>JavaScript the next big ... bytecde | by Mathieu Breton @MatBreton</title>
 
     <meta name="description" content="It's a talk about the future of JavaScript like compiled language"/>
     <meta name="author" content="Mathieu Breton"/>
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic"
-          rel="stylesheet"/>
-
     <link href="css/open-xke.css" rel="stylesheet"/>
     <link href="css/animate.min.css" rel="stylesheet"/>
-    <link href="css/prettify.css" rel="stylesheet"/>
     <link href="css/jquery.terminal.css" rel="stylesheet"/>
-
-    <link rel="shortcut icon" href="favicon.png"/>
-    <link rel="apple-touch-icon" href="apple-touch-icon.png"/>
 </head>
 <body class="impress-not-supported">
 
@@ -33,7 +26,7 @@
 <div id="impress">
     <div id="title" class="step" data-y="-1500" data-x="0">
         <h1 class="title">JavaScript the Next Big<p class="pixel">bytecode</p></h1>
-        <p class="author">By Mathieu Breton</p>
+        <p class="author-container">By<a rel="author" class="coffy author" href="http://twitter.com/MatBreton" >Mathieu Breton</a></p>
     </div>
 
     <div id="console" class="step" data-y="-1350" data-x="265" data-scale="0.2">
@@ -185,7 +178,7 @@ app.listen(3000);</div>
     </div>
 
     <div id="autocomplete" class="step building" data-y="-935" data-x="7500">
-        <h5><span style="color:#f99b1d">Outilage</span> faible</h5>
+        <h2><span style="color:#f99b1d">Outilage</span> faible</h2>
         <div id="autocomplete_container">&nbsp;</div>
     </div>
 
@@ -261,7 +254,7 @@ app.listen(3000);</div>
     </div>
 
     <div id="leader2" class="step" data-y="-2800" data-x="4500" data-rotate-y="180">
-        <img src="assets/coffescript-title.png"/>
+        <img src="assets/coffeescript-title.png"/>
     </div>
 
     <div id="leader3" class="step" data-y="-2720" data-x="4500" data-rotate-y="180">
@@ -367,15 +360,6 @@ class ClickCounterElement extends PolymerElement {
     <div id="dart_is_threaded" class="step dart" data-y="-2650" data-x="4300" data-rotate-y="180">
         Ca gère le <span class="cyan">multi-threading</span> !
     </div>
-
-    <!--div class="step dart code" data-y="-2650" data-x="3000" data-rotate-y="180">
-        <h2><img src="assets/dart.png"/></h2>
-        <div class="container">
-            <div class="outerdiv">
-                <iframe class="innerdiv" src="http://try.dartlang.org/"></iframe>
-            </div>
-        </div>
-    </div-->
 
     <div id="dart_thread" class="step dart" data-y="-2650" data-x="4300" data-rotate-y="180">
         Les <span class="cyan">isolates</span>
@@ -620,12 +604,13 @@ interface JQueryAjaxSettings {
         <h1 class="title">Questions ?</h1>
     </div>
 
+    <div class="hint">
+        <p>Use a spacebar or arrow keys to navigate</p>
+    </div>
+
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.terminal-0.7.7.min.js"></script>
-    <script src="js/languages.js"></script>
     <script src="js/sliders.js"></script>
-    <script src="js/d3.js"></script>
-    <script src="js/d3.layout.cloud.js"></script>
     <script src="js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/coffee-script.js"></script>
     <script src="js/impress.js"></script>

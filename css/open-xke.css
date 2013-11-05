@@ -6,10 +6,6 @@ ol.linenums{
     list-style-type: none;
 }
 
-.prettyprint.linenums.prettyprinted{
-    font-size: 0.5em;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,7 +24,6 @@ time, mark, audio, video {
     border: 0;
     font-size: 100%;
     color: #ffffff;
-    /*vertical-align: baseline;*/
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -128,10 +123,15 @@ body     { pointer-events: none; }
 /* fade out inactive slides */
 .step:not(.active) {
     opacity: 0;
+    z-index: 1;
+}
+
+.step:not(.active) iframe{
+    display: none;
 }
 
 .step.active{
-    z-index: 1000;
+    z-index: 2;
 }
 
 
@@ -141,7 +141,6 @@ body     { pointer-events: none; }
     z-index: -1;
     padding: 0;
 }
-
 /* on overview step everything is visible */
 
 .impress-on-overview .step {
@@ -170,6 +169,94 @@ body     { pointer-events: none; }
     margin-bottom: 10px;
 }
 
+.hint {
+    /*
+        We hide the hint until presentation is started and from browsers not supporting
+        impress.js, as they will have a linear scrollable view ...
+    */
+    display: none;
+
+    /*
+        ... and give it some fixed position and nice styles.
+    */
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+
+    background: rgba(0,0,0,0.5);
+    color: #EEE;
+    text-align: center;
+
+    font-size: 50px;
+    padding: 20px;
+
+    z-index: 100;
+
+    /*
+        By default we don't want the hint to be visible, so we make it transparent ...
+    */
+    opacity: 0;
+
+    /*
+        ... and position it below the bottom of the screen (relative to it's fixed position)
+    */
+    -webkit-transform: translateY(400px);
+    -moz-transform:    translateY(400px);
+    -ms-transform:     translateY(400px);
+    -o-transform:      translateY(400px);
+    transform:         translateY(400px);
+
+    /*
+        Now let's imagine that the hint is visible and we want to fade it out and move out
+        of the screen.
+
+        So we define the transition on the opacity property with 1s duration and another
+        transition on transform property delayed by 1s so it will happen after the fade out
+        on opacity finished.
+
+        This way user will not see the hint moving down.
+    */
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+    transition:         opacity 1s,         transform 0.5s 1s;
+}
+
+.impress-on-title .hint {
+    /*
+        We remove the transparency and position the hint in its default fixed
+        position.
+    */
+    opacity: 1;
+
+    -webkit-transform: translateY(0px);
+    -moz-transform:    translateY(0px);
+    -ms-transform:     translateY(0px);
+    -o-transform:      translateY(0px);
+    transform:         translateY(0px);
+
+    /*
+        Now for fade in transition we have the oposite situation from the one
+        above.
+
+        First after 4.5s delay we animate the transform property to move the hint
+        into its correct position and after that we fade it in with opacity
+        transition.
+    */
+    -webkit-transition: opacity 1s 5s, -webkit-transform 0.5s 4.5s;
+    -moz-transition:    opacity 1s 5s,    -moz-transform 0.5s 4.5s;
+    -ms-transition:     opacity 1s 5s,     -ms-transform 0.5s 4.5s;
+    -o-transition:      opacity 1s 5s,      -o-transform 0.5s 4.5s;
+    transition:         opacity 1s 5s,         transform 0.5s 4.5s;
+}
+
+/*
+    Now we 'enable' the hint when presentation is initialized ...
+*/
+.impress-enabled .hint { display: block }
+
 .impress-disabled .step,
 .impress-not-supported .step {
     position: relative;
@@ -181,19 +268,9 @@ body     { pointer-events: none; }
     display: block;
 }
 
-
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-
 @font-face {
     font-family: 'Pixelic war';
     src: url("../assets/fonts/Blox2.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Courier new';
-    src: url("../assets/fonts/cour.ttf");
     font-weight: normal;
     font-style: normal;
 }
@@ -217,7 +294,7 @@ body     { pointer-events: none; }
     font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: 300;
-    src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url(http://themes.googleusercontent.com/static/fonts/robotoslab/v2/dazS1PrQQuCxC3iOAJFEJfR_54zmj3SbGZQh3vCOwvY.woff) format('woff');
+    src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url("../assets/roboto.woff") format('woff');
 }
 
 @font-face {
@@ -251,6 +328,20 @@ h1 {
     line-height: 1.2em;
 }
 
+.author-container{
+    font-size: 0.7em;
+    text-align: right;
+    padding-right: 12px;
+}
+
+.author-container a{
+    text-decoration: none;
+    padding: none;
+    background: none;
+    text-shadow: none;
+    border-radius: 0.2em;
+}
+
 .pixel {
     font-family: "Pixelic war";
     text-align: center;
@@ -274,13 +365,17 @@ li .fall{
     color: transparent;
     background: url("../assets/brick_small.png") repeat;
     -webkit-background-clip: text;
+    background-clip : text;
     text-shadow : 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
 
 .building.bad li,  .building.bad li .fall{
     background: url("../assets/dirty_wall.jpg") repeat;
     -webkit-background-clip: text;
-    -webkit-transition: background 1s;
+    background-clip : text;
+    -webkit-transition : background 1s;
+    transition : background 1s;
+    -o-transition : background 1s;
     text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -298,6 +393,8 @@ li .fall{
 .impress-on-bad_building,
 .impress-on-wtf{
     -webkit-transition: background ease-in-out 900ms;
+    transition : background 900ms;
+    -o-transition : background 900ms;
 }
 
 .impress-on-ground,
@@ -345,6 +442,7 @@ body[class^='impress-on-typescript'],body[class*=' impress-on-typescript'] .inne
 .typescript-title {
     font-family: "Segoe UI";
     color: #007acc;
+    font-size: 1.1em;
 }
 
 .coffeescript-title{
@@ -404,7 +502,11 @@ body.impress-on-dart_performance_graph div#leader1{
 #coffeescript .title{
     background: url('../assets/coffeescript.png') no-repeat -100px;
     -webkit-transition-delay: 1s;
+    -o-transition-delay:1s;
+    transition-delay:1s;
     -webkit-transition: 1s background ;
+    transition : background 1s;
+    -o-transition : background 1s;
 }
 
 body[class^='impress-on-coffeescript'],body[class*=' impress-on-coffeescript'] #coffeescript{
@@ -413,13 +515,6 @@ body[class^='impress-on-coffeescript'],body[class*=' impress-on-coffeescript'] #
 
 .impress-on-console #title{
     opacity: 1;
-}
-
-.author{
-    font-family: "Ubuntu";
-    font-size: 0.8em;
-    text-align: right;
-    padding-right: 12px;
 }
 
 .impress-on-trend, .impress-on-trend2 {
@@ -462,11 +557,10 @@ body[class^='impress-on-coffeescript'],body[class*=' impress-on-coffeescript'] #
     bottom: 60px;
     left: 80px;
     -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    transform:; rotate(-7deg);
     text-shadow: 6px 0px 6px rgba(0, 0, 0, 0.9);
-}
-
-#cloud {
-
 }
 
 .active #js-terminal{
@@ -523,20 +617,13 @@ body[class^='impress-on-clouds'],body[class*=' impress-on-clouds']{
 .impress-on-leader3 #leader2{
     opacity: 1;
 }
-
-.impress-on-languages{
-    //background: url('../assets/js-compiler-cloud.png') no-repeat center;
-    //background-size: contain;
-
-}
-
 .cyan{
     color: #29bed5;
 }
 
 .coffy{
-    font-family: 'Lobster';
-    color: #df0075;
+    font-family: 'Lobster' !important;
+    color: #df0075 !important;
 }
 
 .greenify{
@@ -572,11 +659,6 @@ body[class^='impress-on-clouds'],body[class*=' impress-on-clouds']{
 .go-up{
     -webkit-transition-duration: 10s;
     top:-13200px;
-}
-
-
-#roadmap {
-    font-family: "Chalk";
 }
 
 .impress-on-roadmap-2 #roadmap-1,
