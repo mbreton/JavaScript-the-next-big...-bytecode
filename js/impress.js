@@ -722,49 +722,9 @@
                              api.next();
                              break;
                 }
-                console.log('hot key');
                 event.preventDefault();
             }
         }, false);
-        
-        // delegated handler for clicking on the links to presentation steps
-        /*document.addEventListener("click", function ( event ) {
-            // event delegation with "bubbling"
-            // check if event target (or any of its parents is a link)
-            var target = event.target;
-            while ( (target.tagName !== "A") &&
-                    (target !== document.documentElement) ) {
-                target = target.parentNode;
-            }
-            
-            if ( target.tagName === "A" ) {
-                var href = target.getAttribute("href");
-                
-                // if it's a link to presentation step, target this step
-                if ( href && href[0] === '#' ) {
-                    target = document.getElementById( href.slice(1) );
-                }
-            }
-            
-            if ( api.goto(target) ) {
-                event.stopImmediatePropagation();
-                event.preventDefault();
-            }
-        }, false);
-        
-        // delegated handler for clicking on step elements
-        document.addEventListener("click", function ( event ) {
-            var target = event.target;
-            // find closest step element that is not active
-            while ( !(target.classList.contains("step") && !target.classList.contains("active")) &&
-                    (target !== document.documentElement) ) {
-                target = target.parentNode;
-            }
-            
-            if ( api.goto(target) ) {
-                event.preventDefault();
-            }
-        }, false);*/
         
         // touch handler to detect taps on the left and right side of the screen
         // based on awesome work of @hakimel: https://github.com/hakimel/reveal.js

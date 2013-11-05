@@ -294,7 +294,7 @@ body     { pointer-events: none; }
     font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: 300;
-    src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url("../assets/roboto.woff") format('woff');
+    src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url("../assets/fonts/roboto.woff") format('woff');
 }
 
 @font-face {

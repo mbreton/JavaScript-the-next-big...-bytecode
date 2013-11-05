@@ -1,5 +1,5 @@
 $(function(){
-    // Call ace tranformer on each ".editor" element 
+    // Call ace tranformer on each ".editor" elements
     $('.editor').each(function(idx, el){
         var $el = $(el);
         var editor = ace.edit(el.id);
@@ -10,13 +10,18 @@ $(function(){
 
     var root = document.getElementById('impress');
     root.addEventListener('impress:stepenter',function(el){
-        if (typeof  window[el.target.id] == "function"){
-            window[el.target.id]();
+        if (typeof  window[el.target.id+"_enter"] == "function"){
+            window[el.target.id+"_enter"]();
+        }
+    });
+    root.addEventListener('mpress:stepleave',function(el){
+        if (typeof  window[el.target.id+"_leave"] == "function"){
+            window[el.target.id+"_leave"]();
         }
     });
 });
 
-var wtf = function(){
+var wtf_enter = function(){
     var term = $('#js-terminal').terminal(function(command, term) {
         if (command !== '') {
             var result = window.eval(command);
@@ -47,7 +52,7 @@ var wtf = function(){
     },15000);
 }
 
-var autocomplete = function(){
+var autocomplete_enter = function(){
     $('#autocomplete_container').replaceWith('<iframe width="810" height="480" ' +
         'src="http://www.youtube.com/embed/oAuekVilLX0?autoplay=1"' +
         'auto_play="1"' +
@@ -55,14 +60,14 @@ var autocomplete = function(){
         '</iframe>');
 }
 
-var bad_building = function(){
+var bad_building_enter = function(){
     $('#bad_building').addClass('bad');
     setTimeout(function(){
         $('.fall').addClass('animated hinge');
     },1000);
 };
 
-var coffeescript_lisible = function(){
+var coffeescript_lisible_enter = function(){
 
     var coffee_editor = ace.edit("coffee_editor");
     var coffee_result = ace.edit("coffee_result");
@@ -74,8 +79,8 @@ var coffeescript_lisible = function(){
     coffee_editor.getSession().setMode("ace/mode/coffee");
     coffee_result.getSession().setMode("ace/mode/javascript");
 
-    coffee_editor.on('change',function(evt, edit){
-        var coffeeCode = edit.getSession().getValue();
+    //coffee_editor.on('change',function(evt, edit){
+        var coffeeCode = coffee_editor.getSession().getValue();
         try{
             var jsCode  = CoffeeScript.compile(coffeeCode);
             console.log(jsCode);
@@ -83,11 +88,11 @@ var coffeescript_lisible = function(){
         } catch (e){
             console.log('mache po')
         }
-    });
-    coffee_editor.focus();
+    //});
+    //coffee_editor.focus();
 };
 
-var languages = function(){
+var languages_enter = function(){
     setTimeout(function(){
         $('#list_lang').addClass('go-up')
     });

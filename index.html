@@ -23,6 +23,10 @@
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
+<div class="hint">
+        <p>Use alt + arrow keys to navigate</p>
+    </div>
+
 <div id="impress">
     <div id="title" class="step" data-y="-1500" data-x="0">
         <h1 class="title">JavaScript the Next Big<p class="pixel">bytecode</p></h1>
@@ -473,7 +477,17 @@ if cat instanceof Pet
 
     <div id="coffeescript_lisible" class="step code coffeescript" data-y="-2250" data-x="1500" data-rotate-y="180" data-scale="1.4">
         Génère un JavaScript propre & lisible
-        <div id="coffee_editor" style="width: 500px;display:inline-block;height: 400px"></div>
+        <div id="coffee_editor" style="width: 500px;display:inline-block;height: 400px">class Animal
+    constructor : (@name)->
+
+class Pet extends Animal
+    construtor : (@owner, name) ->
+        super name
+
+cat = new Pet "Mathieu", "Garfield"
+
+if cat instanceof Pet
+    console.log "#{cat.name} is a Pet"</div>
         <div id="coffee_result" style="width: 500px;display:inline-block;height: 400px"></div>
     </div>
 
@@ -604,9 +618,7 @@ interface JQueryAjaxSettings {
         <h1 class="title">Questions ?</h1>
     </div>
 
-    <div class="hint">
-        <p>Use a spacebar or arrow keys to navigate</p>
-    </div>
+</div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.terminal-0.7.7.min.js"></script>
