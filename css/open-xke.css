@@ -326,15 +326,6 @@ li.productive {
 li.fast {
     letter-spacing: 0.234em;
 }
-
-#roadmap {
-    font-family: "Chalk";
-}
-
-.step.roadmap.past{
-    opacity: 1;
-}
-
 #typescript {
 }
 
@@ -581,4 +572,24 @@ body[class^='impress-on-clouds'],body[class*=' impress-on-clouds']{
 .go-up{
     -webkit-transition-duration: 10s;
     top:-13200px;
+}
+
+
+#roadmap {
+    font-family: "Chalk";
+}
+
+.impress-on-roadmap-2 #roadmap-1,
+.impress-on-roadmap-3 #roadmap-1,
+.impress-on-roadmap-4 #roadmap-1{
+    opacity: 1;
+}
+
+.impress-on-roadmap-3 #roadmap-2,
+.impress-on-roadmap-4 #roadmap-2{
+    opacity: 1;
+}
+
+.impress-on-roadmap-4 #roadmap-3{
+    opacity: 1;
 }
