@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>JavaScript the next big bytecode</title>
+
+    <meta name="description" content="DevoxxFR 2014 - JavaScript the next big bytecode">
+    <meta name="author" content="Mathieu Breton">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="lib/css/jquery.terminal.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <div class="slides">
+
+        <section data-id="1617645f901283d05c2b929d90062e0d" data-transition="zoom">
+            <h1>Javascript the next big Bytecode<br>
+            </h1>
+        </section>
+
+        <section data-id="52b5a3c95ef49db44a5cbf0758de26a2">
+            <p class="author-container">
+                By<a rel="author" class="coffy author" href="http://twitter.com/MatBreton">MathieuBreton</a>
+            </p>
+            <ul>
+                <li>Job :
+                    <span class="cyan">Craftsman developer at
+                        <span class="strong">Xebia</span>
+                    </span>
+                </li>
+                <li>
+                    Expertise :
+                    <span class="cyan">Web application black belt</span>
+                </li>
+                <li>Twitter:
+                    <span class="cyan">@MatBreton</span>
+                </li>
+            </ul>
+        </section>
+
+        <section data-id="0b235c9a1ab4bdcdf29aff660d713f1a">
+            <h2>De quoi allons nous parler ?</h2>
+            <br>De JavaScript<br>De&nbsp; son apogée<br>De la vie de tous les jours&nbsp; avec lui<br>Et de son
+            avenir<br>
+        </section>
+
+        <section data-id="26a60a75d41add39f01a721aafead15d">
+            L'apogée
+        </section>
+
+        <section data-id="9cb1c970f6046e9469097f5d0184774a">
+            <h2>JavaScript sur Stackoverflow</h2>
+            <img src="lib/img/js-stack.png">
+        </section>
+        <section data-id="234ba327c10a44cd4f5dbdd78e233a9c">
+            <h2>Java/JavaScript sur Stackoverflow</h2>
+            <img src="lib/img/js+java-stack.png">
+        </section>
+
+        <section data-id="bd5b6986b812922286fc64da80276853">
+            <h2>JavaSCRIPT is EVERYWHERE</h2>
+
+            <p>NodeJS</p>
+
+            <p>Bootstrap</p>
+
+            <p>AngularJS</p>
+
+            <p>Backbone</p>
+
+            <p>EmberJS<br>
+            </p>
+        </section>
+
+        <section data-id="d8ca0f2710354035a44740b909c1257a">
+            <h2>POURQUOI ?<br>
+            </h2>
+        </section>
+
+        <section data-id="b2ad18aebeea7e855bdb5852c5e049c7">
+            <h2>Un server web</h2>
+            <pre><code>
+                var express = require('express');
+                var app = express();
+                app.get('/', function (req, res) {
+                res.send('Coucou');
+                });
+                app.listen(3000);
+            </code></pre>
+            <h2>Programmation fonctionnelle</h2>
+            <pre><code>
+                _.chain([1,2,3,200])
+                .filter(function(num) { return num % 2 == 0; })
+                .tap(alert)
+                .map(function(num) { return num * num })
+                .value();// [2, 200] (alerted [4,40000]
+            </code></pre>
+            <br>
+        </section>
+
+        <section data-id="e58ee1625957e2a1388225f352a6ad66">
+            <h2>RAPIDE</h2>
+
+            <h2>SIMPLE</h2>
+
+            <h2>PRODUCTIF</h2>
+        </section>
+
+        <section>
+            <h2>Tout va bien alors !</h2>
+        </section>
+
+        <section>
+            <h1>FAUX</h1>
+        </section>
+
+        <section>
+            <div id="js-terminal">
+
+            </div>
+        </section>
+        <section>
+            <iframe src="//www.youtube.com/embed/oAuekVilLX0"
+                    style="width:100%;height:100%;"
+                    frameborder="0"
+                    auto_play="1">
+             </iframe>
+        </section>
+    </div>
+
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/jquery.terminal-0.7.7.min.js"></script>
+
+    <script>
+
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+            //keyboard: false,
+
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+            //parallaxBackgroundImage: 'https://s3.amazonaws.com/media-p.slid.es/uploads/mathieubreton/images/308873/ground.png',
+            //parallaxBackgroundSize: '1600px 3000px',
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+            minScale: 0.3,
+            maxScale: 1.0,
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'lib/js/classList.js', condition: function () {
+                    return !document.body.classList;
+                } },
+                { src: 'plugin/markdown/marked.js', condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                } },
+                { src: 'plugin/markdown/markdown.js', condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                } },
+                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                    return !!document.body.classList;
+                } },
+                { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                    return !!document.body.classList;
+                } }
+            ]
+        });
+
+        Reveal.addEventListener('ready', function (event) {
+            var settings = {
+                greetings: 'Javascript Console',
+                completion: true,
+                name: 'js_demo',
+                width: "100%",
+                height : 200,
+                prompt: 'js> '
+            };
+            function evaluator(command, term) {
+                if (command !== '') {
+                    var result = window.eval(command);
+                    if (result != undefined) {
+                        term.echo(String(result));
+                    }
+                }
+            }
+            var term = $('#js-terminal').terminal(evaluator, settings);
+        });
+
+    </script>
+
+</body>
+</html>
