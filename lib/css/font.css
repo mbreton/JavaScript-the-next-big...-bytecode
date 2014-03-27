@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'bloc';
+    src: url("../font/bloc.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.reveal .bloc{
+    font-family: "bloc";
+}

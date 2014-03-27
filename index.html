@@ -15,11 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <link rel="stylesheet" href="css/reveal.min.css">
-    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/theme/devoxx2014.css" id="theme">
     <link rel="stylesheet" href="lib/css/jquery.terminal.css">
-
-    <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/nv.d3.min.css">
+    <link rel="stylesheet" href="lib/css/font.css">
+    <link rel="stylesheet" href="lib/css/slides.css">
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -41,197 +41,253 @@
 
 <div class="reveal">
 
-    <div class="slides">
+<div class="slides">
 
-        <section data-id="1617645f901283d05c2b929d90062e0d" data-transition="zoom">
-            <h1>Javascript the next big Bytecode<br>
-            </h1>
-        </section>
+    <section data-id="cover">
+        <h1>Javascript the next big <span class="bloc">Bytecode</span><br>
+        </h1>
+    </section>
 
-        <section data-id="52b5a3c95ef49db44a5cbf0758de26a2">
-            <p class="author-container">
-                By<a rel="author" class="coffy author" href="http://twitter.com/MatBreton">MathieuBreton</a>
-            </p>
-            <ul>
-                <li>Job :
+    <section data-id="52b5a3c95ef49db44a5cbf0758de26a2">
+        <p class="author-container">
+            By<a rel="author" class="coffy author" href="http://twitter.com/MatBreton">MathieuBreton</a>
+        </p>
+        <ul>
+            <li>Job :
                     <span class="cyan">Craftsman developer at
                         <span class="strong">Xebia</span>
                     </span>
-                </li>
-                <li>
-                    Expertise :
-                    <span class="cyan">Web application black belt</span>
-                </li>
-                <li>Twitter:
-                    <span class="cyan">@MatBreton</span>
-                </li>
-            </ul>
-        </section>
+            </li>
+            <li>
+                Expertise :
+                <span class="cyan">Web application black belt</span>
+            </li>
+            <li>Twitter:
+                <span class="cyan">@MatBreton</span>
+            </li>
+        </ul>
+    </section>
 
-        <section data-id="0b235c9a1ab4bdcdf29aff660d713f1a">
-            <h2>De quoi allons nous parler ?</h2>
-            <br>De JavaScript<br>De&nbsp; son apogée<br>De la vie de tous les jours&nbsp; avec lui<br>Et de son
-            avenir<br>
-        </section>
+    <section data-id="0b235c9a1ab4bdcdf29aff660d713f1a">
+        <h2>De quoi allons nous parler ?</h2>
+        <br>De JavaScript<br>De&nbsp; son apogée<br>De la vie de tous les jours&nbsp; avec lui<br>Et de son
+        avenir<br>
+    </section>
 
-        <section data-id="26a60a75d41add39f01a721aafead15d">
-            L'apogée
-        </section>
+    <section data-id="26a60a75d41add39f01a721aafead15d">
+        L'apogée
+    </section>
 
-        <section data-id="9cb1c970f6046e9469097f5d0184774a">
-            <h2>JavaScript sur Stackoverflow</h2>
-            <img src="lib/img/js-stack.png">
-        </section>
-        <section data-id="234ba327c10a44cd4f5dbdd78e233a9c">
-            <h2>Java/JavaScript sur Stackoverflow</h2>
-            <img src="lib/img/js+java-stack.png">
-        </section>
+    <section data-id="9cb1c970f6046e9469097f5d0184774a">
+        <h2>JavaScript sur Stackoverflow</h2>
 
-        <section data-id="bd5b6986b812922286fc64da80276853">
-            <h2>JavaSCRIPT is EVERYWHERE</h2>
+        <div id="chart" class="stretch">
+            <svg></svg>
+        </div>
+    </section>
+    <section data-id="234ba327c10a44cd4f5dbdd78e233a9c">
+        <h2>Java/JavaScript sur Stackoverflow</h2>
 
-            <p>NodeJS</p>
+    </section>
 
-            <p>Bootstrap</p>
+    <section data-id="bd5b6986b812922286fc64da80276853">
+        <h2>JavaSCRIPT is EVERYWHERE</h2>
+        <p>NodeJS</p>
+        <p>Bootstrap</p>
+        <p>AngularJS</p>
+        <p>Backbone</p>
+        <p>EmberJS<br>
+        </p>
+    </section>
 
-            <p>AngularJS</p>
+    <section data-id="d8ca0f2710354035a44740b909c1257a">
+        <h2>POURQUOI ?<br>
+        </h2>
+    </section>
 
-            <p>Backbone</p>
+    <section data-id="code-js-examples">
+        <div data-lang="javascript" data-writable="false" class="code" >var express = require('express');
+var app = express();
+app.get('/', function (req, res) {
+    res.send('Coucou');
+});
+app.listen(3000);</div>
 
-            <p>EmberJS<br>
-            </p>
-        </section>
+        <h3>Programmation fonctionnelle</h3>
+        <div data-lang="javascript" data-writable="false" class="code">_.chain([1,2,3,200])
+    .filter(function(num) { return num % 2 == 0; })
+    .tap(alert)
+    .map(function(num) { return num * num })
+.value();// [2, 200] (alerted [4,40000]</div>
+    </section>
 
-        <section data-id="d8ca0f2710354035a44740b909c1257a">
-            <h2>POURQUOI ?<br>
-            </h2>
-        </section>
+    <section data-id="e58ee1625957e2a1388225f352a6ad66">
+        <h2>RAPIDE</h2>
 
-        <section data-id="b2ad18aebeea7e855bdb5852c5e049c7">
-            <h2>Un server web</h2>
-            <pre><code>
-                var express = require('express');
-                var app = express();
-                app.get('/', function (req, res) {
-                res.send('Coucou');
-                });
-                app.listen(3000);
-            </code></pre>
-            <h2>Programmation fonctionnelle</h2>
-            <pre><code>
-                _.chain([1,2,3,200])
-                .filter(function(num) { return num % 2 == 0; })
-                .tap(alert)
-                .map(function(num) { return num * num })
-                .value();// [2, 200] (alerted [4,40000]
-            </code></pre>
-            <br>
-        </section>
+        <h2>SIMPLE</h2>
 
-        <section data-id="e58ee1625957e2a1388225f352a6ad66">
-            <h2>RAPIDE</h2>
+        <h2>PRODUCTIF</h2>
+    </section>
 
-            <h2>SIMPLE</h2>
+    <section>
+        <h2>Tout va bien alors !</h2>
+    </section>
 
-            <h2>PRODUCTIF</h2>
-        </section>
+    <section>
+        <h1>FAUX</h1>
+    </section>
 
-        <section>
-            <h2>Tout va bien alors !</h2>
-        </section>
+    <section>
+        <h2>The JS SHOW</h2>
 
-        <section>
-            <h1>FAUX</h1>
-        </section>
+        <div id="js-terminal" class="stretch"></div>
+    </section>
+    <section>
+        <iframe src="//www.youtube.com/embed/oAuekVilLX0"
+                class="stretch"
+                frameborder="0"
+                data-autoplay
+                auto_play="1">
+        </iframe>
+    </section>
+</div>
 
-        <section>
-            <div id="js-terminal">
-
-            </div>
-        </section>
-        <section>
-            <iframe src="//www.youtube.com/embed/oAuekVilLX0"
-                    style="width:100%;height:100%;"
-                    frameborder="0"
-                    auto_play="1">
-             </iframe>
-        </section>
-    </div>
+<div id="footer">
+    <span id="hashtag">#jsByteCode</span>
+    <span id="twitter-author">@MatBreton</span>
+</div>
 
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.min.js"></script>
-    <script src="lib/js/jquery.min.js"></script>
-    <script src="lib/js/jquery.terminal-0.7.7.min.js"></script>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+<script src="lib/js/jquery.min.js"></script>
+<script src="lib/js/jquery.terminal-0.7.7.min.js"></script>
+<script src="lib/js/d3.v3.js"></script>
+<script src="lib/js/nv.d3.min.js"></script>
+<script src="lib/js/nv.d3.min.js"></script>
+<script src="plugin/ace/ace.js"></script>
 
-    <script>
+<script>
 
-        // Full list of configuration options available here:
-        // https://github.com/hakimel/reveal.js#configuration
-        Reveal.initialize({
-            controls: true,
-            progress: true,
-            history: true,
-            center: true,
-            //keyboard: false,
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+        //keyboard: false,
 
-            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+        //theme: 'devoxx2014',//Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-            //parallaxBackgroundImage: 'https://s3.amazonaws.com/media-p.slid.es/uploads/mathieubreton/images/308873/ground.png',
-            //parallaxBackgroundSize: '1600px 3000px',
+        //parallaxBackgroundImage: 'https://s3.amazonaws.com/media-p.slid.es/uploads/mathieubreton/images/308873/ground.png',
+        //parallaxBackgroundSize: '1600px 3000px',
 
-            // Parallax scrolling
-            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-            // parallaxBackgroundSize: '2100px 900px',
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
 
-            minScale: 0.3,
-            maxScale: 1.0,
+        minScale: 0.3,
+        maxScale: 1.0,
 
-            // Optional libraries used to extend on reveal.js
-            dependencies: [
-                { src: 'lib/js/classList.js', condition: function () {
-                    return !document.body.classList;
-                } },
-                { src: 'plugin/markdown/marked.js', condition: function () {
-                    return !!document.querySelector('[data-markdown]');
-                } },
-                { src: 'plugin/markdown/markdown.js', condition: function () {
-                    return !!document.querySelector('[data-markdown]');
-                } },
-                { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
-                    hljs.initHighlightingOnLoad();
-                } },
-                { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
-                    return !!document.body.classList;
-                } },
-                { src: 'plugin/notes/notes.js', async: true, condition: function () {
-                    return !!document.body.classList;
-                } }
-            ]
-        });
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            //{ src: 'plugin/ace/ace.js', async: true},
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } }
+        ]
+    });
 
-        Reveal.addEventListener('ready', function (event) {
-            var settings = {
-                greetings: 'Javascript Console',
-                completion: true,
-                name: 'js_demo',
-                width: "100%",
-                height : 200,
-                prompt: 'js> '
-            };
-            function evaluator(command, term) {
-                if (command !== '') {
-                    var result = window.eval(command);
-                    if (result != undefined) {
-                        term.echo(String(result));
-                    }
+    Reveal.addEventListener('ready', function (event) {
+        buildJsTerminal();
+        buildJavaJSChart();
+
+    });
+
+    function buildJsTerminal() {
+        var settings = {
+            greetings: 'Javascript Console',
+            completion: true,
+            name: 'js_demo',
+            width: "100%",
+            height: 200,
+            prompt: 'js> '
+        };
+
+        function evaluator(command, term) {
+            if (command !== '') {
+                var result = window.eval(command);
+                if (result != undefined) {
+                    term.echo(String(result));
                 }
             }
-            var term = $('#js-terminal').terminal(evaluator, settings);
-        });
+        }
 
-    </script>
+        var term = $('#js-terminal').terminal(evaluator, settings);
+    }
+
+    function buildJavaJSChart() {
+        function data() {
+            var sin = [],
+                    cos = [];
+
+            for (var i = 0; i < 100; i++) {
+                sin.push({x: i, y: Math.sin(i / 10)});
+                cos.push({x: i, y: .5 * Math.cos(i / 10)});
+            }
+
+            return [
+                {
+                    values: sin,
+                    key: 'Sine Wave',
+                    color: '#ff7f0e'
+                },
+                {
+                    values: cos,
+                    key: 'Cosine Wave',
+                    color: '#2ca02c'
+                }
+            ];
+        }
+
+        nv.addGraph(function () {
+            var chart = nv.models.lineChart()
+                    .useInteractiveGuideline(true);
+
+            chart.xAxis
+                    .axisLabel('Time (ms)')
+                    .tickFormat(d3.format(',r'));
+
+            chart.yAxis
+                    .axisLabel('Voltage (v)')
+                    .tickFormat(d3.format('.02f'));
+
+            d3.select('#chart svg')
+                    .datum(data())
+                    .transition().duration(500)
+                    .call(chart);
+
+            nv.utils.windowResize(chart.update);
+
+            return chart;
+        });
+    }
+
+</script>
 
 </body>
 </html>

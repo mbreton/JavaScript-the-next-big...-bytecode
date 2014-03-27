@@ -1,0 +1,14 @@
+/* globals */
+
+.code{
+	text-align: left;
+}
+
+
+section[data-id="cover"] h1{
+    font-size: 3.5em;
+}
+
+section[data-id="code-js-examples"] .code{
+	height:8em;
+}

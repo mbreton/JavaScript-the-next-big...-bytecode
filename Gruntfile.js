@@ -48,7 +48,8 @@ module.exports = function(grunt) {
 					'css/theme/sky.css': 'css/theme/source/sky.scss',
 					'css/theme/moon.css': 'css/theme/source/moon.scss',
 					'css/theme/solarized.css': 'css/theme/source/solarized.scss',
-					'css/theme/blood.css': 'css/theme/source/blood.scss'
+					'css/theme/blood.css': 'css/theme/source/blood.scss',
+                    'css/theme/devoxx2014.css': 'css/theme/source/devoxx2014.scss'
 				}
 			}
 		},
@@ -80,7 +81,8 @@ module.exports = function(grunt) {
 			server: {
 				options: {
 					port: port,
-					base: '.'
+					base: '.',
+					hostname:'*'
 				}
 			}
 		},
