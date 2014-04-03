@@ -1,25 +1,31 @@
 /**
- * A simple theme for reveal.js presentations, similar
- * to the default theme. The accent color is darkblue.
+ * A DevoxxFR 2014 theme for reveal.js presentations, similar
+ * to the default theme.
  *
- * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * This theme is Copyright (C) 2014 Mathieu Breton, https://github.com/devoxxFR2014-reveal-theme. It is MIT licensed.
  * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
 // Default mixins and settings -----------------
 @import "../template/mixins";
 @import "../template/settings";
-// ---------------------------------------------
-// Include theme-specific fonts
-@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
 
-//@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+// ---------------------------------------------
+$cyan: rgb(83, 182, 188);
+$textColor: white;
+$orange: rgb(245, 175, 51);
+$typeScriptColor: #007acc;
+
+$footerHeight: 1.4em;
+$sideMargin: 0.3em;
+$footerFontSize: 0.9em;
+$footerTopPaddingText: ($footerHeight - $footerFontSize) /2;
 
 // Override theme settings (see ../template/settings.scss)
 $mainFont: 'Arial', sans-serif;
 $mainColor: #000;
-$headingFont: 'News Cycle', Impact, sans-serif;
-$headingColor: #000;
-$headingTextShadow: none;
+$headingFont: 'Trebuchet MS', Impact, sans-serif;
+$headingColor: $cyan;
+$headingTextShadow: 0px 2px 5px $orange;
 $headingTextTransform: none;
 $backgroundColor: #fff;
 $linkColor: #00008B;
@@ -30,36 +36,163 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 @import "../template/theme";
 // ---------------------------------------------
 
-$bgCyan: #53B6BC;
-$textColor: white;
+.reveal {
 
-.reveal #footer {
-  $footerHeight: 1.4em;
-  $sideMargin: 0.3em;
-  $footerFontSize: 0.9em;
-  $footerTopPaddingText: ($footerHeight - $footerFontSize) /2;
-
-  background: url('../../../lib/img/footer-devoxx.png') no-repeat center $bgCyan;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  height: $footerHeight;
-  color: $textColor;
-  font-size: $footerFontSize;
-  z-index: 11;
-
-  span {
-    position: inherit;
-    padding-top: $footerTopPaddingText;
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+  .orange {
+    background-color: $orange;
+  }
+  .cyan {
+    background-color: $cyan;
+  }
+  .white {
+    background-color: white;
   }
 
-  #hashtag {
-    left: $sideMargin;
+  .code {
+    text-align: left;
   }
 
-  #twitter-author {
-    right: $sideMargin;
+  #footer {
+    background: url('../../../lib/img/footer-devoxx.png') no-repeat center $cyan;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: $footerHeight;
+    z-index: 11;
+
+    span {
+      position: inherit;
+      padding-top: $footerTopPaddingText;
+      font-size: $footerFontSize;
+      text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+      color: $textColor;
+    }
+
+    #hashtag {
+      left: $sideMargin;
+    }
+
+    #twitter-author {
+      right: $sideMargin;
+    }
+  }
+
+  section.header {
+
+    .rotate45 {
+      @include rotate(-45deg);
+      position: absolute;
+      top: -39em;
+      left: -4em;
+      width: 15em;
+
+      h2 {
+        font-size: 2.7em;
+        top: 0.1em;
+        text-align: left;
+        color: black;
+        text-shadow: none;
+
+        &.text-white {
+          color: white;
+        }
+      }
+
+      div {
+        height: 13em;
+        width: 13em;
+        position: relative;
+        &.white {
+          z-index: 3;
+          left: 7.5em;
+        }
+        &.orange {
+          z-index: 2;
+          left: 4em;
+          top: 12.5em;
+        }
+        &.cyan {
+          z-index: 1;
+          top: 24.9em;
+        }
+      }
+    }
+  }
+
+  h3 {
+    color: $cyan;
+    border-bottom: 6px solid $orange;
+    text-align: left;
+    font-size: 2em;
+    padding: 0.1em;
+    padding-bottom: 0.4em;
+  }
+
+  section[data-id="cover"] {
+    text-align: left;
+    margin: 0;
+
+    h1 {
+      font-size: 2em;
+      color: $cyan;
+      background-color: white;
+      width: 80%;
+      margin-bottom: 0;
+      padding: 10px;
+      text-shadow: $headingTextShadow
+    }
+    .orange {
+      background-color: $orange;
+      width: 75%;
+      height: 1em;
+    }
+    h2 {
+      background-color: $cyan;
+      width: 50%;
+      font-size: $footerFontSize;
+      color: $textColor;
+      margin-bottom: 0;
+      padding: 0.1em;
+      line-height: 1.1em;
+    }
+  }
+
+  section[data-id="code-js-examples"] .code {
+    height: 8em;
+  }
+
+  section[data-id="js-show"] #js-terminal {
+    text-align: left;
+  }
+
+  section[data-id="dart"] .rotate45 h2 {
+    font-family: "Montserrat";
+  }
+
+  section[data-id="dart-bench"] {
+    .stretch {
+      overflow:hidden;
+      .innerdiv {
+        overflow: none;
+        position:relative;
+        width: 100%;
+        height: 100%;
+        top: -170px;
+      }
+    }
+  }
+
+  section[data-id="coffeescript"] .rotate45 h2 {
+  }
+
+  section[data-id="typescript"] .rotate45 h2 {
+    font-family: "Segoe UI";
+    color: $typeScriptColor;
+  }
+
+  section[data-id="asmjs"] .rotate45 h2 {
+    color: #0a0;
+    font-family: Consolas, Menlo;
   }
 }

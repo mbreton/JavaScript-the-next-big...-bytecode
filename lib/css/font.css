@@ -5,6 +5,33 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Lobster';
+    src: url("../font/lobster.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    src: url("../font/segoeui.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../font/Montserrat-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
 .reveal .bloc{
     font-family: "bloc";
+    line-height: 1.5em;
+}
+
+.coffee{
+    font-family: 'Lobster' !important;
+    color: #df0075 !important;
 }

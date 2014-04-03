@@ -6,9 +6,17 @@
         var editorElements = document.querySelectorAll('.code');
         Array.prototype.forEach.call(editorElements, function (editorElement) {
             var editor = ace.edit(editorElement);
-            //editor.setFontSize(20);
-            //editor.setTheme("ace/theme/monokai");
-            editor.setReadOnly(!Boolean(editorElement.attributes['data-writable']));
+            editor.setFontSize(20);
+            editor.setTheme("ace/theme/solarized_light");
+            editor.setOptions({
+			    maxLines: Infinity
+			});
+			//clearInterval(editor.renderer.$textLayer.$pollSizeChangesTimer);
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+			    console.log(arguments);
+			    //editor.renderer.$textLayer.$pollSizeChanges();
+			});
+            editor.setReadOnly(!Boolean(editorElement.getAttribute['data-writable']));
             editor.getSession().setMode("ace/mode/" + editorElement.getAttribute('data-lang'));
         });
     }

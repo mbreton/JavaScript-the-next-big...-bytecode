@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="lib/css/jquery.terminal.css">
     <link rel="stylesheet" href="lib/css/nv.d3.min.css">
     <link rel="stylesheet" href="lib/css/font.css">
-    <link rel="stylesheet" href="lib/css/slides.css">
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -43,113 +42,430 @@
 
 <div class="slides">
 
-    <section data-id="cover">
-        <h1>Javascript the next big <span class="bloc">Bytecode</span><br>
-        </h1>
-    </section>
+<section data-id="cover"
+         data-background="lib/img/cover-bg.png"
+         data-background-transition="slide"
+         data-transition="linear">
+    <h1>JavaScript the next big... <span class="bloc">BYTECODE</span></h1>
 
-    <section data-id="52b5a3c95ef49db44a5cbf0758de26a2">
-        <p class="author-container">
-            By<a rel="author" class="coffy author" href="http://twitter.com/MatBreton">MathieuBreton</a>
-        </p>
-        <ul>
-            <li>Job :
-                    <span class="cyan">Craftsman developer at
-                        <span class="strong">Xebia</span>
-                    </span>
-            </li>
-            <li>
-                Expertise :
-                <span class="cyan">Web application black belt</span>
-            </li>
-            <li>Twitter:
-                <span class="cyan">@MatBreton</span>
-            </li>
-        </ul>
-    </section>
+    <div class="orange">&nbsp;</div>
+</section>
 
-    <section data-id="0b235c9a1ab4bdcdf29aff660d713f1a">
-        <h2>De quoi allons nous parler ?</h2>
-        <br>De JavaScript<br>De&nbsp; son apogée<br>De la vie de tous les jours&nbsp; avec lui<br>Et de son
-        avenir<br>
-    </section>
+<section data-id="52b5a3c95ef49db44a5cbf0758de26a2">
+    <h2>
+        By <a rel="author" class="coffy author" href="http://twitter.com/MatBreton">Mathieu Breton</a>
+    </h2>
+    <ul>
+        <li>Job :Craftsman developer at <span class="strong">Xebia</span></li>
+        <li>Expertise : Web application black belt</li>
+        <li>Twitter : @MatBreton</li>
+    </ul>
+</section>
 
-    <section data-id="26a60a75d41add39f01a721aafead15d">
-        L'apogée
-    </section>
+<section data-id="agenda" class="slide">
+    <h3>De quoi allons nous parler ?</h3>
+    <ol class="stretch">
+        <li>De JavaScript</li>
+        <li>De son apogée</li>
+        <li>De la vie de tous les jours avec lui</li>
+        <li>Et de son avenir</li>
+    </ol>
+</section>
 
-    <section data-id="9cb1c970f6046e9469097f5d0184774a">
-        <h2>JavaScript sur Stackoverflow</h2>
+<section data-id="epogee"
+         data-background="lib/img/title-bg.png"
+         data-background-transition="slide"
+         data-transition="linear"
+         class="header">
+    <div class="rotate45">
+        <div class="cyan">&nbsp;</div>
+        <div class="orange">&nbsp;</div>
+        <div class="white">&nbsp;</div>
+        <h2 class="text-white">L'apogée</h2>
+    </div>
+</section>
 
-        <div id="chart" class="stretch">
-            <svg></svg>
-        </div>
-    </section>
-    <section data-id="234ba327c10a44cd4f5dbdd78e233a9c">
-        <h2>Java/JavaScript sur Stackoverflow</h2>
+<section data-id="9cb1c970f6046e9469097f5d0184774a">
+    <h2>JavaScript sur Stackoverflow</h2>
 
-    </section>
+    <div id="chart" class="stretch">
+        <svg></svg>
+    </div>
+</section>
+<section data-id="234ba327c10a44cd4f5dbdd78e233a9c">
+    <h2>Java/JavaScript sur Stackoverflow</h2>
 
-    <section data-id="bd5b6986b812922286fc64da80276853">
-        <h2>JavaSCRIPT is EVERYWHERE</h2>
-        <p>NodeJS</p>
-        <p>Bootstrap</p>
-        <p>AngularJS</p>
-        <p>Backbone</p>
-        <p>EmberJS<br>
-        </p>
-    </section>
+</section>
 
-    <section data-id="d8ca0f2710354035a44740b909c1257a">
-        <h2>POURQUOI ?<br>
-        </h2>
-    </section>
+<section data-id="bd5b6986b812922286fc64da80276853">
+    <h2>JavaSCRIPT is EVERYWHERE</h2>
 
-    <section data-id="code-js-examples">
-        <div data-lang="javascript" data-writable="false" class="code" >var express = require('express');
+    <p>NodeJS</p>
+
+    <p>Bootstrap</p>
+
+    <p>AngularJS</p>
+
+    <p>Backbone</p>
+
+    <p>EmberJS<br>
+    </p>
+</section>
+
+<section data-id="d8ca0f2710354035a44740b909c1257a">
+    <h2>POURQUOI ?<br>
+    </h2>
+</section>
+
+<section data-id="code-js-examples">
+    <h4>Serveur Web</h4>
+        <pre data-lang="javascript" data-writable="false" class="code">var express = require('express');
 var app = express();
 app.get('/', function (req, res) {
-    res.send('Coucou');
+    res.send('Hello, DevoxxFR 2014');
 });
-app.listen(3000);</div>
+app.listen(3000);</
 
-        <h3>Programmation fonctionnelle</h3>
-        <div data-lang="javascript" data-writable="false" class="code">_.chain([1,2,3,200])
-    .filter(function(num) { return num % 2 == 0; })
-    .tap(alert)
+    <h4>Programmation fonctionnelle</h4>
+        <pre data-lang="javascript" data-writable="false" class="code">_.chain([1,2,3,200])
+    .filter(function(num) { return num % 2 === 0; })
+    .tap(alert) // (alerted [2, 200])
     .map(function(num) { return num * num })
-.value();// [2, 200] (alerted [4,40000]</div>
-    </section>
+    .value();   // [4,40000]</pre>
+</section>
 
-    <section data-id="e58ee1625957e2a1388225f352a6ad66">
-        <h2>RAPIDE</h2>
+<section data-id="e58ee1625957e2a1388225f352a6ad66">
+    <h2>RAPIDE</h2>
 
-        <h2>SIMPLE</h2>
+    <h2>SIMPLE</h2>
 
-        <h2>PRODUCTIF</h2>
-    </section>
+    <h2>PRODUCTIF</h2>
+</section>
 
-    <section>
-        <h2>Tout va bien alors !</h2>
-    </section>
+<section>
+    <h2>Tout va bien alors !</h2>
+</section>
 
-    <section>
-        <h1>FAUX</h1>
-    </section>
+<section>
+    <h1>FAUX</h1>
+</section>
 
-    <section>
-        <h2>The JS SHOW</h2>
+<section data-id="js-show">
+    <h2>The JS SHOW</h2>
 
-        <div id="js-terminal" class="stretch"></div>
-    </section>
-    <section>
-        <iframe src="//www.youtube.com/embed/oAuekVilLX0"
-                class="stretch"
-                frameborder="0"
-                data-autoplay
-                auto_play="1">
-        </iframe>
-    </section>
+    <div id="js-terminal" class="stretch"></div>
+</section>
+
+<section data-id="dart"
+         data-background="lib/img/title2-bg.png"
+         data-background-transition="slide"
+         data-transition="linear"
+         class="header">
+    <div class="rotate45">
+        <div class="cyan">&nbsp;</div>
+        <div class="orange">&nbsp;</div>
+        <div class="white">&nbsp;</div>
+        <h2>Dart</h2>
+    </div>
+</section>
+
+<section data-id="dart-birth"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    <p>Powered by Google en <span class="color">2011</span></p>
+</section>
+
+<section data-id="dart-server"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Peut être executé dans une machine <span class="color">virtuelle</span>
+</section>
+
+<section data-id="dart-client"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Seul une version de Chromium supporte cette <span class="color">machine virtuelle</span>
+</section>
+
+<section data-id="dart-both"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Est donc côté <span class="color">serveur</span> & côté <span class="color">client</span>
+</section>
+
+<section data-id="dart-compile-to-js"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Ou compilé <span class="color">en JavaScript</span>
+</section>
+
+<section data-id="dart-faster"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Dans les deux cas, il est plus <span class="color">rapide</span>
+</section>
+
+<section data-id="dart-bench"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    <div class="stretch">
+        <iframe class="innerdiv" frameborder="none" src="https://www.dartlang.org/performance/"></iframe>
+    </div>
+</section>
+
+<section data-id="dart-type"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    <span class="color">Typage</span> fort, mais optionel
+    <pre class="code" data-lang="dart" data-writable="false" style="height: 100px">var name = "Mathieu";
+// ou
+var name:String = "Mathieu";</pre>
+</section>
+
+<section data-id="dart-oo"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Modèle <span class="color">orienté objet</span>
+    <pre class="code" data-lang="dart" data-writable="false" style="height: 10em">abstract class Animal{
+    var name = "";
+    Animal.fromName(this.name);
+}
+class Pet extends Animal{
+    var owner = ""
+}</pre>
+</section>
+
+<section data-id="dart-futures"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Modèle <span class="color">orienté objet</span>
+    <pre class="code" data-lang="dart" data-writable="true" style="height: 15em">import 'dart:io';
+import 'dart:async';
+
+void printDailyNewsDigest() {
+    File file = new File("dailyNewsDigest.txt");
+    file.readAsString()
+        .then((content) => print(content))
+        .catchError((error) =>
+            print("Sorry, no news today. Here's why:\n$error"));
+}</pre>
+</section>
+
+<section data-id="dart-polymer"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Bien intégré à <span class="color">polymer</span>
+    <pre class="code" data-lang="dart" data-writable="true" style="height: 15em">import 'package:polymer/polymer.dart';
+import 'dart:html';
+
+@CustomTag('click-counter')
+class ClickCounterElement extends PolymerElement {
+    @observable int count = 0;
+
+    void increment(Event e, var detail, Node target) {
+    count += 1;
+    }
+}</pre>
+</section>
+
+<section data-id="dart-env"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Fourni avec un <span class="color">écosystème</span> riche
+    <ul>
+        <li><a href="http://pub.dartlang.org">pub.dartlang.org</a></li>
+        <li><a href="https://www.dartlang.org/tools/editor">Dart Editor</a></li>
+        <li><a href="http://api.dartlang.org/docs/releases/latest/">Une vraie API (Dart:HTML, Dart:IO,
+            Dart:collection)</a></li>
+    </ul>
+</section>
+
+<section data-id="coffeescript"
+         data-background="lib/img/title2-bg.png"
+         data-background-transition="slide"
+         data-transition="linear"
+         class="header">
+    <div class="rotate45">
+        <div class="cyan">&nbsp;</div>
+        <div class="orange">&nbsp;</div>
+        <div class="white">&nbsp;</div>
+        <h2 class="coffee">CoffeeScript</h2>
+    </div>
+</section>
+
+<section data-id="coffeescript-birth"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Créé en <span class="color">Décembre 2009</span> par Jeremy Ashkenas
+</section>
+
+<section data-id="coffeescript-compile"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Peut être utilisé dés à présent avec le <span class="color">transcompilateur</span>
+</section>
+
+<section data-id="coffeescript-keywords"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Une <span class="color">syntaxe</span> très épurée
+    <div class="cyan" style="text-decoration: line-through;font-size: 2em"> ( ) { } ; , return*</div>
+</section>
+
+<section data-id="coffeescript-example"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Du sucre <span class="color">syntaxique</span>
+    <pre class="code" data-lang="coffee" data-writable="true" style="height: 15em"># for comprehension
+foods = ['broccoli', 'spinach', 'chocolate']
+eat food for food in foods when food isnt 'chocolate'
+
+# for with range
+countdown = (num for num in [10..1])
+
+# Chained opetator
+cholesterol = 127
+
+healthy = 200 > cholesterol > 60</pre>
+</section>
+
+<section data-id="coffeescript-example2"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Du sucre <span class="color">syntaxique</span>
+    <pre class="code" data-lang="coffee" data-writable="true" style="height: 15em"># New operators
+winner = yes if pick in [47, 92, 13]
+
+launch() if ignition is on
+
+volume = 10 if band isnt SpinalTap
+
+letTheWildRumpusBegin() unless answer is no
+
+solipsism = true if mind? and not world?</pre>
+</section>
+
+<section data-id="coffeescript-example2"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    <span class="color">Beaucoup</span> de sucre syntaxique
+    <pre class="code" data-lang="coffee" data-writable="true" style="height: 15em">#destructuring assignement
+weatherReport = (location) ->
+    # Make an Ajax request to fetch the weather...
+    [location, 72, "Mostly Sunny"]
+
+    [city, temp, forecast] = weatherReport "Berkeley, CA"
+
+#the strings become magic
+sentence = "#{ 22 / 7 } is a decent approximation of π"
+html = """
+    &#139;strong>
+        cup of coffeescript
+    &#139;/strong>
+"""</pre>
+</section>
+
+<section data-id="coffeescript-example3"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Modèle <span class="color">orienté objet</span>
+    <pre class="code" data-lang="coffee" data-writable="true" style="height: 15em">class Animal
+    constructor : (@name)->
+
+class Pet extends Animal
+    construtor : (@owner, name) ->
+        super name
+
+cat = new Pet "Mathieu", "Garfield"
+
+if cat instanceof Pet
+    console.log "#{cat.name} is a Pet"</pre>
+</section>
+
+<section data-id="coffeescript-demo"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Modèle <span class="color">orienté objet</span>
+    <pre id="coffee-src" class="code" data-lang="coffee" data-writable="true" style="height: 15em"></pre>
+    <pre id="coffee-dest" class="code" data-lang="coffee" data-writable="true" style="height: 15em"></pre>
+</section>
+
+<section data-id="typescript"
+         data-background="lib/img/title2-bg.png"
+         data-background-transition="slide"
+         data-transition="linear"
+         class="header">
+    <div class="rotate45">
+        <div class="cyan">&nbsp;</div>
+        <div class="orange">&nbsp;</div>
+        <div class="white">&nbsp;</div>
+        <h2>TypeScript</h2>
+    </div>
+</section>
+
+<section data-id="asmjs"
+         data-background="lib/img/title2-bg.png"
+         data-background-transition="slide"
+         data-transition="linear"
+         class="header">
+    <div class="rotate45">
+        <div class="cyan">&nbsp;</div>
+        <div class="orange">&nbsp;</div>
+        <div class="white">&nbsp;</div>
+        <h2>ASM.js</h2>
+    </div>
+</section>
+
+<section data-id="slide"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    <h3>Pensez à utiliser des images</h3>
+
+    <div class="stretch"></div>
+</section>
+
 </div>
 
 <div id="footer">
@@ -172,11 +488,11 @@ app.listen(3000);</div>
     // Full list of configuration options available here:
     // https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
-        controls: false,
+        controls: true,
         progress: true,
         history: true,
         center: true,
-        //keyboard: false,
+        keyboard: false,
 
         //theme: 'devoxx2014',//Reveal.getQueryHash().theme, // available themes are in /css/theme
         transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
@@ -215,8 +531,8 @@ app.listen(3000);</div>
     Reveal.addEventListener('ready', function (event) {
         buildJsTerminal();
         buildJavaJSChart();
-
     });
+
 
     function buildJsTerminal() {
         var settings = {
