@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="lib/css/jquery.terminal.css">
     <link rel="stylesheet" href="lib/css/nv.d3.min.css">
     <link rel="stylesheet" href="lib/css/font.css">
+    <link rel="stylesheet" href="lib/css/solarized_light.css">
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -119,19 +120,23 @@
 
 <section data-id="code-js-examples">
     <h4>Serveur Web</h4>
-        <pre data-lang="javascript" data-writable="false" class="code">var express = require('express');
+<pre><code data-trim>
+    var express = require('express');
 var app = express();
 app.get('/', function (req, res) {
     res.send('Hello, DevoxxFR 2014');
 });
-app.listen(3000);</
+app.listen(3000);
+</code></pre>
 
     <h4>Programmation fonctionnelle</h4>
-        <pre data-lang="javascript" data-writable="false" class="code">_.chain([1,2,3,200])
+<pre><code data-trim>
+_.chain([1,2,3,200])
     .filter(function(num) { return num % 2 === 0; })
     .tap(alert) // (alerted [2, 200])
     .map(function(num) { return num * num })
-    .value();   // [4,40000]</pre>
+    .value(); // [4,40000]
+</code></pre>
 </section>
 
 <section data-id="e58ee1625957e2a1388225f352a6ad66">
@@ -233,9 +238,10 @@ app.listen(3000);</
          data-background-transition="slide"
          data-background-position="0% 25%">
     <span class="color">Typage</span> fort, mais optionel
-    <pre class="code" data-lang="dart" data-writable="false" style="height: 100px">var name = "Mathieu";
+<pre><code data-trim class="language-dart">
+var name = "Mathieu";
 // ou
-var name:String = "Mathieu";</pre>
+String name = "Mathieu";</code></pre>
 </section>
 
 <section data-id="dart-oo"
@@ -244,13 +250,14 @@ var name:String = "Mathieu";</pre>
          data-background-transition="slide"
          data-background-position="0% 25%">
     Modèle <span class="color">orienté objet</span>
-    <pre class="code" data-lang="dart" data-writable="false" style="height: 10em">abstract class Animal{
+<pre><code data-trim class="language-dart">
+abstract class Animal{
     var name = "";
     Animal.fromName(this.name);
 }
 class Pet extends Animal{
     var owner = ""
-}</pre>
+}</code></pre>
 </section>
 
 <section data-id="dart-futures"
@@ -258,8 +265,9 @@ class Pet extends Animal{
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    Modèle <span class="color">orienté objet</span>
-    <pre class="code" data-lang="dart" data-writable="true" style="height: 15em">import 'dart:io';
+    Asynchronisme basé sur des <span class="color">futurs</span>
+<pre><code data-trim class="language-dart">
+import 'dart:io';
 import 'dart:async';
 
 void printDailyNewsDigest() {
@@ -268,7 +276,7 @@ void printDailyNewsDigest() {
         .then((content) => print(content))
         .catchError((error) =>
             print("Sorry, no news today. Here's why:\n$error"));
-}</pre>
+}</code></code></pre>
 </section>
 
 <section data-id="dart-polymer"
@@ -277,17 +285,19 @@ void printDailyNewsDigest() {
          data-background-transition="slide"
          data-background-position="0% 25%">
     Bien intégré à <span class="color">polymer</span>
-    <pre class="code" data-lang="dart" data-writable="true" style="height: 15em">import 'package:polymer/polymer.dart';
+<pre><code data-trim class="language-dart">
+import 'package:polymer/polymer.dart';
 import 'dart:html';
 
 @CustomTag('click-counter')
 class ClickCounterElement extends PolymerElement {
-    @observable int count = 0;
+    @observable
+    int count = 0;
 
     void increment(Event e, var detail, Node target) {
-    count += 1;
+        count += 1;
     }
-}</pre>
+}</code></pre>
 </section>
 
 <section data-id="dart-env"
@@ -348,7 +358,8 @@ class ClickCounterElement extends PolymerElement {
          data-background-transition="slide"
          data-background-position="0% 25%">
     Du sucre <span class="color">syntaxique</span>
-    <pre class="code" data-lang="coffee" data-writable="true" style="height: 15em"># for comprehension
+<pre><code data-trim class="language-coffeescript">
+# for comprehension
 foods = ['broccoli', 'spinach', 'chocolate']
 eat food for food in foods when food isnt 'chocolate'
 
@@ -358,7 +369,8 @@ countdown = (num for num in [10..1])
 # Chained opetator
 cholesterol = 127
 
-healthy = 200 > cholesterol > 60</pre>
+healthy = 200 > cholesterol > 60
+</code></pre>
 </section>
 
 <section data-id="coffeescript-example2"
@@ -367,7 +379,8 @@ healthy = 200 > cholesterol > 60</pre>
          data-background-transition="slide"
          data-background-position="0% 25%">
     Du sucre <span class="color">syntaxique</span>
-    <pre class="code" data-lang="coffee" data-writable="true" style="height: 15em"># New operators
+<pre><code data-trim class="language-coffeescript">
+# New operators
 winner = yes if pick in [47, 92, 13]
 
 launch() if ignition is on
@@ -376,7 +389,8 @@ volume = 10 if band isnt SpinalTap
 
 letTheWildRumpusBegin() unless answer is no
 
-solipsism = true if mind? and not world?</pre>
+solipsism = true if mind? and not world?
+</code></pre>
 </section>
 
 <section data-id="coffeescript-example2"
@@ -385,20 +399,22 @@ solipsism = true if mind? and not world?</pre>
          data-background-transition="slide"
          data-background-position="0% 25%">
     <span class="color">Beaucoup</span> de sucre syntaxique
-    <pre class="code" data-lang="coffee" data-writable="true" style="height: 15em">#destructuring assignement
+<pre><code data-trim>
+#destructuring assignement
 weatherReport = (location) ->
     # Make an Ajax request to fetch the weather...
     [location, 72, "Mostly Sunny"]
 
-    [city, temp, forecast] = weatherReport "Berkeley, CA"
+[city, temp, forecast] = weatherReport "Berkeley, CA"
 
 #the strings become magic
 sentence = "#{ 22 / 7 } is a decent approximation of π"
 html = """
-    &#139;strong>
-        cup of coffeescript
-    &#139;/strong>
-"""</pre>
+<strong>
+cup of coffeescript
+</strong>
+"""
+</code></pre>
 </section>
 
 <section data-id="coffeescript-example3"
@@ -407,7 +423,8 @@ html = """
          data-background-transition="slide"
          data-background-position="0% 25%">
     Modèle <span class="color">orienté objet</span>
-    <pre class="code" data-lang="coffee" data-writable="true" style="height: 15em">class Animal
+<pre><code data-trim class="language-coffeescript">
+class Animal
     constructor : (@name)->
 
 class Pet extends Animal
@@ -417,7 +434,8 @@ class Pet extends Animal
 cat = new Pet "Mathieu", "Garfield"
 
 if cat instanceof Pet
-    console.log "#{cat.name} is a Pet"</pre>
+    console.log "#{cat.name} is a Pet"
+</code></pre>
 </section>
 
 <section data-id="coffeescript-demo"
@@ -426,8 +444,8 @@ if cat instanceof Pet
          data-background-transition="slide"
          data-background-position="0% 25%">
     Modèle <span class="color">orienté objet</span>
-    <pre id="coffee-src" class="code" data-lang="coffee" data-writable="true" style="height: 15em"></pre>
-    <pre id="coffee-dest" class="code" data-lang="coffee" data-writable="true" style="height: 15em"></pre>
+    <pre id="coffee-src" class="code" data-lang="coffee" data-writable="true" style="height: 15em"><code data-trim></code></pre>
+    <pre id="coffee-dest" class="code" data-lang="coffee" data-writable="true" style="height: 15em"><code data-trim></code></pre>
 </section>
 
 <section data-id="typescript"
@@ -465,12 +483,11 @@ if cat instanceof Pet
 
     <div class="stretch"></div>
 </section>
-
 </div>
-
 <div id="footer">
     <span id="hashtag">#jsByteCode</span>
     <span id="twitter-author">@MatBreton</span>
+</div>
 </div>
 
 
@@ -481,7 +498,7 @@ if cat instanceof Pet
 <script src="lib/js/d3.v3.js"></script>
 <script src="lib/js/nv.d3.min.js"></script>
 <script src="lib/js/nv.d3.min.js"></script>
-<script src="plugin/ace/ace.js"></script>
+<!--script src="plugin/ace/ace.js"></script-->
 
 <script>
 
@@ -492,7 +509,7 @@ if cat instanceof Pet
         progress: true,
         history: true,
         center: true,
-        keyboard: false,
+        keyboard: true,
 
         //theme: 'devoxx2014',//Reveal.getQueryHash().theme, // available themes are in /css/theme
         transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
@@ -509,6 +526,9 @@ if cat instanceof Pet
 
         // Optional libraries used to extend on reveal.js
         dependencies: [
+            { src: 'plugin/highlight/highlight.min.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
             { src: 'lib/js/classList.js', condition: function () {
                 return !document.body.classList;
             } },
