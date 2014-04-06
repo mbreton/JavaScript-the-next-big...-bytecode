@@ -17,7 +17,7 @@ $typeScriptColor: #007acc;
 
 $footerHeight: 1.4em;
 $sideMargin: 0.3em;
-$footerFontSize: 0.9em;
+$footerFontSize: 0.8em;
 $footerTopPaddingText: ($footerHeight - $footerFontSize) /2;
 
 // Override theme settings (see ../template/settings.scss)
@@ -166,16 +166,21 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     text-align: left;
   }
 
-  section[data-id="dart"] .rotate45 h2 {
+  section[data-id="dart"] {
+    .rotate45 h2 {
+    }
     font-family: "Montserrat";
+    .color {
+      color: #29bed5;
+    }
   }
 
   section[data-id="dart-bench"] {
     .stretch {
-      overflow:hidden;
+      overflow: hidden;
       .innerdiv {
         overflow: none;
-        position:relative;
+        position: relative;
         width: 100%;
         height: 100%;
         top: -170px;
@@ -183,12 +188,45 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     }
   }
 
-  section[data-id="coffeescript"] .rotate45 h2 {
+  .editor {
+    box-shadow: 0 0 6px rgba(0, 0, 0, .3);
+    letter-spacing: normal;
+    text-align: left;
+    zoom: normal;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
   }
 
-  section[data-id="typescript"] .rotate45 h2 {
-    font-family: "Segoe UI";
-    color: $typeScriptColor;
+  .side {
+    display: inline-block;
+    width: 45%;
+    height: 90%;
+    padding: 0;
+    margin: 0.5em 0.5em 0 0.5em;
+    font-size:0.7em;
+    .editor{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  section[data-id^="coffeescript"] {
+    .color, .rotate45 h2 {
+      font-family: 'Lobster' !important;
+      color: #df0075 !important;
+    }
+  }
+
+  section[data-id="typescript"] {
+    .color {
+      color: #afcd37;
+      font-family: "Segoe UI";
+    }
+    .rotate45 h2 {
+      font-family: "Segoe UI";
+      color: $typeScriptColor;
+    }
   }
 
   section[data-id="asmjs"] .rotate45 h2 {

@@ -14,7 +14,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/devoxx2014.css" id="theme">
     <link rel="stylesheet" href="lib/css/jquery.terminal.css">
     <link rel="stylesheet" href="lib/css/nv.d3.min.css">
@@ -122,16 +122,16 @@
     <h4>Serveur Web</h4>
 <pre><code data-trim>
     var express = require('express');
-var app = express();
-app.get('/', function (req, res) {
+    var app = express();
+    app.get('/', function (req, res) {
     res.send('Hello, DevoxxFR 2014');
-});
-app.listen(3000);
+    });
+    app.listen(3000);
 </code></pre>
 
     <h4>Programmation fonctionnelle</h4>
 <pre><code data-trim>
-_.chain([1,2,3,200])
+    _.chain([1,2,3,200])
     .filter(function(num) { return num % 2 === 0; })
     .tap(alert) // (alerted [2, 200])
     .map(function(num) { return num * num })
@@ -187,7 +187,7 @@ _.chain([1,2,3,200])
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    Peut être executé dans une machine <span class="color">virtuelle</span>
+    Peut être executé dans une <span class="color">machine virtuelle</span>
 </section>
 
 <section data-id="dart-client"
@@ -195,7 +195,7 @@ _.chain([1,2,3,200])
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    Seul une version de Chromium supporte cette <span class="color">machine virtuelle</span>
+    Seul <span class="color">Dartium</span>, une version de Chromium, supporte cette machine virtuelle
 </section>
 
 <section data-id="dart-both"
@@ -239,9 +239,9 @@ _.chain([1,2,3,200])
          data-background-position="0% 25%">
     <span class="color">Typage</span> fort, mais optionel
 <pre><code data-trim class="language-dart">
-var name = "Mathieu";
-// ou
-String name = "Mathieu";</code></pre>
+    var name = "Mathieu";
+    // ou
+    String name = "Mathieu";</code></pre>
 </section>
 
 <section data-id="dart-oo"
@@ -251,13 +251,13 @@ String name = "Mathieu";</code></pre>
          data-background-position="0% 25%">
     Modèle <span class="color">orienté objet</span>
 <pre><code data-trim class="language-dart">
-abstract class Animal{
+    abstract class Animal{
     var name = "";
     Animal.fromName(this.name);
-}
-class Pet extends Animal{
+    }
+    class Pet extends Animal{
     var owner = ""
-}</code></pre>
+    }</code></pre>
 </section>
 
 <section data-id="dart-futures"
@@ -267,16 +267,16 @@ class Pet extends Animal{
          data-background-position="0% 25%">
     Asynchronisme basé sur des <span class="color">futurs</span>
 <pre><code data-trim class="language-dart">
-import 'dart:io';
-import 'dart:async';
+    import 'dart:io';
+    import 'dart:async';
 
-void printDailyNewsDigest() {
+    void printDailyNewsDigest() {
     File file = new File("dailyNewsDigest.txt");
     file.readAsString()
-        .then((content) => print(content))
-        .catchError((error) =>
-            print("Sorry, no news today. Here's why:\n$error"));
-}</code></code></pre>
+    .then((content) => print(content))
+    .catchError((error) =>
+    print("Sorry, no news today. Here's why:\n$error"));
+    }</code></code></pre>
 </section>
 
 <section data-id="dart-polymer"
@@ -286,18 +286,18 @@ void printDailyNewsDigest() {
          data-background-position="0% 25%">
     Bien intégré à <span class="color">polymer</span>
 <pre><code data-trim class="language-dart">
-import 'package:polymer/polymer.dart';
-import 'dart:html';
+    import 'package:polymer/polymer.dart';
+    import 'dart:html';
 
-@CustomTag('click-counter')
-class ClickCounterElement extends PolymerElement {
+    @CustomTag('click-counter')
+    class ClickCounterElement extends PolymerElement {
     @observable
     int count = 0;
 
     void increment(Event e, var detail, Node target) {
-        count += 1;
+    count += 1;
     }
-}</code></pre>
+    }</code></pre>
 </section>
 
 <section data-id="dart-env"
@@ -349,7 +349,28 @@ class ClickCounterElement extends PolymerElement {
          data-background-transition="slide"
          data-background-position="0% 25%">
     Une <span class="color">syntaxe</span> très épurée
-    <div class="cyan" style="text-decoration: line-through;font-size: 2em"> ( ) { } ; , return*</div>
+    <div style="text-decoration: line-through;font-size: 2em;padding-top:10px"> ( ) { } ; , return*</div>
+</section>
+
+<section data-id="coffeescript-oo"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Modèle <span class="color">orienté objet</span>
+<pre><code data-trim class="language-coffeescript">
+    class Animal
+    constructor : (@name)->
+
+    class Pet extends Animal
+    construtor : (@owner, name) ->
+    super name
+
+    cat = new Pet "Mathieu", "Garfield"
+
+    if cat instanceof Pet
+    console.log "#{cat.name} is a Pet"
+</code></pre>
 </section>
 
 <section data-id="coffeescript-example"
@@ -359,17 +380,17 @@ class ClickCounterElement extends PolymerElement {
          data-background-position="0% 25%">
     Du sucre <span class="color">syntaxique</span>
 <pre><code data-trim class="language-coffeescript">
-# for comprehension
-foods = ['broccoli', 'spinach', 'chocolate']
-eat food for food in foods when food isnt 'chocolate'
+    # for comprehension
+    foods = ['broccoli', 'spinach', 'chocolate']
+    eat food for food in foods when food isnt 'chocolate'
 
-# for with range
-countdown = (num for num in [10..1])
+    # for with range
+    countdown = (num for num in [10..1])
 
-# Chained opetator
-cholesterol = 127
+    # Chained opetator
+    cholesterol = 127
 
-healthy = 200 > cholesterol > 60
+    healthy = 200 > cholesterol > 60
 </code></pre>
 </section>
 
@@ -378,18 +399,18 @@ healthy = 200 > cholesterol > 60
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    Du sucre <span class="color">syntaxique</span>
+    <span class="color">Encore</span> du sucre syntaxique
 <pre><code data-trim class="language-coffeescript">
-# New operators
-winner = yes if pick in [47, 92, 13]
+    # New operators
+    winner = yes if pick in [47, 92, 13]
 
-launch() if ignition is on
+    launch() if ignition is on
 
-volume = 10 if band isnt SpinalTap
+    volume = 10 if band isnt SpinalTap
 
-letTheWildRumpusBegin() unless answer is no
+    letTheWildRumpusBegin() unless answer is no
 
-solipsism = true if mind? and not world?
+    solipsism = true if mind? and not world?
 </code></pre>
 </section>
 
@@ -400,52 +421,42 @@ solipsism = true if mind? and not world?
          data-background-position="0% 25%">
     <span class="color">Beaucoup</span> de sucre syntaxique
 <pre><code data-trim>
-#destructuring assignement
-weatherReport = (location) ->
+    #destructuring assignement
+    weatherReport = (location) ->
     # Make an Ajax request to fetch the weather...
     [location, 72, "Mostly Sunny"]
 
-[city, temp, forecast] = weatherReport "Berkeley, CA"
+    [city, temp, forecast] = weatherReport "Berkeley, CA"
 
-#the strings become magic
-sentence = "#{ 22 / 7 } is a decent approximation of π"
-html = """
-<strong>
-cup of coffeescript
-</strong>
-"""
+    #the strings become magic
+    sentence = "#{ 22 / 7 } is a decent approximation of π"
+    html = """
+    <strong>
+        cup of coffeescript
+    </strong>
+    """
 </code></pre>
 </section>
 
-<section data-id="coffeescript-example3"
+<section data-id="coffeescript-editor"
          data-background="lib/img/slide-devoxx-bg.png"
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    Modèle <span class="color">orienté objet</span>
-<pre><code data-trim class="language-coffeescript">
-class Animal
-    constructor : (@name)->
+    Ca fait des <span class="color">carries</span>
 
-class Pet extends Animal
-    construtor : (@owner, name) ->
-        super name
+    <div class="stretch">
+        <div class="side">
+            <h5>CoffeeScript</h5>
 
-cat = new Pet "Mathieu", "Garfield"
+            <div id="coffee-src" class="editor" data-lang="coffee"></div>
+        </div>
+        <div class="side">
+            <h5>JavaScript</h5>
 
-if cat instanceof Pet
-    console.log "#{cat.name} is a Pet"
-</code></pre>
-</section>
-
-<section data-id="coffeescript-demo"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    Modèle <span class="color">orienté objet</span>
-    <pre id="coffee-src" class="code" data-lang="coffee" data-writable="true" style="height: 15em"><code data-trim></code></pre>
-    <pre id="coffee-dest" class="code" data-lang="coffee" data-writable="true" style="height: 15em"><code data-trim></code></pre>
+            <div id="coffee-dest" class="editor" data-lang="javascript"></div>
+        </div>
+    </div>
 </section>
 
 <section data-id="typescript"
@@ -459,6 +470,96 @@ if cat instanceof Pet
         <div class="white">&nbsp;</div>
         <h2>TypeScript</h2>
     </div>
+</section>
+
+<section data-id="tyepscript-birth"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Créé en février<span class="color"> 2012</span> par Microsoft
+    <p class="fragment fade-in">Passé récement en V1.0</p>
+</section>
+<section data-id="tyepscript-vs"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Donc très bien intégré dans la <span class="color">suite Visual Studio</span>
+    <img src="lib/img/typescript-visual.png"/>
+</section>
+<section data-id="tyepscript-birth"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Ressemble à ce qu'il y aura en <span class="color">ECMA6</span>
+</section>
+<section data-id="tyepscript-birth"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    <span class="color">Super ensemble</span> de JavaScript
+    <div class="stretch">
+        <div class="side">
+            <h5>CoffeeScript</h5>
+
+            <div id="typescript-src" class="editor" data-lang="coffee"></div>
+        </div>
+        <div class="side">
+            <h5>JavaScript</h5>
+
+            <div id="typescript-dest" class="editor" data-lang="javascript"></div>
+        </div>
+    </div>
+
+</section>
+<section data-id="tyepscript-birth"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Nécisse des <span class="color">interfaces</span> d'interopérabilité
+    <a href="github.com/borisyankov/DefinitelyTyped">github.com/borisyankov/DefinitelyTyped</a>
+    <pre><code data-trim class="language-java">/*
+        Interface for the AJAX setting that will configure the AJAX request
+        */
+        interface JQueryAjaxSettings {
+        accepts?: any;
+        async?: boolean;
+        beforeSend? (jqXHR: JQueryXHR, settings: JQueryAjaxSettings): any;
+        cache?: boolean;
+        complete? (jqXHR: JQueryXHR, textStatus: string): any;
+        contents?: { [key: string]: any; };
+        contentType?: any;
+        context?: any;
+        converters?: { [key: string]: any; };
+        crossDomain?: boolean;
+        data?: any;
+        dataFilter? (data: any, ty: any): any;
+        dataType?: string;
+        error? (jqXHR: JQueryXHR, textStatus: string, errorThrow: string): any;
+        global?: boolean;
+        headers?: { [key: string]: any; };
+        ifModified?: boolean;
+        isLocal?: boolean;
+        jsonp?: string;
+        jsonpCallback?: any;
+        mimeType?: string;
+        password?: string;
+        processData?: boolean;
+        scriptCharset?: string;
+        statusCode?: { [key: string]: any; };
+        success? (data: any, textStatus: string, jqXHR: JQueryXHR): any;
+        timeout?: number;
+        traditional?: boolean;
+        type?: string;
+        url?: string;
+        username?: string;
+        xhr?: any;
+        xhrFields?: { [key: string]: any; };
+        }</code></pre>
 </section>
 
 <section data-id="asmjs"
@@ -479,9 +580,7 @@ if cat instanceof Pet
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    <h3>Pensez à utiliser des images</h3>
-
-    <div class="stretch"></div>
+    Ca vient de chez <span class="color">Mozilla</span>
 </section>
 </div>
 <div id="footer">
@@ -498,7 +597,8 @@ if cat instanceof Pet
 <script src="lib/js/d3.v3.js"></script>
 <script src="lib/js/nv.d3.min.js"></script>
 <script src="lib/js/nv.d3.min.js"></script>
-<!--script src="plugin/ace/ace.js"></script-->
+<script src="lib/js/coffee-script.js"></script>
+<script src="plugin/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 
 <script>
 
@@ -551,6 +651,7 @@ if cat instanceof Pet
     Reveal.addEventListener('ready', function (event) {
         buildJsTerminal();
         buildJavaJSChart();
+        initCoffeeScriptCompiler();
     });
 
 
@@ -620,6 +721,24 @@ if cat instanceof Pet
             nv.utils.windowResize(chart.update);
 
             return chart;
+        });
+    }
+
+    function initCoffeeScriptCompiler() {
+        var coffeeEditor = ace.edit('coffee-src');
+        var jsRendering = ace.edit('coffee-dest');
+
+        coffeeEditor.on('change', function () {
+            var coffeeCode = coffeeEditor.getSession().getValue();
+            setTimeout(function () {
+                try {
+                    var jsCode = coffeeCode === "" ? "" : CoffeeScript.compile(coffeeCode);
+                    jsRendering.getSession().setValue(jsCode);
+                } catch (e) {
+                    console.log(e.getMessage());
+                    jsRendering.getSession().setValue("");
+                }
+            }, 1);
         });
     }
 
