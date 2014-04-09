@@ -166,28 +166,6 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     text-align: left;
   }
 
-  section[data-id="dart"] {
-    .rotate45 h2 {
-    }
-    font-family: "Montserrat";
-    .color {
-      color: #29bed5;
-    }
-  }
-
-  section[data-id="dart-bench"] {
-    .stretch {
-      overflow: hidden;
-      .innerdiv {
-        overflow: none;
-        position: relative;
-        width: 100%;
-        height: 100%;
-        top: -170px;
-      }
-    }
-  }
-
   .editor {
     box-shadow: 0 0 6px rgba(0, 0, 0, .3);
     letter-spacing: normal;
@@ -204,33 +182,65 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     height: 90%;
     padding: 0;
     margin: 0.5em 0.5em 0 0.5em;
-    font-size:0.7em;
-    .editor{
+    font-size: 0.7em;
+    .editor {
       width: 100%;
       height: 100%;
     }
   }
 
-  section[data-id^="coffeescript"] {
-    .color, .rotate45 h2 {
-      font-family: 'Lobster' !important;
-      color: #df0075 !important;
+  section[data-id="dart-bench"] {
+    .stretch {
+      overflow: hidden;
+      .innerdiv {
+        overflow: none;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: -170px;
+      }
     }
   }
 
-  section[data-id="typescript"] {
-    .color {
+  section[data-id^="dart"] {
+    .rotate45 h2, .color {
+      font-family: "Montserrat";
+      color: #0084c5;
+    }
+  }
+
+  section[data-id^="coffeescript"] {
+    .color, .rotate45 h2, h1 {
+      font-family: 'Lobster';
+      color: #CC1487;
+    }
+  }
+
+  section[data-id^="typescript"] {
+    .color, .rotate45 h2, h1 {
       color: #afcd37;
       font-family: "Segoe UI";
     }
-    .rotate45 h2 {
-      font-family: "Segoe UI";
-      color: $typeScriptColor;
-    }
   }
 
-  section[data-id="asmjs"] .rotate45 h2 {
-    color: #0a0;
-    font-family: Consolas, Menlo;
+  section[data-id^="asm"] {
+    color: white;
+    .rotate45 h2, .color, h1 {
+      color: #0a0;
+      font-family: "Courier new";
+    }
+     .rotate45 h2 {
+      font-variant: small-caps;
+    }
+    .color {
+      font-size: 1.2em;
+    }
+  }
+}
+
+.asm {
+  .backgrounds {
+    background: url('/lib/img/slide-devoxx-bg-negative.png') no-repeat #000000;
+    background-position: 0% 25%;
   }
 }

@@ -6,7 +6,7 @@
         var editorElements = document.querySelectorAll('.editor');
         Array.prototype.forEach.call(editorElements, function (editorElement) {
             var editor = ace.edit(editorElement);
-            editor.setFontSize(20);
+            editor.setFontSize(15);
             editor.setTheme("ace/theme/solarized_light");
 			//clearInterval(editor.renderer.$textLayer.$pollSizeChangesTimer);
 			Reveal.addEventListener( 'slidechanged', function( event ) {
