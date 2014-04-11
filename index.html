@@ -521,9 +521,9 @@ test("Simple test", function () {
          data-background-position="0% 25%">
     <span class="color">Typage</span> fort, mais optionel
 <pre><code data-trim class="language-dart">
-    var name = "Mathieu";
-    // ou
-    String name = "Mathieu";</code></pre>
+var name = "Mathieu";
+// ou
+String name = "Mathieu";</code></pre>
 </section>
 
 <section data-id="dart-oo"
@@ -533,13 +533,13 @@ test("Simple test", function () {
          data-background-position="0% 25%">
     Modèle <span class="color">orienté objet</span>
 <pre><code data-trim class="language-dart">
-    abstract class Animal{
+abstract class Animal{
     var name = "";
     Animal.fromName(this.name);
-    }
-    class Pet extends Animal{
+}
+class Pet extends Animal{
     var owner = ""
-    }</code></pre>
+}</code></pre>
 </section>
 
 <section data-id="dart-futures"
@@ -549,16 +549,16 @@ test("Simple test", function () {
          data-background-position="0% 25%">
     Asynchronisme basé sur des <span class="color">futurs</span>
 <pre><code data-trim class="language-dart">
-    import 'dart:io';
-    import 'dart:async';
+import 'dart:io';
+import 'dart:async';
 
-    void printDailyNewsDigest() {
-    File file = new File("dailyNewsDigest.txt");
-    file.readAsString()
+void printDailyNewsDigest() {
+File file = new File("dailyNewsDigest.txt");
+file.readAsString()
     .then((content) => print(content))
     .catchError((error) =>
-    print("Sorry, no news today. Here's why:\n$error"));
-    }</code></code></pre>
+        print("Sorry, no news today. Here's why:\n$error"));
+}</code></code></pre>
 </section>
 
 <section data-id="dart-polymer"
@@ -568,18 +568,18 @@ test("Simple test", function () {
          data-background-position="0% 25%">
     Bien intégré à <span class="color">polymer</span>
 <pre><code data-trim class="language-dart">
-    import 'package:polymer/polymer.dart';
-    import 'dart:html';
+import 'package:polymer/polymer.dart';
+import 'dart:html';
 
-    @CustomTag('click-counter')
-    class ClickCounterElement extends PolymerElement {
+@CustomTag('click-counter')
+class ClickCounterElement extends PolymerElement {
     @observable
     int count = 0;
 
     void increment(Event e, var detail, Node target) {
-    count += 1;
+        count += 1;
     }
-    }</code></pre>
+}</code></pre>
 </section>
 
 <section data-id="dart-env"
@@ -641,16 +641,16 @@ test("Simple test", function () {
          data-background-position="0% 25%">
     Modèle <span class="color">orienté objet</span>
 <pre><code data-trim class="language-coffeescript">
-    class Animal
+class Animal
     constructor : (@name)->
 
-    class Pet extends Animal
+class Pet extends Animal
     construtor : (@owner, name) ->
-    super name
+        super name
 
-    cat = new Pet "Mathieu", "Garfield"
+cat = new Pet "Mathieu", "Garfield"
 
-    if cat instanceof Pet
+if cat instanceof Pet
     console.log "#{cat.name} is a Pet"
 </code></pre>
 </section>
@@ -662,17 +662,17 @@ test("Simple test", function () {
          data-background-position="0% 25%">
     Du sucre <span class="color">syntaxique</span>
 <pre><code data-trim class="language-coffeescript">
-    # for comprehension
-    foods = ['broccoli', 'spinach', 'chocolate']
-    eat food for food in foods when food isnt 'chocolate'
+# for comprehension
+foods = ['broccoli', 'spinach', 'chocolate']
+eat food for food in foods when food isnt 'chocolate'
 
-    # for with range
-    countdown = (num for num in [10..1])
+# for with range
+countdown = (num for num in [10..1])
 
-    # Chained opetator
-    cholesterol = 127
+# Chained opetator
+cholesterol = 127
 
-    healthy = 200 > cholesterol > 60
+healthy = 200 > cholesterol > 60
 </code></pre>
 </section>
 
@@ -683,16 +683,16 @@ test("Simple test", function () {
          data-background-position="0% 25%">
     <span class="color">Encore</span> du sucre syntaxique
 <pre><code data-trim class="language-coffeescript">
-    # New operators
-    winner = yes if pick in [47, 92, 13]
+# New operators
+winner = yes if pick in [47, 92, 13]
 
-    launch() if ignition is on
+launch() if ignition is on
 
-    volume = 10 if band isnt SpinalTap
+volume = 10 if band isnt SpinalTap
 
-    letTheWildRumpusBegin() unless answer is no
+letTheWildRumpusBegin() unless answer is no
 
-    solipsism = true if mind? and not world?
+solipsism = true if mind? and not world?
 </code></pre>
 </section>
 
@@ -703,20 +703,20 @@ test("Simple test", function () {
          data-background-position="0% 25%">
     <span class="color">Beaucoup</span> de sucre syntaxique
 <pre><code data-trim>
-    #destructuring assignement
-    weatherReport = (location) ->
+#destructuring assignement
+weatherReport = (location) ->
     # Make an Ajax request to fetch the weather...
     [location, 72, "Mostly Sunny"]
 
-    [city, temp, forecast] = weatherReport "Berkeley, CA"
+[city, temp, forecast] = weatherReport "Berkeley, CA"
 
-    #the strings become magic
-    sentence = "#{ 22 / 7 } is a decent approximation of π"
-    html = """
-    <strong>
-        cup of coffeescript
-    </strong>
-    """
+#the strings become magic
+sentence = "#{ 22 / 7 } is a decent approximation of π"
+html = """
+<strong>
+    cup of coffeescript
+</strong>
+"""
 </code></pre>
 </section>
 
