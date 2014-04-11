@@ -199,12 +199,12 @@ test("Simple test", function () {
     <section>
         <h4 class="underline">Un JDK vous dites, humm ...</h4>
         <div class="stretch">
-            <p>L'api de base est très pauvre</p>
+            <p>L'api de base est très pauvre. Votre SDK est constitué de libraitie externe :</p>
             <ul>
                 <li class="fragment">MomentJS</li>
-                <li class="fragment">JQuery</li>
-                <li class="fragment">LoDash/UnderScore</li>
-                <li class="fragment">Require/Browserify</li>
+                <li class="fragment">JQuery/Zepto</li>
+                <li class="fragment">Lo-Dash/Underscore</li>
+                <li class="fragment">RequireJS/Browserify</li>
             </ul>
         </div>
     </section>
@@ -219,6 +219,10 @@ test("Simple test", function () {
         <li class="fragment">moins WTF !</li>
         <li class="fragment">doté d'outils plus puissant</li>
     </ul>
+</section>
+
+<section>
+    <h3 class="underline"><span class="bloc">BYTECODE</span> de quoi ?</h3>
 </section>
 
 <section>
@@ -432,6 +436,28 @@ test("Simple test", function () {
          data-background-transition="slide"
          data-background-position="0% 25%">
     <p>Powered by Google en <span class="color">2011</span></p>
+    <p class="fragment">Récement sortie en <span class="color">version 1.3</span></p>
+</section>
+
+<section data-id="dart-birth"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    <p>Sous license <span class="color">BSD</span></p>
+</section>
+
+<section data-id="dart-birth"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    <h4>Conçue pour :</h4>
+    <ul>
+        <li class="fragment">bâtir de large application web</li>
+        <li class="fragment">créer des jeux vidéos </li>
+        <li class="fragment">être plus rapide que JavaScript</li>
+    </ul>
 </section>
 
 <section data-id="dart-server"
@@ -439,9 +465,7 @@ test("Simple test", function () {
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    <p>
-        Peut être executé dans une <span class="color">machine virtuelle</span>
-    </p>
+    <p>Peut être executé dans une <span class="color">machine virtuelle</span></p>
 
     <p class="fragment">
         Ou sur <span class="color">Dartium</span>, une version de Chromium
@@ -473,7 +497,7 @@ test("Simple test", function () {
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    <p>Nativement, Dart est plus rapide <span class="color">rapide</span> JS</p>
+    <p>Nativement, Dart est plus rapide <span class="color">rapide</span> que JavaScript</p>
 
     <p>Et...</p>
 
@@ -736,6 +760,15 @@ test("Simple test", function () {
     Créé en février <span class="color">2012</span> par Microsoft
     <p class="fragment fade-in">Passé récement en V1.0</p>
 </section>
+
+<section data-id="typescript-birth"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Sous license <span class="color">Apache 2 License</span>
+</section>
+
 <section data-id="typescript-vs"
          data-background="lib/img/slide-devoxx-bg.png"
          data-background-size="6% 90%"
@@ -763,23 +796,23 @@ test("Simple test", function () {
             <div class="side">
                 TypeScript
                 <div id="typescript-src-1" class="editor source" data-lang="typescript">function Greeter(greeting:
-                    string) {
-                    this.greeting = greeting;
-                    }
+string) {
+    this.greeting = greeting;
+}
 
-                    Greeter.prototype.greet = function() {
-                    return "Hello, " + this.greeting;
-                    }
+Greeter.prototype.greet = function() {
+    return "Hello, " + this.greeting;
+}
 
-                    var greeter = new Greeter("world");
+var greeter = new Greeter("world");
 
-                    var button = document.createElement('button');
-                    button.textContent = "Say Hello";
-                    button.onclick = function() {
-                    alert(greeter.greet());
-                    };
+var button = document.createElement('button');
+button.textContent = "Say Hello";
+button.onclick = function() {
+    alert(greeter.greet());
+};
 
-                    document.body.appendChild(button);
+document.body.appendChild(button);
                 </div>
             </div>
             <div class="side">
@@ -795,26 +828,24 @@ test("Simple test", function () {
             <div class="side">
                 TypeScript
                 <div id="typescript-src-2" class="editor source" data-lang="typescript">class Greeter {
-                    greeting: string;
-                    constructor(message: string) {
-                    this.greeting = message;
-                    }
-                    greet() {
-                    return "Hello, " + this.greeting;
-                    }
-                    }
+    greeting: string;
+    constructor(message: string) {
+        this.greeting = message;
+    }
+    greet() {
+        return "Hello, " + this.greeting;
+    }
+}
 
-                    var greeter = new Greeter("world");
+var greeter = new Greeter("world");
 
-                    var button = document.createElement('button');
-                    button.textContent = "Say Hello";
-                    button.onclick = function() {
-                    alert(greeter.greet());
-                    }
+var button = document.createElement('button');
+button.textContent = "Say Hello";
+button.onclick = function() {
+    alert(greeter.greet());
+}
 
-                    document.body.appendChild(button);
-
-                </div>
+document.body.appendChild(button);</div>
             </div>
             <div class="side">
                 JavaScript
@@ -828,29 +859,25 @@ test("Simple test", function () {
         <div class="stretch">
             <div class="side">
                 TypeScript
-                <div id="typescript-src-3" class="editor source" data-lang="typescript">class Greeter
-                    <T> {
-                        greeting: T;
-                        constructor(message: T) {
-                        this.greeting = message;
-                        }
-                        greet() {
-                        return this.greeting;
-                        }
-                        }
+                <div id="typescript-src-3" class="editor source" data-lang="typescript">class Greeter <T> {
+    greeting: T;
+    constructor(message: T) {
+        this.greeting = message;
+    }
+    greet() {
+        return this.greeting;
+    }
+}
 
-                        var greeter = new Greeter
-                        <string>("Hello, world");
+var greeter = new Greeter <string>("Hello, world");
 
-                            var button = document.createElement('button');
-                            button.textContent = "Say Hello";
-                            button.onclick = function () {
-                            alert(greeter.greet());
-                            }
+var button = document.createElement('button');
+button.textContent = "Say Hello";
+button.onclick = function () {
+    alert(greeter.greet());
+}
 
-                            document.body.appendChild(button);
-
-                </div>
+document.body.appendChild(button);</div>
             </div>
             <div class="side">
                 JavaScript
@@ -864,27 +891,25 @@ test("Simple test", function () {
             <div class="side">
                 TypeScript
                 <div id="typescript-src-4" class="editor source" data-lang="typescript">module Sayings {
-                    export class Greeter {
-                    greeting: string;
-                    constructor(message: string) {
-                    this.greeting = message;
-                    }
-                    greet() {
-                    return "Hello, " + this.greeting;
-                    }
-                    }
-                    }
-                    var greeter = new Sayings.Greeter("world");
+    export class Greeter {
+        greeting: string;
+        constructor(message: string) {
+            this.greeting = message;
+        }
+        greet() {
+            return "Hello, " + this.greeting;
+        }
+    }
+}
+var greeter = new Sayings.Greeter("world");
 
-                    var button = document.createElement('button');
-                    button.textContent = "Say Hello";
-                    button.onclick = function() {
-                    alert(greeter.greet());
-                    };
+var button = document.createElement('button');
+button.textContent = "Say Hello";
+button.onclick = function() {
+    alert(greeter.greet());
+};
 
-                    document.body.appendChild(button);
-
-                </div>
+document.body.appendChild(button);</div>
             </div>
             <div class="side">
                 JavaScript
@@ -902,43 +927,43 @@ test("Simple test", function () {
     Nécisse des <span class="color">interfaces</span> d'interopérabilité
     <a href="github.com/borisyankov/DefinitelyTyped">github.com/borisyankov/DefinitelyTyped</a>
     <pre><code data-trim class="language-java">/*
-        Interface for the AJAX setting that will configure the AJAX request
-        */
-        interface JQueryAjaxSettings {
-        accepts?: any;
-        async?: boolean;
-        beforeSend? (jqXHR: JQueryXHR, settings: JQueryAjaxSettings): any;
-        cache?: boolean;
-        complete? (jqXHR: JQueryXHR, textStatus: string): any;
-        contents?: { [key: string]: any; };
-        contentType?: any;
-        context?: any;
-        converters?: { [key: string]: any; };
-        crossDomain?: boolean;
-        data?: any;
-        dataFilter? (data: any, ty: any): any;
-        dataType?: string;
-        error? (jqXHR: JQueryXHR, textStatus: string, errorThrow: string): any;
-        global?: boolean;
-        headers?: { [key: string]: any; };
-        ifModified?: boolean;
-        isLocal?: boolean;
-        jsonp?: string;
-        jsonpCallback?: any;
-        mimeType?: string;
-        password?: string;
-        processData?: boolean;
-        scriptCharset?: string;
-        statusCode?: { [key: string]: any; };
-        success? (data: any, textStatus: string, jqXHR: JQueryXHR): any;
-        timeout?: number;
-        traditional?: boolean;
-        type?: string;
-        url?: string;
-        username?: string;
-        xhr?: any;
-        xhrFields?: { [key: string]: any; };
-        }</code></pre>
+Interface for the AJAX setting that will configure the AJAX request
+*/
+interface JQueryAjaxSettings {
+    accepts?: any;
+    async?: boolean;
+    beforeSend? (jqXHR: JQueryXHR, settings: JQueryAjaxSettings): any;
+    cache?: boolean;
+    complete? (jqXHR: JQueryXHR, textStatus: string): any;
+    contents?: { [key: string]: any; };
+    contentType?: any;
+    context?: any;
+    converters?: { [key: string]: any; };
+    crossDomain?: boolean;
+    data?: any;
+    dataFilter? (data: any, ty: any): any;
+    dataType?: string;
+    error? (jqXHR: JQueryXHR, textStatus: string, errorThrow: string): any;
+    global?: boolean;
+    headers?: { [key: string]: any; };
+    ifModified?: boolean;
+    isLocal?: boolean;
+    jsonp?: string;
+    jsonpCallback?: any;
+    mimeType?: string;
+    password?: string;
+    processData?: boolean;
+    scriptCharset?: string;
+    statusCode?: { [key: string]: any; };
+    success? (data: any, textStatus: string, jqXHR: JQueryXHR): any;
+    timeout?: number;
+    traditional?: boolean;
+    type?: string;
+    url?: string;
+    username?: string;
+    xhr?: any;
+    xhrFields?: { [key: string]: any; };
+}</code></pre>
 </section>
 
 <section data-id="asm-title"
