@@ -53,9 +53,8 @@
 </section>
 
 <section data-id="52b5a3c95ef49db44a5cbf0758de26a2">
-    <h2>
-        By <a rel="author" class="coffy author" href="http://twitter.com/MatBreton">Mathieu Breton</a>
-    </h2>
+    <h3>Mathieu Breton</h3>
+    <div class="avatar"><div></div></div>
     <ul>
         <li>Job :Craftsman developer at <span class="strong">Xebia</span></li>
         <li>Expertise : Web application black belt</li>
@@ -86,31 +85,31 @@
     </div>
 </section>
 
-<section data-id="9cb1c970f6046e9469097f5d0184774a">
-    <h2>JavaScript sur Stackoverflow</h2>
-
-    <div id="chart" class="stretch">
-        <svg></svg>
-    </div>
+<section>
+    <section data-id="js-chart">
+        <h4 class="underline">JavaScript sur Stackoverflow</h4>
+        <img style="border:none" class="stretch" src="lib/img/js-stack.png"/>
+    </section>
+    <section data-id="js-java-chart">
+        <h4 class="underline">Java/JavaScript sur Stackoverflow</h4>
+        <img style="border:none" class="stretch" src="lib/img/js+java-stack.png"/></section>
 </section>
-<section data-id="234ba327c10a44cd4f5dbdd78e233a9c">
-    <h2>Java/JavaScript sur Stackoverflow</h2>
-
 </section>
 
 <section data-id="bd5b6986b812922286fc64da80276853">
-    <h2>JavaSCRIPT is EVERYWHERE</h2>
+    <h4 class="underline">JavaScript is partout !</h4>
 
-    <p>NodeJS</p>
+    <div class="stretch">
+        <p class="fragment">NodeJS</p>
 
-    <p>Bootstrap</p>
+        <p class="fragment">Bootstrap</p>
 
-    <p>AngularJS</p>
+        <p class="fragment">AngularJS</p>
 
-    <p>Backbone</p>
+        <p class="fragment">Backbone</p>
 
-    <p>EmberJS<br>
-    </p>
+        <p class="fragment">EmberJS</p>
+    </div>
 </section>
 
 <section data-id="d8ca0f2710354035a44740b909c1257a">
@@ -119,7 +118,7 @@
 </section>
 
 <section data-id="code-js-examples">
-    <h4>Serveur Web</h4>
+    <h4 class="underline">Serveur Web</h4>
 <pre><code data-trim>
     var express = require('express');
     var app = express();
@@ -128,8 +127,8 @@
     });
     app.listen(3000);
 </code></pre>
-
-    <h4>Programmation fonctionnelle</h4>
+    <br/>
+    <h4 class="underline">Programmation fonctionnelle</h4>
 <pre><code data-trim>
     _.chain([1,2,3,200])
     .filter(function(num) { return num % 2 === 0; })
@@ -148,17 +147,78 @@
 </section>
 
 <section>
-    <h2>Tout va bien alors !</h2>
+    <h2>Le JavaScript c'est bien tous le temps !</h2>
+    <p id="wrong-fragment" class="fragment wrong"></p>
+</section>
+
+<section data-id="bad-js-and-editor">
+    <section data-id="js-show">
+        <h3>The JS SHOW</h3>
+        <div id="js-terminal" class="stretch"></div>
+        <p>&nbsp;</p>
+    </section>
+    <section>
+        <h4 class="underline">Sans typage, l'IDE est perdu</h4>
+        <iframe width="810" height="480" src="http://www.youtube.com/embed/oAuekVilLX0?autoplay=1" auto_play="1" frameborder="0"></iframe>
+    </section>
+    <section data-id="ut-editor">
+        <h4 class="underline">Sans typage, les TU sont moins pertinants</h4>
+        <div class="stretch">
+            <div class="side">
+                <div id="ut-editor" class="editor" data-lang="javascript">// Source
+function A() {}
+A.prototype.plus = function (arg1, arg2) {
+    return arg1 + arg2;
+};
+
+function B(a) {
+    this.a = a;
+}
+B.prototype.plusCaller = function () {
+    return this.a.plus(arg1, arg2);
+};
+
+// Test
+test("Simple test", function () {
+    var dirtyMockA = {
+        plus: function (arg1, arg2) {
+            if (arg1 == 1 && arg2 == 1) {
+                return 2;
+            }
+        }
+    }
+
+    var b = new B(dirtyMockA);
+    equal(b.plusCaller(), 2);
+});
+                </div>
+            </div>
+            <iframe id="utRenderer" class="side" src="qunit.html" ></iframe>
+        </div>
+    </section>
+    <section>
+        <h4 class="underline">Un JDK vous dites, humm ...</h4>
+        <div class="stretch">
+            <p>L'api de base est très pauvre</p>
+            <ul>
+                <li class="fragment">MomentJS</li>
+                <li class="fragment">JQuery</li>
+                <li class="fragment">LoDash/UnderScore</li>
+                <li class="fragment">Require/Browserify</li>
+            </ul>
+        </div>
+    </section>
 </section>
 
 <section>
-    <h1>FAUX</h1>
-</section>
-
-<section data-id="js-show">
-    <h2>The JS SHOW</h2>
-
-    <div id="js-terminal" class="stretch"></div>
+    <h4 class="underline">Le langage web de demain sera</h4>
+    <ul class="stretch">
+        <li class="fragment">toujours aussi productif</li>
+        <li class="fragment">plus facile à maintenir</li>
+        <li class="fragment">typé plus fortement</li>
+        <li class="fragment">moins WTF !</li>
+        <li class="fragment">doté d'outils plus puissant</li>
+    </ul>
 </section>
 
 <section>
@@ -346,6 +406,7 @@
 </section>
 
 <section data-id="leader">
+    <section data-id=""><h2>L'avenir ?</h2></section>
     <section data-id="dart-title"><h1>Dart</h1></section>
     <section data-id="coffeescript-title"><h1>CoffeeScript</h1></section>
     <section data-id="typescript-title"><h1>TypeScript</h1></section>
@@ -416,7 +477,7 @@
 
     <p>Et...</p>
 
-    <p class="fragment">Le code JS généré est plus rapide que celui <span class="color">écrit à la main</span></p>
+    <p class="fragment">Le code JS généré peut être plus rapide que celui <span class="color">écrit à la main</span></p>
 </section>
 
 <section data-id="dart-bench"
@@ -701,24 +762,25 @@
         <div class="stretch">
             <div class="side">
                 TypeScript
-<div id="typescript-src-1" class="editor source" data-lang="typescript">function Greeter(greeting: string) {
-    this.greeting = greeting;
-}
+                <div id="typescript-src-1" class="editor source" data-lang="typescript">function Greeter(greeting:
+                    string) {
+                    this.greeting = greeting;
+                    }
 
-Greeter.prototype.greet = function() {
-    return "Hello, " + this.greeting;
-}
+                    Greeter.prototype.greet = function() {
+                    return "Hello, " + this.greeting;
+                    }
 
-var greeter = new Greeter("world");
+                    var greeter = new Greeter("world");
 
-var button = document.createElement('button');
-button.textContent = "Say Hello";
-button.onclick = function() {
-    alert(greeter.greet());
-};
+                    var button = document.createElement('button');
+                    button.textContent = "Say Hello";
+                    button.onclick = function() {
+                    alert(greeter.greet());
+                    };
 
-document.body.appendChild(button);
-</div>
+                    document.body.appendChild(button);
+                </div>
             </div>
             <div class="side">
                 JavaScript
@@ -728,30 +790,31 @@ document.body.appendChild(button);
     </section>
     <section data-id="typescript-oo-editor">
         Modèle <span class="color">orienté objet</span>
+
         <div class="stretch">
             <div class="side">
                 TypeScript
-<div id="typescript-src-2" class="editor source" data-lang="typescript">class Greeter {
-    greeting: string;
-    constructor(message: string) {
-        this.greeting = message;
-    }
-    greet() {
-        return "Hello, " + this.greeting;
-    }
-}
+                <div id="typescript-src-2" class="editor source" data-lang="typescript">class Greeter {
+                    greeting: string;
+                    constructor(message: string) {
+                    this.greeting = message;
+                    }
+                    greet() {
+                    return "Hello, " + this.greeting;
+                    }
+                    }
 
-var greeter = new Greeter("world");
+                    var greeter = new Greeter("world");
 
-var button = document.createElement('button');
-button.textContent = "Say Hello";
-button.onclick = function() {
-    alert(greeter.greet());
-}
+                    var button = document.createElement('button');
+                    button.textContent = "Say Hello";
+                    button.onclick = function() {
+                    alert(greeter.greet());
+                    }
 
-document.body.appendChild(button);
+                    document.body.appendChild(button);
 
-</div>
+                </div>
             </div>
             <div class="side">
                 JavaScript
@@ -761,30 +824,33 @@ document.body.appendChild(button);
     </section>
     <section data-id="typescript-generic-editor">
         Les <span class="color">génériques</span>
+
         <div class="stretch">
             <div class="side">
                 TypeScript
-<div id="typescript-src-3" class="editor source" data-lang="typescript">class Greeter<T> {
-    greeting: T;
-    constructor(message: T) {
-        this.greeting = message;
-    }
-    greet() {
-        return this.greeting;
-    }
-}
+                <div id="typescript-src-3" class="editor source" data-lang="typescript">class Greeter
+                    <T> {
+                        greeting: T;
+                        constructor(message: T) {
+                        this.greeting = message;
+                        }
+                        greet() {
+                        return this.greeting;
+                        }
+                        }
 
-var greeter = new Greeter<string>("Hello, world");
+                        var greeter = new Greeter
+                        <string>("Hello, world");
 
-var button = document.createElement('button');
-button.textContent = "Say Hello";
-button.onclick = function () {
-    alert(greeter.greet());
-}
+                            var button = document.createElement('button');
+                            button.textContent = "Say Hello";
+                            button.onclick = function () {
+                            alert(greeter.greet());
+                            }
 
-document.body.appendChild(button);
+                            document.body.appendChild(button);
 
-</div>
+                </div>
             </div>
             <div class="side">
                 JavaScript
@@ -797,28 +863,28 @@ document.body.appendChild(button);
         <div class="stretch">
             <div class="side">
                 TypeScript
-<div id="typescript-src-4" class="editor source" data-lang="typescript">module Sayings {
-    export class Greeter {
-        greeting: string;
-        constructor(message: string) {
-            this.greeting = message;
-        }
-        greet() {
-            return "Hello, " + this.greeting;
-        }
-    }
-}
-var greeter = new Sayings.Greeter("world");
+                <div id="typescript-src-4" class="editor source" data-lang="typescript">module Sayings {
+                    export class Greeter {
+                    greeting: string;
+                    constructor(message: string) {
+                    this.greeting = message;
+                    }
+                    greet() {
+                    return "Hello, " + this.greeting;
+                    }
+                    }
+                    }
+                    var greeter = new Sayings.Greeter("world");
 
-var button = document.createElement('button');
-button.textContent = "Say Hello";
-button.onclick = function() {
-    alert(greeter.greet());
-};
+                    var button = document.createElement('button');
+                    button.textContent = "Say Hello";
+                    button.onclick = function() {
+                    alert(greeter.greet());
+                    };
 
-document.body.appendChild(button);
+                    document.body.appendChild(button);
 
-</div>
+                </div>
             </div>
             <div class="side">
                 JavaScript
@@ -836,43 +902,43 @@ document.body.appendChild(button);
     Nécisse des <span class="color">interfaces</span> d'interopérabilité
     <a href="github.com/borisyankov/DefinitelyTyped">github.com/borisyankov/DefinitelyTyped</a>
     <pre><code data-trim class="language-java">/*
-Interface for the AJAX setting that will configure the AJAX request
-*/
-interface JQueryAjaxSettings {
-    accepts?: any;
-    async?: boolean;
-    beforeSend? (jqXHR: JQueryXHR, settings: JQueryAjaxSettings): any;
-    cache?: boolean;
-    complete? (jqXHR: JQueryXHR, textStatus: string): any;
-    contents?: { [key: string]: any; };
-    contentType?: any;
-    context?: any;
-    converters?: { [key: string]: any; };
-    crossDomain?: boolean;
-    data?: any;
-    dataFilter? (data: any, ty: any): any;
-    dataType?: string;
-    error? (jqXHR: JQueryXHR, textStatus: string, errorThrow: string): any;
-    global?: boolean;
-    headers?: { [key: string]: any; };
-    ifModified?: boolean;
-    isLocal?: boolean;
-    jsonp?: string;
-    jsonpCallback?: any;
-    mimeType?: string;
-    password?: string;
-    processData?: boolean;
-    scriptCharset?: string;
-    statusCode?: { [key: string]: any; };
-    success? (data: any, textStatus: string, jqXHR: JQueryXHR): any;
-    timeout?: number;
-    traditional?: boolean;
-    type?: string;
-    url?: string;
-    username?: string;
-    xhr?: any;
-    xhrFields?: { [key: string]: any; };
-}</code></pre>
+        Interface for the AJAX setting that will configure the AJAX request
+        */
+        interface JQueryAjaxSettings {
+        accepts?: any;
+        async?: boolean;
+        beforeSend? (jqXHR: JQueryXHR, settings: JQueryAjaxSettings): any;
+        cache?: boolean;
+        complete? (jqXHR: JQueryXHR, textStatus: string): any;
+        contents?: { [key: string]: any; };
+        contentType?: any;
+        context?: any;
+        converters?: { [key: string]: any; };
+        crossDomain?: boolean;
+        data?: any;
+        dataFilter? (data: any, ty: any): any;
+        dataType?: string;
+        error? (jqXHR: JQueryXHR, textStatus: string, errorThrow: string): any;
+        global?: boolean;
+        headers?: { [key: string]: any; };
+        ifModified?: boolean;
+        isLocal?: boolean;
+        jsonp?: string;
+        jsonpCallback?: any;
+        mimeType?: string;
+        password?: string;
+        processData?: boolean;
+        scriptCharset?: string;
+        statusCode?: { [key: string]: any; };
+        success? (data: any, textStatus: string, jqXHR: JQueryXHR): any;
+        timeout?: number;
+        traditional?: boolean;
+        type?: string;
+        url?: string;
+        username?: string;
+        xhr?: any;
+        xhrFields?: { [key: string]: any; };
+        }</code></pre>
 </section>
 
 <section data-id="asm-title"
