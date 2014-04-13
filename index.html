@@ -153,16 +153,31 @@
 
 <section data-id="bad-js-and-editor">
     <section data-id="js-show">
-        <h3>The JS SHOW</h3>
+        <h3>Le JS SHOW</h3>
         <div id="js-terminal" class="stretch"></div>
         <p>&nbsp;</p>
+        <aside class="notes" data-markdown>
+            * typeof null : montrer l'inconhérence
+            * 5 + {} : Montrer le typage faible
+            * 5 + "3" : Début coercition de type
+            * 5 - "3" : La coercition de type qui réagie différement selon l'opérateur
+            * [] + {} : Pour montrer que le sens à de l'importance
+            * {} + [] : Sens à de l'importance
+            * [1.2, 1.4, 1.5].map(parseInt) : Pas d'arriété
+        </aside>
+    </section>
+    <section data-id="js-show">
+        <h4>JavaScript a un Typage Dynamique Implicite Faible</h4>
+        <aside class="notes" data-markdown>
+            Expliqué chaque qualificatif
+        </aside>
     </section>
     <section>
-        <h4 class="underline">Sans typage, l'IDE est perdu</h4>
+        <h4 class="underline">Le typage JS génère un outillage de mauvaise qualité</h4>
         <iframe width="810" height="480" src="http://www.youtube.com/embed/oAuekVilLX0?autoplay=1" auto_play="1" frameborder="0"></iframe>
     </section>
     <section data-id="ut-editor">
-        <h4 class="underline">Sans typage, les TU sont moins pertinants</h4>
+        <h4 class="underline">Le typage JS rend moins pertinants les tests unitaires</h4>
         <div class="stretch">
             <div class="side">
                 <div id="ut-editor" class="editor" data-lang="javascript">// Source
@@ -171,15 +186,13 @@ A.prototype.plus = function (arg1, arg2) {
     return arg1 + arg2;
 };
 
-function B(a) {
-    this.a = a;
-}
-B.prototype.plusCaller = function () {
+function B(a) { this.a = a; }
+B.prototype.plusCaller = function (arg1, arg2) {
     return this.a.plus(arg1, arg2);
 };
 
 // Test
-test("Simple test", function () {
+test("Unit test", function () {
     var dirtyMockA = {
         plus: function (arg1, arg2) {
             if (arg1 == 1 && arg2 == 1) {
@@ -189,12 +202,15 @@ test("Simple test", function () {
     }
 
     var b = new B(dirtyMockA);
-    equal(b.plusCaller(), 2);
-});
-                </div>
+    equal(b.plusCaller(1,1), 2);
+});</div>
             </div>
             <iframe id="utRenderer" class="side" src="qunit.html" ></iframe>
         </div>
+        <aside class="notes" data-markdown>
+            * Expliquer d'abord les sources et le test
+            * Montrer que les signatures du mock et de la source ne sont pas liées
+        </aside>
     </section>
     <section>
         <h4 class="underline">Un JDK vous dites, humm ...</h4>
@@ -214,10 +230,13 @@ test("Simple test", function () {
     <h4 class="underline">Le langage web de demain sera</h4>
     <ul class="stretch">
         <li class="fragment">toujours aussi productif</li>
-        <li class="fragment">plus facile à maintenir</li>
-        <li class="fragment">typé plus fortement</li>
         <li class="fragment">moins WTF !</li>
-        <li class="fragment">doté d'outils plus puissant</li>
+        <li class="fragment">typé plus fortement
+            <ul>
+                <li class="fragment">plus facile à maintenir</li>
+                <li class="fragment">doté d'outils plus puissant</li>
+            </ul>
+        </li>
     </ul>
 </section>
 
@@ -439,7 +458,7 @@ test("Simple test", function () {
     <p class="fragment">Récement sortie en <span class="color">version 1.3</span></p>
 </section>
 
-<section data-id="dart-birth"
+<section data-id="dart-licnse"
          data-background="lib/img/slide-devoxx-bg.png"
          data-background-size="6% 90%"
          data-background-transition="slide"
@@ -447,7 +466,15 @@ test("Simple test", function () {
     <p>Sous license <span class="color">BSD</span></p>
 </section>
 
-<section data-id="dart-birth"
+<section data-id="dart-ecma"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    <span class="color">TC52</span> est le commité est standardisation ECMA sur le langage Dart
+</section>
+
+<section data-id="dart-goals"
          data-background="lib/img/slide-devoxx-bg.png"
          data-background-size="6% 90%"
          data-background-transition="slide"
@@ -594,6 +621,23 @@ class ClickCounterElement extends PolymerElement {
         <li><a href="http://api.dartlang.org/docs/releases/latest/">Une vraie API (Dart:HTML, Dart:IO,
             Dart:collection)</a></li>
     </ul>
+</section>
+
+<section data-id="dart-editor"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    <div class="stretch">
+        <div class="side">
+            Dart
+            <div id="dart-src" class="editor source" data-lang="dart"></div>
+        </div>
+        <div class="side">
+            JavaScript
+            <div id="dart-dest" class="editor" data-lang="javascript"></div>
+        </div>
+    </div>
 </section>
 
 <section data-id="coffeescript"
@@ -983,8 +1027,21 @@ interface JQueryAjaxSettings {
     Ca vient de chez <span class="color">Mozilla</span>
 </section>
 
+<section data-id="asm-mozilla" data-state="asm">
+    Emscriptten, le compilateur LLVM->JavaScript est sous license <span class="color">MIT</span>
+</section>
+
 <section data-id="asm-sub" data-state="asm">
     Est un <span class="color">sous-ensemble</span> de JavaScript
+    <p><span class="color">"use asm"</span></p>
+</section>
+
+<section data-id="asm-sub" data-state="asm">
+    Fait pour être le plus rapide possible, avec <span class="color">des performances proche du code natif</span>
+</section>
+
+<section data-id="asm-mozilla" data-state="asm">
+    <p>Marche sur tous les buttineurs, mais n'est vraiment efficace que sous <span class="color">Firefox</span> depuis la version 22</p>
 </section>
 
 <section data-id="asm-odin" data-state="asm">
@@ -992,12 +1049,43 @@ interface JQueryAjaxSettings {
     <img src="/lib/img/odinmonkey.jpg" class="fragment fade-in" width="30%"/>
 </section>
 
+<section data-id="asm-pipeline" data-state="asm">
+    <img src="lib/img/asm-pipeline.png" style="background: none"/>
+</section>
+
+<section data-id="asm-pipeline" data-state="asm">
+    Déjà plusieurs portages de moteur physique en C/C++ (Unreal Engine)
+</section>
+
+<section data-id="asm-odin" data-state="asm">
+    <h3>Vraimnent plus rapide ?</h3>
+</section>
+
+<section data-id="asm-editor" data-state="asm">
+    <h3>Chart sur les perfs ...</h3>
+    <div class="stretch"></div>
+</section>
+
+<section data-id="asm-editor" data-state="asm">
+    <h3>Demo</h3>
+    <div class="stretch">
+        <div class="side">
+            C/C++
+            <div id="dart-src" class="editor source" data-lang="dart"></div>
+        </div>
+        <div class="side">
+            JavaScript
+            <div id="dart-dest" class="editor" data-lang="javascript"></div>
+        </div>
+    </div>
+</section>
+
 <section data-id="so" data-state="conclusion">
     <h4>So..</h4>
 </section>
 
 <section data-id="type-is-good" data-state="conclusion">
-    <h4>JavaScript c'est bien, mais typé c'est mieux</h4>
+    <h4>Un projet évolue, au début le typage est superflux à terme il est vital</h4>
 </section>
 
 <section data-id="shot-term" data-state="conclusion">
@@ -1006,6 +1094,11 @@ interface JQueryAjaxSettings {
 
 <section data-id="long-term" data-state="conclusion">
     <h4>Dart est plus complet à moyen/long terme</h4>
+</section>
+
+<section data-id="long-term" data-state="conclusion">
+    <h3>ASM.js est très prometeur en terme de performance</h3>
+    <h4 class="fragment">Mais les langages avec gestion de mémoire ne sont pas destinés aux applications classiques</h4>
 </section>
 
 <section data-id="question" data-state="conclusion">
