@@ -429,14 +429,14 @@ test("Unit test", function () {
 </section>
 
 <section data-id="leader">
-    <section data-id=""><h2>L'avenir ?</h2></section>
-    <section data-id="dart-title"><h1>Dart</h1></section>
-    <section data-id="coffeescript-title"><h1>CoffeeScript</h1></section>
+    <section data-id=""><h2>Les leaders</h2></section>
     <section data-id="typescript-title"><h1>TypeScript</h1></section>
+    <section data-id="coffeescript-title"><h1>CoffeeScript</h1></section>
+    <section data-id="dart-title"><h1>Dart</h1></section>
     <section data-id="asm-title"><h1>ASM.JS</h1></section>
 </section>
 
-<section data-id="dart"
+<section data-id="typescript"
          data-background="lib/img/title2-bg.png"
          data-background-transition="slide"
          data-transition="linear"
@@ -445,205 +445,77 @@ test("Unit test", function () {
         <div class="cyan">&nbsp;</div>
         <div class="orange">&nbsp;</div>
         <div class="white">&nbsp;</div>
-        <h2>Dart</h2>
+        <h2>TypeScript</h2>
     </div>
 </section>
 
-<section data-id="dart-birth"
+<section data-id="typescript-birth"
          data-background="lib/img/slide-devoxx-bg.png"
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    <p>Propulsé par Google en <span class="color">2011</span></p>
-    <p class="fragment">Récement sortie en <span class="color">version 1.3</span></p>
-    <p class="fragment">Sous license <span class="color">BSD</span></p>
-    <p class="fragment">standardisation ECMA par le comité <span class="color">TC52</span></p>
+    Créé en février <span class="color">2012</span> par Microsoft
+    <p class="fragment fade-in">Passé récement en V1.0</p>
 </section>
 
-<section data-id="dart-goals"
+<section data-id="typescript-birth"
          data-background="lib/img/slide-devoxx-bg.png"
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    <h4>Dart est conçu pour :</h4>
-    <ul>
-        <li class="fragment">bâtir de larges applications web</li>
-        <li class="fragment">créer des jeux vidéos </li>
-        <li class="fragment">être plus rapide que JavaScript</li>
-    </ul>
-    <aside class="notes" data-markdown>
-        * Parler du SIMD dans Dart
-          * Cela permet de faire des multiplication de Float32x4 and Int32x4
-          * Potential speedup of 400%
-        * Nombreuses libs pour fabriquer des Jeux
-    </aside>
+    Sous license <span class="color">Apache 2 License</span>
 </section>
 
-<section data-id="dart-server"
+<section data-id="typescript-vs"
          data-background="lib/img/slide-devoxx-bg.png"
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    <p>Peut être executé dans une <span class="color">machine virtuelle</span></p>
-
-    <p class="fragment">
-        Ou sur <span class="color">Dartium</span>, une version de Chromium
-    </p>
+    Donc très bien intégré dans la <span class="color">suite Visual Studio</span>
+    <img src="lib/img/typescript-visual.png"/>
+</section>
+<section data-id="typescript-ecma"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Ressemble à ce qu'il y aura en <span class="color">ECMA6</span>
 </section>
 
-<section data-id="dart-both"
+<section data-id="typescript-editor"
          data-background="lib/img/slide-devoxx-bg.png"
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    Est donc nativement côté <span class="color">serveur</span> & côté <span class="color">client</span>
-</section>
-
-<section data-id="dart-compile-to-js"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    Ou peut être compilé <span class="color">en JavaScript</span>
-
-    <p class="fragment">
-        Transpileur <span class="color">Dart2Js</span>
-    </p>
-</section>
-
-<section data-id="dart-faster"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    <p>Nativement, Dart est plus rapide <span class="color">rapide</span> que JavaScript</p>
-
-    <p>Et...</p>
-
-    <p class="fragment">Le code JS généré peut être plus rapide que celui <span class="color">écrit à la main</span></p>
-
-    <aside class="notes" data-markdown>
-        * Le tree checking supprime les codes morts
-        * L'inférence de type global
-    </aside>
-</section>
-
-<section data-id="dart-bench"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    <div class="stretch">
-        <iframe class="innerdiv" frameborder="none" src="https://www.dartlang.org/performance/"></iframe>
-    </div>
-</section>
-
-<section data-id="dart-type"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    <span class="color">Typage</span> "fort" explicite statique, mais optionel
-<pre><code data-trim class="language-dart">
-var name = "Mathieu";
-// ou
-String name = "Mathieu";</code></pre>
-    <aside class="notes" data-markdown>
-
-    </aside>
-</section>
-
-<section data-id="dart-oo"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    Modèle <span class="color">orienté objet</span>
-<pre><code data-trim class="language-dart">
-abstract class Animal{
-    var name = "";
-    Animal.fromName(this.name);
-}
-class Pet extends Animal{
-    var owner = ""
-}</code></pre>
-    <aside class="notes" data-markdown>
-        Préciser pour dart la différence entre sa version de l’orienté objet et l’orienté objet JS.
-    </aside>
-</section>
-
-<section data-id="dart-futures"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    Asynchronisme basé sur des <span class="color">futurs</span>
-<pre><code data-trim class="language-dart">
-import 'dart:io';
-import 'dart:async';
-
-void printDailyNewsDigest() {
-File file = new File("dailyNewsDigest.txt");
-file.readAsString()
-    .then((content) => print(content))
-    .catchError((error) =>
-        print("Sorry, no news today. Here's why:\n$error"));
-}</code></code></pre>
-</section>
-
-<section data-id="dart-polymer"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    Bien intégré à <span class="color">polymer</span>
-<pre><code data-trim class="language-dart">
-import 'package:polymer/polymer.dart';
-import 'dart:html';
-
-@CustomTag('click-counter')
-class ClickCounterElement extends PolymerElement {
-    @observable
-    int count = 0;
-
-    void increment(Event e, var detail, Node target) {
-        count += 1;
-    }
-}</code></pre>
-    <aside class="notes" data-markdown>
-        Shadow DOM ? (c’est pas encore assez mainstream pour en parler sans un petit mot sur ce que c’est)
-    </aside>
-</section>
-
-<section data-id="dart-env"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    Fourni avec un <span class="color">écosystème</span> riche
-    <ul>
-        <li><a href="http://pub.dartlang.org">pub.dartlang.org</a></li>
-        <li><a href="https://www.dartlang.org/tools/editor">Dart Editor</a></li>
-        <li><a href="http://api.dartlang.org/docs/releases/latest/">Une vraie API (Dart:HTML, Dart:IO,
-            Dart:collection)</a></li>
-    </ul>
-</section>
-
-<section data-id="dart-editor"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    <div class="stretch">
-        <div class="side">
-            Dart
-            <div id="dart-src" class="editor source" data-lang="dart"></div>
+    <section data-id="typescript-super-editor">
+        <p id="ts-editor-title"><span class="color">Super ensemble</span> de JavaScript</p>
+        <div class="stretch">
+            <div class="side">
+                TypeScript
+                <div id="typescript-src" class="editor source" data-lang="typescript"></div>
+            </div>
+            <div class="side">
+                JavaScript
+                <div id="typescript-dest" class="editor" data-lang="javascript"></div>
+            </div>
         </div>
-        <div class="side">
-            JavaScript
-            <div id="dart-dest" class="editor" data-lang="javascript"></div>
-        </div>
-    </div>
+        <p class="editor-links">
+            <a id="tsc-js" href="#">JavaScript</a> -
+            <a id="tsc-oo" href="#"><Orienté></Orienté> objet</a> -
+            <a id="tsc-generics" href="#">Les génériques</a> -
+            <a id="tsc-module" href="#">Les modules</a>
+        </p>
+    </section>
+</section>
+
+<section data-id="typescript-typed"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Nécessite des <span class="color">interfaces</span> d'interopérabilité
+    <a href="github.com/borisyankov/DefinitelyTyped">github.com/borisyankov/DefinitelyTyped</a>
+    <pre><code id="ts-jquery" data-trim class="language-java"></code></pre>
 </section>
 
 <section data-id="coffeescript"
@@ -788,7 +660,7 @@ html = """
     </div>
 </section>
 
-<section data-id="typescript"
+<section data-id="dart"
          data-background="lib/img/title2-bg.png"
          data-background-transition="slide"
          data-transition="linear"
@@ -797,222 +669,205 @@ html = """
         <div class="cyan">&nbsp;</div>
         <div class="orange">&nbsp;</div>
         <div class="white">&nbsp;</div>
-        <h2>TypeScript</h2>
+        <h2>Dart</h2>
     </div>
 </section>
 
-<section data-id="typescript-birth"
+<section data-id="dart-birth"
          data-background="lib/img/slide-devoxx-bg.png"
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    Créé en février <span class="color">2012</span> par Microsoft
-    <p class="fragment fade-in">Passé récement en V1.0</p>
+    <p>Propulsé par Google en <span class="color">2011</span></p>
+    <p class="fragment">Récement sortie en <span class="color">version 1.3</span></p>
+    <p class="fragment">Sous license <span class="color">BSD</span></p>
+    <p class="fragment">standardisation ECMA par le comité <span class="color">TC52</span></p>
 </section>
 
-<section data-id="typescript-birth"
+<section data-id="dart-goals"
          data-background="lib/img/slide-devoxx-bg.png"
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    Sous license <span class="color">Apache 2 License</span>
+    <h4>Dart est conçu pour :</h4>
+    <ul>
+        <li class="fragment">bâtir de larges applications web</li>
+        <li class="fragment">créer des jeux vidéos </li>
+        <li class="fragment">être plus rapide que JavaScript</li>
+    </ul>
+    <aside class="notes" data-markdown>
+        * Parler du SIMD dans Dart
+        * Cela permet de faire des multiplication de Float32x4 and Int32x4
+        * Potential speedup of 400%
+        * Nombreuses libs pour fabriquer des Jeux
+    </aside>
 </section>
 
-<section data-id="typescript-vs"
+<section data-id="dart-server"
          data-background="lib/img/slide-devoxx-bg.png"
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    Donc très bien intégré dans la <span class="color">suite Visual Studio</span>
-    <img src="lib/img/typescript-visual.png"/>
-</section>
-<section data-id="typescript-ecma"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    Ressemble à ce qu'il y aura en <span class="color">ECMA6</span>
+    <p>Peut être executé dans une <span class="color">machine virtuelle</span></p>
+
+    <p class="fragment">
+        Ou sur <span class="color">Dartium</span>, une version de Chromium
+    </p>
 </section>
 
-<section data-id="typescript-editor"
+<section data-id="dart-both"
          data-background="lib/img/slide-devoxx-bg.png"
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    <section data-id="typescript-super-editor">
-        <span class="color">Super ensemble</span> de JavaScript
-        <div class="stretch">
-            <div class="side">
-                TypeScript
-                <div id="typescript-src-1" class="editor source" data-lang="typescript">function Greeter(greeting:
-string) {
-    this.greeting = greeting;
-}
+    Est donc nativement côté <span class="color">serveur</span> & côté <span class="color">client</span>
+</section>
 
-Greeter.prototype.greet = function() {
-    return "Hello, " + this.greeting;
-}
+<section data-id="dart-compile-to-js"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Ou peut être compilé <span class="color">en JavaScript</span>
 
-var greeter = new Greeter("world");
+    <p class="fragment">
+        Transpileur <span class="color">Dart2Js</span>
+    </p>
+</section>
 
-var button = document.createElement('button');
-button.textContent = "Say Hello";
-button.onclick = function() {
-    alert(greeter.greet());
-};
+<section data-id="dart-faster"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    <p>Nativement, Dart est plus rapide <span class="color">rapide</span> que JavaScript</p>
 
-document.body.appendChild(button);
-                </div>
-            </div>
-            <div class="side">
-                JavaScript
-                <div id="typescript-src-1-js" class="editor" data-lang="javascript"></div>
-            </div>
+    <p>Et...</p>
+
+    <p class="fragment">Le code JS généré peut être plus rapide que celui <span class="color">écrit à la main</span></p>
+
+    <aside class="notes" data-markdown>
+        * Le tree checking supprime les codes morts
+        * L'inférence de type global
+    </aside>
+</section>
+
+<section data-id="dart-bench"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    <div class="stretch">
+        <iframe class="innerdiv" frameborder="none" src="https://www.dartlang.org/performance/"></iframe>
+    </div>
+</section>
+
+<section data-id="dart-type"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    <span class="color">Typage</span> "fort" explicite statique, mais optionel
+<pre><code data-trim class="language-dart">
+    var name = "Mathieu";
+    // ou
+    String name = "Mathieu";</code></pre>
+    <aside class="notes" data-markdown>
+
+    </aside>
+</section>
+
+<section data-id="dart-oo"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Modèle <span class="color">orienté objet</span>
+<pre><code data-trim class="language-dart">
+    abstract class Animal{
+    var name = "";
+    Animal.fromName(this.name);
+    }
+    class Pet extends Animal{
+    var owner = ""
+    }</code></pre>
+    <aside class="notes" data-markdown>
+        Préciser pour dart la différence entre sa version de l’orienté objet et l’orienté objet JS.
+    </aside>
+</section>
+
+<section data-id="dart-futures"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Asynchronisme basé sur des <span class="color">futurs</span>
+<pre><code data-trim class="language-dart">
+    import 'dart:io';
+    import 'dart:async';
+
+    void printDailyNewsDigest() {
+    File file = new File("dailyNewsDigest.txt");
+    file.readAsString()
+    .then((content) => print(content))
+    .catchError((error) =>
+    print("Sorry, no news today. Here's why:\n$error"));
+    }</code></code></pre>
+</section>
+
+<section data-id="dart-polymer"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Bien intégré à <span class="color">polymer</span>
+<pre><code data-trim class="language-dart">
+    import 'package:polymer/polymer.dart';
+    import 'dart:html';
+
+    @CustomTag('click-counter')
+    class ClickCounterElement extends PolymerElement {
+    @observable
+    int count = 0;
+
+    void increment(Event e, var detail, Node target) {
+    count += 1;
+    }
+    }</code></pre>
+    <aside class="notes" data-markdown>
+        Shadow DOM ? (c’est pas encore assez mainstream pour en parler sans un petit mot sur ce que c’est)
+    </aside>
+</section>
+
+<section data-id="dart-env"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Fourni avec un <span class="color">écosystème</span> riche
+    <ul>
+        <li><a href="http://pub.dartlang.org">pub.dartlang.org</a></li>
+        <li><a href="https://www.dartlang.org/tools/editor">Dart Editor</a></li>
+        <li><a href="http://api.dartlang.org/docs/releases/latest/">Une vraie API (Dart:HTML, Dart:IO,
+            Dart:collection)</a></li>
+    </ul>
+</section>
+
+<section data-id="dart-editor"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    <div class="stretch">
+        <div class="side">
+            Dart
+            <div id="dart-src" class="editor source" data-lang="dart"></div>
         </div>
-    </section>
-    <section data-id="typescript-oo-editor">
-        Modèle <span class="color">orienté objet</span>
-
-        <div class="stretch">
-            <div class="side">
-                TypeScript
-                <div id="typescript-src-2" class="editor source" data-lang="typescript">class Greeter {
-    greeting: string;
-    constructor(message: string) {
-        this.greeting = message;
-    }
-    greet() {
-        return "Hello, " + this.greeting;
-    }
-}
-
-var greeter = new Greeter("world");
-
-var button = document.createElement('button');
-button.textContent = "Say Hello";
-button.onclick = function() {
-    alert(greeter.greet());
-}
-
-document.body.appendChild(button);</div>
-            </div>
-            <div class="side">
-                JavaScript
-                <div id="typescript-src-2-js" class="editor" data-lang="javascript"></div>
-            </div>
+        <div class="side">
+            JavaScript
+            <div id="dart-dest" class="editor" data-lang="javascript"></div>
         </div>
-    </section>
-    <section data-id="typescript-generic-editor">
-        Les <span class="color">génériques</span>
-
-        <div class="stretch">
-            <div class="side">
-                TypeScript
-                <div id="typescript-src-3" class="editor source" data-lang="typescript">class Greeter <T> {
-    greeting: T;
-    constructor(message: T) {
-        this.greeting = message;
-    }
-    greet() {
-        return this.greeting;
-    }
-}
-
-var greeter = new Greeter <string>("Hello, world");
-
-var button = document.createElement('button');
-button.textContent = "Say Hello";
-button.onclick = function () {
-    alert(greeter.greet());
-}
-
-document.body.appendChild(button);</div>
-            </div>
-            <div class="side">
-                JavaScript
-                <div id="typescript-src-3-js" class="editor" data-lang="javascript"></div>
-            </div>
-        </div>
-    </section>
-    <section data-id="typescript-modul-editor">
-        <span class="color">Modularisation</span> du code
-        <div class="stretch">
-            <div class="side">
-                TypeScript
-                <div id="typescript-src-4" class="editor source" data-lang="typescript">module Sayings {
-    export class Greeter {
-        greeting: string;
-        constructor(message: string) {
-            this.greeting = message;
-        }
-        greet() {
-            return "Hello, " + this.greeting;
-        }
-    }
-}
-var greeter = new Sayings.Greeter("world");
-
-var button = document.createElement('button');
-button.textContent = "Say Hello";
-button.onclick = function() {
-    alert(greeter.greet());
-};
-
-document.body.appendChild(button);</div>
-            </div>
-            <div class="side">
-                JavaScript
-                <div id="typescript-src-4-js" class="editor" data-lang="javascript"></div>
-            </div>
-        </div>
-    </section>
-</section>
-
-<section data-id="typescript-typed"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    Nécessite des <span class="color">interfaces</span> d'interopérabilité
-    <a href="github.com/borisyankov/DefinitelyTyped">github.com/borisyankov/DefinitelyTyped</a>
-    <pre><code data-trim class="language-java">/*
-Interface for the AJAX setting that will configure the AJAX request
-*/
-interface JQueryAjaxSettings {
-    accepts?: any;
-    async?: boolean;
-    beforeSend? (jqXHR: JQueryXHR, settings: JQueryAjaxSettings): any;
-    cache?: boolean;
-    complete? (jqXHR: JQueryXHR, textStatus: string): any;
-    contents?: { [key: string]: any; };
-    contentType?: any;
-    context?: any;
-    converters?: { [key: string]: any; };
-    crossDomain?: boolean;
-    data?: any;
-    dataFilter? (data: any, ty: any): any;
-    dataType?: string;
-    error? (jqXHR: JQueryXHR, textStatus: string, errorThrow: string): any;
-    global?: boolean;
-    headers?: { [key: string]: any; };
-    ifModified?: boolean;
-    isLocal?: boolean;
-    jsonp?: string;
-    jsonpCallback?: any;
-    mimeType?: string;
-    password?: string;
-    processData?: boolean;
-    scriptCharset?: string;
-    statusCode?: { [key: string]: any; };
-    success? (data: any, textStatus: string, jqXHR: JQueryXHR): any;
-    timeout?: number;
-    traditional?: boolean;
-    type?: string;
-    url?: string;
-    username?: string;
-    xhr?: any;
-    xhrFields?: { [key: string]: any; };
-}</code></pre>
+    </div>
 </section>
 
 <section data-id="asm-title"
@@ -1049,7 +904,7 @@ interface JQueryAjaxSettings {
 
 <section data-id="asm-mozilla" data-state="asm">
     <p>Compatible tous butineurs</p>
-    <p class="fragment">Accéléré depuis <span class="color">Firefox</span> depuis la version 22</p>
+    <p class="fragment">Accéléré depuis <span class="color">Firefox</span> dans la version 22</p>
 </section>
 
 <section data-id="asm-odin" data-state="asm">

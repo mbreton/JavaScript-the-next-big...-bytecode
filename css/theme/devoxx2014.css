@@ -298,7 +298,16 @@ body {
     font-variant: small-caps; }
   .reveal section[data-id^="asm"] .color {
     font-size: 1.2em; }
+.reveal p.editor-links {
+  font-size: 0.6em; }
 
 .asm .backgrounds {
-  background: url("/lib/img/slide-devoxx-bg-negative.png") no-repeat #181818;
-  background-position: 0% 25%; }
+  background: url("/lib/img/slide-devoxx-bg-negative.png") no-repeat #181818; }
+
+.backgrounds {
+  background-position: 0% 25%;
+  -webkit-transition: background-color 500ms linear;
+  -moz-transition: background-color 500ms linear;
+  -o-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear; }

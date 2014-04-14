@@ -28,6 +28,14 @@
   background: radial-gradient(center, $type cover, $inner 0%, $outer 100%);
 }
 
+@mixin transition ($transition){
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  -ms-transition: $transition;
+  transition: $transition;
+}
+
 @mixin rotate($deg) {
   -webkit-transform: rotate($deg); /* Chrome, Safari, Opera */
           transform: rotate($deg);

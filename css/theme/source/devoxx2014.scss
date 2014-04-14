@@ -276,11 +276,20 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
       font-size: 1.2em;
     }
   }
+
+  p.editor-links{
+    font-size: 0.6em;
+  }
 }
 
 .asm {
   .backgrounds {
     background: url('/lib/img/slide-devoxx-bg-negative.png') no-repeat #181818;
-    background-position: 0% 25%;
+
   }
+}
+
+.backgrounds{
+  background-position: 0% 25%;
+  @include transition(background-color 500ms linear);
 }
