@@ -87,17 +87,17 @@
 
 <section>
     <section data-id="js-chart">
-        <h4 class="underline">JavaScript sur Stackoverflow</h4>
+        <h4 class="underline"><span style="color:blue">JavaScript</span> sur Stackoverflow</h4>
         <img style="border:none" class="stretch" src="lib/img/js-stack.png"/>
     </section>
     <section data-id="js-java-chart">
-        <h4 class="underline">Java/JavaScript sur Stackoverflow</h4>
+        <h4 class="underline"><span style="color:red">Java</span>/<span style="color:blue">JavaScript</span> sur Stackoverflow</h4>
         <img style="border:none" class="stretch" src="lib/img/js+java-stack.png"/></section>
 </section>
 </section>
 
 <section data-id="bd5b6986b812922286fc64da80276853">
-    <h4 class="underline">JavaScript is partout !</h4>
+    <h4 class="underline">JavaScript est partout</h4>
 
     <div class="stretch">
         <p class="fragment">NodeJS</p>
@@ -425,7 +425,7 @@ test("Unit test", function () {
             <li><a href="#">PureScript</a></li>
         </ul>
     </section>
-    <section data-id="nb-langs"><h3>Plus de 170 langages/transpilateurs génèrent du JavaScript</h3></section>
+    <section data-id="nb-langs"><h3>Plus de 170 langages/transpileurs génèrent du JavaScript</h3></section>
 </section>
 
 <section data-id="leader">
@@ -454,24 +454,10 @@ test("Unit test", function () {
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    <p>Powered by Google en <span class="color">2011</span></p>
+    <p>Propulsé par Google en <span class="color">2011</span></p>
     <p class="fragment">Récement sortie en <span class="color">version 1.3</span></p>
-</section>
-
-<section data-id="dart-licnse"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    <p>Sous license <span class="color">BSD</span></p>
-</section>
-
-<section data-id="dart-ecma"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    <span class="color">TC52</span> est le commité est standardisation ECMA sur le langage Dart
+    <p class="fragment">Sous license <span class="color">BSD</span></p>
+    <p class="fragment">standardisation ECMA par le comité <span class="color">TC52</span></p>
 </section>
 
 <section data-id="dart-goals"
@@ -479,12 +465,18 @@ test("Unit test", function () {
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    <h4>Conçue pour :</h4>
+    <h4>Dart est conçu pour :</h4>
     <ul>
-        <li class="fragment">bâtir de large application web</li>
+        <li class="fragment">bâtir de larges applications web</li>
         <li class="fragment">créer des jeux vidéos </li>
         <li class="fragment">être plus rapide que JavaScript</li>
     </ul>
+    <aside class="notes" data-markdown>
+        * Parler du SIMD dans Dart
+          * Cela permet de faire des multiplication de Float32x4 and Int32x4
+          * Potential speedup of 400%
+        * Nombreuses libs pour fabriquer des Jeux
+    </aside>
 </section>
 
 <section data-id="dart-server"
@@ -515,7 +507,7 @@ test("Unit test", function () {
     Ou peut être compilé <span class="color">en JavaScript</span>
 
     <p class="fragment">
-        Transpilateur <span class="color">Dart2Js</span>
+        Transpileur <span class="color">Dart2Js</span>
     </p>
 </section>
 
@@ -529,6 +521,11 @@ test("Unit test", function () {
     <p>Et...</p>
 
     <p class="fragment">Le code JS généré peut être plus rapide que celui <span class="color">écrit à la main</span></p>
+
+    <aside class="notes" data-markdown>
+        * Le tree checking supprime les codes morts
+        * L'inférence de type global
+    </aside>
 </section>
 
 <section data-id="dart-bench"
@@ -546,11 +543,14 @@ test("Unit test", function () {
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    <span class="color">Typage</span> fort, mais optionel
+    <span class="color">Typage</span> "fort" explicite statique, mais optionel
 <pre><code data-trim class="language-dart">
 var name = "Mathieu";
 // ou
 String name = "Mathieu";</code></pre>
+    <aside class="notes" data-markdown>
+
+    </aside>
 </section>
 
 <section data-id="dart-oo"
@@ -567,6 +567,9 @@ abstract class Animal{
 class Pet extends Animal{
     var owner = ""
 }</code></pre>
+    <aside class="notes" data-markdown>
+        Préciser pour dart la différence entre sa version de l’orienté objet et l’orienté objet JS.
+    </aside>
 </section>
 
 <section data-id="dart-futures"
@@ -607,6 +610,9 @@ class ClickCounterElement extends PolymerElement {
         count += 1;
     }
 }</code></pre>
+    <aside class="notes" data-markdown>
+        Shadow DOM ? (c’est pas encore assez mainstream pour en parler sans un petit mot sur ce que c’est)
+    </aside>
 </section>
 
 <section data-id="dart-env"
@@ -659,6 +665,7 @@ class ClickCounterElement extends PolymerElement {
          data-background-transition="slide"
          data-background-position="0% 25%">
     Créé en <span class="color">Décembre 2009</span> par Jeremy Ashkenas
+    <blockquote>It's just JavaScript</blockquote>
 </section>
 
 <section data-id="coffeescript-compile"
@@ -666,7 +673,7 @@ class ClickCounterElement extends PolymerElement {
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    Peut être utilisé dés à présent avec le <span class="color">transpilateur</span>
+    Peut être utilisé dés à présent avec le <span class="color">transpileur</span>
 </section>
 
 <section data-id="coffeescript-keywords"
@@ -684,19 +691,17 @@ class ClickCounterElement extends PolymerElement {
          data-background-transition="slide"
          data-background-position="0% 25%">
     Modèle <span class="color">orienté objet</span>
-<pre><code data-trim class="language-coffeescript">
-class Animal
+<pre><code data-trim class="language-coffeescript">class Animal
     constructor : (@name)->
 
-class Pet extends Animal
+    class Pet extends Animal
     construtor : (@owner, name) ->
         super name
 
-cat = new Pet "Mathieu", "Garfield"
+    cat = new Pet "Mathieu", "Garfield"
 
-if cat instanceof Pet
-    console.log "#{cat.name} is a Pet"
-</code></pre>
+    if cat instanceof Pet
+        console.log "#{cat.name} is a Pet"</code></pre>
 </section>
 
 <section data-id="coffeescript-example"
@@ -968,7 +973,7 @@ document.body.appendChild(button);</div>
          data-background-size="6% 90%"
          data-background-transition="slide"
          data-background-position="0% 25%">
-    Nécisse des <span class="color">interfaces</span> d'interopérabilité
+    Nécessite des <span class="color">interfaces</span> d'interopérabilité
     <a href="github.com/borisyankov/DefinitelyTyped">github.com/borisyankov/DefinitelyTyped</a>
     <pre><code data-trim class="language-java">/*
 Interface for the AJAX setting that will configure the AJAX request
@@ -1024,16 +1029,18 @@ interface JQueryAjaxSettings {
 </section>
 
 <section data-id="asm-mozilla" data-state="asm">
-    Ca vient de chez <span class="color">Mozilla</span>
-</section>
-
-<section data-id="asm-mozilla" data-state="asm">
-    Emscriptten, le compilateur LLVM->JavaScript est sous license <span class="color">MIT</span>
+    <p style="text-align: left">Asm.js :</p>
+    <p class="fragment">Ca vient de chez <span class="color">Mozilla</span></p>
+    <p class="fragment">Sous license <span class="color">MIT</span></p>
+    <p class="fragment">N'est pas pas un langage</p>
 </section>
 
 <section data-id="asm-sub" data-state="asm">
-    Est un <span class="color">sous-ensemble</span> de JavaScript
+    Est un <span class="color">sous-ensemble</span> de JavaScript très restristif
     <p><span class="color">"use asm"</span></p>
+    <aside class="notes" data-markdown>
+        Comparé à use strict
+    </aside>
 </section>
 
 <section data-id="asm-sub" data-state="asm">
@@ -1041,11 +1048,12 @@ interface JQueryAjaxSettings {
 </section>
 
 <section data-id="asm-mozilla" data-state="asm">
-    <p>Marche sur tous les buttineurs, mais n'est vraiment efficace que sous <span class="color">Firefox</span> depuis la version 22</p>
+    <p>Compatible tous butineurs</p>
+    <p class="fragment">Accéléré depuis <span class="color">Firefox</span> depuis la version 22</p>
 </section>
 
 <section data-id="asm-odin" data-state="asm">
-    <h3>OdinMonkey</h3>
+    <p>OdinMonkey</p>
     <img src="/lib/img/odinmonkey.jpg" class="fragment fade-in" width="30%"/>
 </section>
 
@@ -1053,12 +1061,9 @@ interface JQueryAjaxSettings {
     <img src="lib/img/asm-pipeline.png" style="background: none"/>
 </section>
 
-<section data-id="asm-pipeline" data-state="asm">
-    Déjà plusieurs portages de moteur physique en C/C++ (Unreal Engine)
-</section>
-
 <section data-id="asm-odin" data-state="asm">
-    <h3>Vraimnent plus rapide ?</h3>
+    <p>Vraiment plus rapide ?</p>
+    <p class="fragment">Bananabread : <a href="https://developer.mozilla.org/fr/demos/detail/bananabread/launch">goo.gl/gFN5jp</a></p>
 </section>
 
 <section data-id="asm-editor" data-state="asm">
@@ -1066,16 +1071,23 @@ interface JQueryAjaxSettings {
     <div class="stretch"></div>
 </section>
 
+
+<section data-id="asm-port" data-state="asm">
+    Déjà plusieurs portages en C/C++
+    <p class="fragment">Moteur de jeux (Unreal Engine)</p>
+    <p class="fragment">Base de données (SQLite)</p>
+</section>
+
 <section data-id="asm-editor" data-state="asm">
     <h3>Demo</h3>
     <div class="stretch">
         <div class="side">
             C/C++
-            <div id="dart-src" class="editor source" data-lang="dart"></div>
+            <div id="asm-src" class="editor source" data-lang="dart"></div>
         </div>
         <div class="side">
             JavaScript
-            <div id="dart-dest" class="editor" data-lang="javascript"></div>
+            <div id="asm-dest" class="editor" data-lang="javascript"></div>
         </div>
     </div>
 </section>
@@ -1088,17 +1100,26 @@ interface JQueryAjaxSettings {
     <h4>Un projet évolue, au début le typage est superflux à terme il est vital</h4>
 </section>
 
+<section data-id="type-is-good" data-state="conclusion">
+    <h4>Les grands du web on compris que JavaScript ne suffisait pas.</h4>
+</section>
+
 <section data-id="shot-term" data-state="conclusion">
-    <h4>CoffeeScript et TypeScript utilisable à court terme</h4>
+    <h4>CoffeeScript et TypeScript utilisables à court terme</h4>
 </section>
 
 <section data-id="long-term" data-state="conclusion">
-    <h4>Dart est plus complet à moyen/long terme</h4>
+    <h4>Dart est plus complet</h4>
 </section>
 
 <section data-id="long-term" data-state="conclusion">
-    <h3>ASM.js est très prometeur en terme de performance</h3>
-    <h4 class="fragment">Mais les langages avec gestion de mémoire ne sont pas destinés aux applications classiques</h4>
+    <h3>ASM.js est très prometeur</h3>
+    <h4 class="fragment">Nécessite de la gérer la mémoire, pour l'instant</h4>
+    <h4 class="fragment">Le JNI de JavaScript ?</h4>
+    <aside class="notes" data-markdown>
+        David Herman (Senior Researcher at Mozilla Research) ne cache pas ça volonté de faire d'asmjs
+        l'assembleur de web pour d'autre langage avec support du GC
+    </aside>
 </section>
 
 <section data-id="question" data-state="conclusion">
