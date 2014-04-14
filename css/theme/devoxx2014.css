@@ -300,5 +300,5 @@ body {
     font-size: 1.2em; }
 
 .asm .backgrounds {
-  background: url("/lib/img/slide-devoxx-bg-negative.png") no-repeat black;
+  background: url("/lib/img/slide-devoxx-bg-negative.png") no-repeat #181818;
   background-position: 0% 25%; }
