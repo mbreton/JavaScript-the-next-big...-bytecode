@@ -542,17 +542,7 @@
          data-background-transition="slide"
          data-background-position="0% 25%">
     Modèle <span class="color">orienté objet</span>
-<pre><code data-trim class="language-coffeescript">class Animal
-    constructor : (@name)->
-
-    class Pet extends Animal
-    construtor : (@owner, name) ->
-        super name
-
-    cat = new Pet "Mathieu", "Garfield"
-
-    if cat instanceof Pet
-        console.log "#{cat.name} is a Pet"</code></pre>
+<pre><code data-trim class="language-coffeescript" id="coffee-oo"></code></pre>
 </section>
 
 <section data-id="coffeescript-example"
@@ -561,19 +551,7 @@
          data-background-transition="slide"
          data-background-position="0% 25%">
     Du sucre <span class="color">syntaxique</span>
-<pre><code data-trim class="language-coffeescript">
-# for comprehension
-foods = ['broccoli', 'spinach', 'chocolate']
-eat food for food in foods when food isnt 'chocolate'
-
-# for with range
-countdown = (num for num in [10..1])
-
-# Chained opetator
-cholesterol = 127
-
-healthy = 200 > cholesterol > 60
-</code></pre>
+<pre><code data-trim class="language-coffeescript" id="sugar1"></code></pre>
 </section>
 
 <section data-id="coffeescript-example2"
@@ -582,18 +560,7 @@ healthy = 200 > cholesterol > 60
          data-background-transition="slide"
          data-background-position="0% 25%">
     <span class="color">Encore</span> du sucre syntaxique
-<pre><code data-trim class="language-coffeescript">
-# New operators
-winner = yes if pick in [47, 92, 13]
-
-launch() if ignition is on
-
-volume = 10 if band isnt SpinalTap
-
-letTheWildRumpusBegin() unless answer is no
-
-solipsism = true if mind? and not world?
-</code></pre>
+<pre><code data-trim class="language-coffeescript" id="sugar2"></code></pre>
 </section>
 
 <section data-id="coffeescript-example2"
@@ -602,22 +569,7 @@ solipsism = true if mind? and not world?
          data-background-transition="slide"
          data-background-position="0% 25%">
     <span class="color">Beaucoup</span> de sucre syntaxique
-<pre><code data-trim>
-#destructuring assignement
-weatherReport = (location) ->
-    # Make an Ajax request to fetch the weather...
-    [location, 72, "Mostly Sunny"]
-
-[city, temp, forecast] = weatherReport "Berkeley, CA"
-
-#the strings become magic
-sentence = "#{ 22 / 7 } is a decent approximation of π"
-html = """
-<strong>
-    cup of coffeescript
-</strong>
-"""
-</code></pre>
+<pre><code data-trim class="language-coffeescript" id="sugar3"></code></pre>
 </section>
 
 <section data-id="coffeescript-editor"
