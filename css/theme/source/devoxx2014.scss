@@ -190,11 +190,13 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     height: 100%;
     color: #000000;
     background: white;
-    font-size: 19em;
+    font-size: 27em;
     letter-spacing: -0.03em;
     font-family: "League Gothic", Impact, sans-serif;
     opacity: 0.5;
     z-index: 100;
+    line-height: 0.815;
+    padding: 0;
   }
 
   section[data-id="code-js-examples"] .code {

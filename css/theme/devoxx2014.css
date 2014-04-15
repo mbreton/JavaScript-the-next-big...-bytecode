@@ -244,11 +244,13 @@ body {
   height: 100%;
   color: #000000;
   background: white;
-  font-size: 19em;
+  font-size: 27em;
   letter-spacing: -0.03em;
   font-family: "League Gothic", Impact, sans-serif;
   opacity: 0.5;
-  z-index: 100; }
+  z-index: 100;
+  line-height: 0.815;
+  padding: 0; }
 .reveal section[data-id="code-js-examples"] .code {
   height: 8em; }
 .reveal section[data-id="js-show"] #js-terminal {
