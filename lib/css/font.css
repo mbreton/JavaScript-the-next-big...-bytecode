@@ -26,6 +26,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Cray';
+    src: url("../font/cray.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
 .reveal .bloc{
     font-family: "bloc";
     line-height: 1.5em;
