@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="lib/css/jquery.terminal.css">
     <link rel="stylesheet" href="lib/css/nv.d3.min.css">
     <link rel="stylesheet" href="lib/css/font.css">
-    <link rel="stylesheet" href="lib/css/groundwork.css">
     <link rel="stylesheet" href="lib/css/solarized_light.css">
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
@@ -183,30 +182,7 @@
         <h4 class="underline">Le typage JS rend moins pertinants les tests unitaires</h4>
         <div class="stretch">
             <div class="side">
-                <div id="ut-editor" class="editor" data-lang="javascript">// Source
-function A() {}
-A.prototype.plus = function (arg1, arg2) {
-    return arg1 + arg2;
-};
-
-function B(a) { this.a = a; }
-B.prototype.plusCaller = function (arg1, arg2) {
-    return this.a.plus(arg1, arg2);
-};
-
-// Test
-test("Unit test", function () {
-    var dirtyMockA = {
-        plus: function (arg1, arg2) {
-            if (arg1 == 1 && arg2 == 1) {
-                return 2;
-            }
-        }
-    }
-
-    var b = new B(dirtyMockA);
-    equal(b.plusCaller(1,1), 2);
-});</div>
+                <div id="ut-editor" class="editor" data-lang="javascript"></div>
             </div>
             <iframe id="utRenderer" class="side" src="qunit.html" ></iframe>
         </div>
