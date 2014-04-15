@@ -143,20 +143,30 @@ body {
   background-color: #53b6bc; }
 .reveal .white {
   background-color: white; }
-.reveal .code {
-  text-align: left; }
-.reveal div.avatar {
+.reveal section div.def {
+  font-size: 0.87em;
+  text-align: left;
+  font-family: 'Times New Roman'; }
+  .reveal section div.def p.title {
+    font-weight: bold; }
+.reveal section div.avatar {
   margin: auto !important;
   display: block;
-  width: 10em;
-  height: 10em;
+  width: 9.5em;
+  height: 9.5em;
   border-radius: 100%;
+  -moz-box-shadow: 0px 0px 2px 2px #656565;
+  -webkit-box-shadow: 0px 0px 2px 2px #656565;
+  -o-box-shadow: 0px 0px 2px 2px #656565;
+  box-shadow: 0px 0px 2px 2px #656565;
   overflow: hidden;
-  border: 4px solid #53b6bc; }
-  .reveal div.avatar div {
+  border: 10px solid white; }
+  .reveal section div.avatar div {
     width: 100%;
     height: 100%;
     background: url("/lib/img/me-zoom-small.png"); }
+.reveal .code {
+  text-align: left; }
 .reveal #footer {
   background: url("../../../lib/img/footer-devoxx.png") no-repeat center #53b6bc;
   position: absolute;

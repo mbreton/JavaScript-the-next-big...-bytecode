@@ -28,6 +28,13 @@
   background: radial-gradient(center, $type cover, $inner 0%, $outer 100%);
 }
 
+@mixin box-shadow ($val){
+  -moz-box-shadow: $val;
+  -webkit-box-shadow: $val;
+  -o-box-shadow: $val;
+  box-shadow: $val;
+}
+
 @mixin transition ($transition){
   -webkit-transition: $transition;
   -moz-transition: $transition;
