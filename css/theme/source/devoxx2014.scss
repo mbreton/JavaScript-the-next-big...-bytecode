@@ -38,7 +38,7 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
 .reveal {
 
-  .controls{
+  .controls {
     bottom: 1em;
   }
 
@@ -56,16 +56,16 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     text-align: left;
   }
 
-  div.avatar{
-    $avatarSize : 10em;
-    margin: auto!important;
+  div.avatar {
+    $avatarSize: 10em;
+    margin: auto !important;
     display: block;
     width: $avatarSize;
     height: $avatarSize;
     border-radius: 100%;
     overflow: hidden;
     border: 4px solid $cyan;
-    div{
+    div {
       width: 100%;
       height: 100%;
       background: url('/lib/img/me-zoom-small.png');
@@ -279,19 +279,27 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     }
   }
 
-  p.editor-links{
+  p.editor-links {
     font-size: 0.6em;
   }
 }
 
 .asm {
   .backgrounds {
-    background: url('/lib/img/slide-devoxx-bg-negative.png') no-repeat #181818;
-
+    $color:#181818;
+    @include radial-gradient($color, lighten($color, 10%));
+    //background: url('/lib/img/slide-devoxx-bg-negative.png') no-repeat;
+  }
+  .odinmonley-container {
+    width: 7em;
+    position: absolute;
+    right: -5em;
+    bottom: 0.7em;
+    font-size: 0.7em!important;
   }
 }
 
-.backgrounds{
+.backgrounds {
   background-position: 0% 25%;
   @include transition(background-color 500ms linear);
 }

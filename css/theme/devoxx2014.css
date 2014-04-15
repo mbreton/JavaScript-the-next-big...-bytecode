@@ -304,7 +304,19 @@ body {
   font-size: 0.6em; }
 
 .asm .backgrounds {
-  background: url("/lib/img/slide-devoxx-bg-negative.png") no-repeat #181818; }
+  background: #181818;
+  background: -moz-radial-gradient(center, circle cover, #323232 0%, #181818 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #323232), color-stop(100%, #181818));
+  background: -webkit-radial-gradient(center, circle cover, #323232 0%, #181818 100%);
+  background: -o-radial-gradient(center, circle cover, #323232 0%, #181818 100%);
+  background: -ms-radial-gradient(center, circle cover, #323232 0%, #181818 100%);
+  background: radial-gradient(center, circle cover, #323232 0%, #181818 100%); }
+.asm .odinmonley-container {
+  width: 7em;
+  position: absolute;
+  right: -5em;
+  bottom: 0.7em;
+  font-size: 0.7em !important; }
 
 .backgrounds {
   background-position: 0% 25%;

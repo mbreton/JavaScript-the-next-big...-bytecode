@@ -54,8 +54,11 @@
 
 <section data-id="52b5a3c95ef49db44a5cbf0758de26a2">
     <h3>Mathieu Breton</h3>
+
     <div class="stretch">
-        <div class="side avatar"><div></div></div>
+        <div class="side avatar">
+            <div></div>
+        </div>
         <ul class="side">
             <li>Job :Craftsman developer at <span class="strong">Xebia</span></li>
             <li>Expertise : Web application black belt</li>
@@ -93,7 +96,8 @@
         <img style="border:none" class="stretch" src="lib/img/js-stack.png"/>
     </section>
     <section data-id="js-java-chart">
-        <h4 class="underline"><span style="color:red">Java</span>/<span style="color:blue">JavaScript</span> sur Stackoverflow</h4>
+        <h4 class="underline"><span style="color:red">Java</span>/<span style="color:blue">JavaScript</span> sur
+            Stackoverflow</h4>
         <img style="border:none" class="stretch" src="lib/img/js+java-stack.png"/></section>
 </section>
 </section>
@@ -150,12 +154,14 @@
 
 <section>
     <h2>Le JavaScript c'est bien tous le temps !</h2>
+
     <p id="wrong-fragment" class="fragment wrong"></p>
 </section>
 
 <section data-id="bad-js-and-editor">
     <section data-id="js-show">
         <h3>Le JS SHOW</h3>
+
         <div id="js-terminal" class="stretch"></div>
         <p>&nbsp;</p>
         <aside class="notes" data-markdown>
@@ -176,15 +182,17 @@
     </section>
     <section>
         <h4 class="underline">Le typage JS génère un outillage de mauvaise qualité</h4>
-        <iframe width="810" height="480" src="http://www.youtube.com/embed/oAuekVilLX0?autoplay=1" auto_play="1" frameborder="0"></iframe>
+        <iframe width="810" height="480" src="http://www.youtube.com/embed/oAuekVilLX0?autoplay=1" auto_play="1"
+                frameborder="0"></iframe>
     </section>
     <section data-id="ut-editor">
         <h4 class="underline">Le typage JS rend moins pertinants les tests unitaires</h4>
+
         <div class="stretch">
             <div class="side">
                 <div id="ut-editor" class="editor" data-lang="javascript"></div>
             </div>
-            <iframe id="utRenderer" class="side" src="qunit.html" ></iframe>
+            <iframe id="utRenderer" class="side" src="qunit.html"></iframe>
         </div>
         <aside class="notes" data-markdown>
             * Expliquer d'abord les sources et le test
@@ -193,6 +201,7 @@
     </section>
     <section>
         <h4 class="underline">Un JDK vous dites, humm ...</h4>
+
         <div class="stretch">
             <p>L'api de base est très pauvre. Votre SDK est constitué de libraitie externe :</p>
             <ul>
@@ -435,14 +444,7 @@
          data-background-position="0% 25%">
     Créé en février <span class="color">2012</span> par Microsoft
     <p class="fragment fade-in">Passé récement en V1.0</p>
-</section>
-
-<section data-id="typescript-birth"
-         data-background="lib/img/slide-devoxx-bg.png"
-         data-background-size="6% 90%"
-         data-background-transition="slide"
-         data-background-position="0% 25%">
-    Sous license <span class="color">Apache 2 License</span>
+    <p class="fragment">Sous license <span class="color">Apache 2 License</span></p>
 </section>
 
 <section data-id="typescript-vs"
@@ -460,6 +462,16 @@
          data-background-position="0% 25%">
     Ressemble à ce qu'il y aura en <span class="color">ECMA6</span>
 </section>
+<section data-id="typescript-type"
+         data-background="lib/img/slide-devoxx-bg.png"
+         data-background-size="6% 90%"
+         data-background-transition="slide"
+         data-background-position="0% 25%">
+    Typage explicite <span class="color">statique</span> faible, optionel
+    <aside class="notes" data-markdown>
+        * Préciser qu'il fait de l'inférence de type quand le type n'est pas définie se qui garantie le statiquement typé
+    </aside>
+</section>
 
 <section data-id="typescript-editor"
          data-background="lib/img/slide-devoxx-bg.png"
@@ -468,6 +480,7 @@
          data-background-position="0% 25%">
     <section data-id="typescript-super-editor">
         <p id="ts-editor-title"><span class="color">Super ensemble</span> de JavaScript</p>
+
         <div class="stretch">
             <div class="side">
                 TypeScript
@@ -480,7 +493,9 @@
         </div>
         <p class="editor-links">
             <a id="tsc-js" href="#">JavaScript</a> -
-            <a id="tsc-oo" href="#"><Orienté></Orienté> objet</a> -
+            <a id="tsc-oo" href="#">
+                <Orienté></Orienté>
+                objet</a> -
             <a id="tsc-generics" href="#">Les génériques</a> -
             <a id="tsc-module" href="#">Les modules</a>
         </p>
@@ -542,7 +557,7 @@
          data-background-transition="slide"
          data-background-position="0% 25%">
     Modèle <span class="color">orienté objet</span>
-<pre><code data-trim class="language-coffeescript" id="coffee-oo"></code></pre>
+    <pre><code data-trim class="language-coffeescript" id="coffee-oo"></code></pre>
 </section>
 
 <section data-id="coffeescript-example"
@@ -551,7 +566,7 @@
          data-background-transition="slide"
          data-background-position="0% 25%">
     Du sucre <span class="color">syntaxique</span>
-<pre><code data-trim class="language-coffeescript" id="sugar1"></code></pre>
+    <pre><code data-trim class="language-coffeescript" id="sugar1"></code></pre>
 </section>
 
 <section data-id="coffeescript-example2"
@@ -560,7 +575,7 @@
          data-background-transition="slide"
          data-background-position="0% 25%">
     <span class="color">Encore</span> du sucre syntaxique
-<pre><code data-trim class="language-coffeescript" id="sugar2"></code></pre>
+    <pre><code data-trim class="language-coffeescript" id="sugar2"></code></pre>
 </section>
 
 <section data-id="coffeescript-example2"
@@ -569,7 +584,7 @@
          data-background-transition="slide"
          data-background-position="0% 25%">
     <span class="color">Beaucoup</span> de sucre syntaxique
-<pre><code data-trim class="language-coffeescript" id="sugar3"></code></pre>
+    <pre><code data-trim class="language-coffeescript" id="sugar3"></code></pre>
 </section>
 
 <section data-id="coffeescript-editor"
@@ -610,8 +625,11 @@
          data-background-transition="slide"
          data-background-position="0% 25%">
     <p>Propulsé par Google en <span class="color">2011</span></p>
+
     <p class="fragment">Récement sortie en <span class="color">version 1.3</span></p>
+
     <p class="fragment">Sous license <span class="color">BSD</span></p>
+
     <p class="fragment">standardisation ECMA par le comité <span class="color">TC52</span></p>
 </section>
 
@@ -623,7 +641,7 @@
     <h4>Dart est conçu pour :</h4>
     <ul>
         <li class="fragment">bâtir de larges applications web</li>
-        <li class="fragment">créer des jeux vidéos </li>
+        <li class="fragment">créer des jeux vidéos</li>
         <li class="fragment">être plus rapide que JavaScript</li>
     </ul>
     <aside class="notes" data-markdown>
@@ -699,9 +717,10 @@
          data-background-transition="slide"
          data-background-position="0% 25%">
     <span class="color">Typage</span> "fort" explicite statique, mais optionel
-<pre><code data-trim class="language-dart" id="dart-type"></code></pre>
+    <pre><code data-trim class="language-dart" id="dart-type"></code></pre>
+    <pre class="fragment"><code data-trim class="language-dart " id="dart-type-string"></code></pre>
     <aside class="notes" data-markdown>
-
+        * Par contre on réaffecter une variable avec un type différent
     </aside>
 </section>
 
@@ -711,7 +730,7 @@
          data-background-transition="slide"
          data-background-position="0% 25%">
     Modèle <span class="color">orienté objet</span>
-<pre><code data-trim class="language-dart" id="dart-class"></code></pre>
+    <pre><code data-trim class="language-dart" id="dart-class"></code></pre>
     <aside class="notes" data-markdown>
         Préciser pour dart la différence entre sa version de l’orienté objet et l’orienté objet JS.
     </aside>
@@ -723,7 +742,7 @@
          data-background-transition="slide"
          data-background-position="0% 25%">
     Asynchronisme basé sur des <span class="color">futurs</span>
-<pre><code data-trim class="language-dart" id="dart-futur"></code></code></pre>
+    <pre><code data-trim class="language-dart" id="dart-futur"></code></code></pre>
 </section>
 
 <section data-id="dart-polymer"
@@ -732,7 +751,7 @@
          data-background-transition="slide"
          data-background-position="0% 25%">
     Bien intégré à <span class="color">polymer</span>
-<pre><code data-trim class="language-dart" id="dart-polymer"></code></pre>
+    <pre><code data-trim class="language-dart" id="dart-polymer"></code></pre>
     <aside class="notes" data-markdown>
         Shadow DOM ? (c’est pas encore assez mainstream pour en parler sans un petit mot sur ce que c’est)
     </aside>
@@ -784,8 +803,11 @@
 
 <section data-id="asm-mozilla" data-state="asm">
     <p style="text-align: left">Asm.js :</p>
+
     <p class="fragment">Ca vient de chez <span class="color">Mozilla</span></p>
+
     <p class="fragment">Sous license <span class="color">MIT</span></p>
+
     <p class="fragment">N'est pas pas un langage</p>
 </section>
 
@@ -803,31 +825,66 @@
 
 <section data-id="asm-mozilla" data-state="asm">
     <p>Compatible tous butineurs</p>
+
     <p class="fragment">Accéléré depuis <span class="color">Firefox</span> dans la version 22</p>
 </section>
 
-<section data-id="asm-odin" data-state="asm">
-    <p>OdinMonkey</p>
-    <img src="/lib/img/odinmonkey.jpg" class="fragment fade-in" width="30%"/>
-</section>
-
 <section data-id="asm-pipeline" data-state="asm">
-    <img src="lib/img/asm-pipeline.png" style="background: none"/>
+    <img src="lib/img/asm_pipeline.png" style="background: none;box-shadow: none;border:none;"/>
 </section>
 
 <section data-id="asm-odin" data-state="asm">
     <p>Vraiment plus rapide ?</p>
-    <p class="fragment">Bananabread : <a href="https://developer.mozilla.org/fr/demos/detail/bananabread/launch">goo.gl/gFN5jp</a></p>
+
+    <p class="fragment">Bananabread : <a href="https://developer.mozilla.org/fr/demos/detail/bananabread/launch">goo.gl/gFN5jp</a>
+    </p>
 </section>
 
 <section data-id="asm-odin" data-state="asm">
-    <h4>Un AOT compiler plutôt qu'un JIT compiler</h4>
+    <h3>Ok, comment c'est possible ?</h3>
+
+    <div class="stretch">
+        <p class="fragment">Suppression des types complexes (String, Object, Boolean)</p>
+
+        <p class="fragment">Manipulation uniquement de type numérique sur 32 bits</p>
+
+        <p class="fragment">Utilisation massive des opérateurs bitwise</p>
+
+        <p class="fragment">Unboxing en type primitif</p>
+
+        <p class="fragment">Statiquement typé</p>
+
+        <p class="fragment">Désactivation du garbage collector</p>
+
+        <p class="fragment">Disparition des vérifications runtime</p>
+    </div>
+</section>
+
+<section data-id="asm-odin" data-state="asm">
+    <h3>Un AOT compiler plutôt qu'un JIT compiler</h3>
     <br/>
     <img src="lib/img/asm_jit_vs_aot.png" style="background: none;border:none;"/>
+
+    <div class="odinmonley-container fragment fade-in">
+        OdinMonkey
+        <img src="/lib/img/odinmonkey.jpg"/>
+    </div>
+</section>
+
+<section data-id="asm-odin" data-state="asm">
+    <h3>Show me the code</h3>
+    <pre><code data-trim class="language-javascript" id="asm-simple"></code></pre>
+
+    <section class="notes" data-markdown>
+        * a standard library object, providing access to a limited subset of the JavaScript standard libraries;
+        * a foreign function interface (FFI), providing access to custom external JavaScript functions; and
+        * a heap buffer, providing a single ArrayBuffer to act as the asm.js heap.
+    </section>
 </section>
 
 <section data-id="asm-editor" data-state="asm">
     <h3>Chart sur les perfs ...</h3>
+
     <div class="stretch"></div>
 </section>
 
@@ -835,11 +892,13 @@
 <section data-id="asm-port" data-state="asm">
     Déjà plusieurs portages en C/C++
     <p class="fragment">Moteur de jeux (Unreal Engine)</p>
+
     <p class="fragment">Base de données (SQLite)</p>
 </section>
 
 <section data-id="asm-editor" data-state="asm">
     <h3>Demo</h3>
+
     <div class="stretch">
         <div class="side">
             C/C++
