@@ -135,19 +135,22 @@ body {
 .reveal .slide-number {
   color: #f5af33; }
 
+.reveal img {
+  border: none !important;
+  box-shadow: none !important; }
 .reveal .controls {
   bottom: 1em; }
 .reveal .dart, .reveal section[data-id^="dart"] .color {
   font-family: "Montserrat" !important;
   color: #0084c5 !important; }
 .reveal .coffee, .reveal section[data-id^="coffeescript"] .color, .reveal section[data-id^="coffeescript"] h1 {
-  font-family: "Lobster" !important;
-  color: #cc1487 !important; }
+  font-family: 'Lobster' !important;
+  color: #CC1487 !important; }
 .reveal .ts, .reveal section[data-id^="typescript"] .color, .reveal section[data-id^="typescript"] h1 {
   color: #afcd37 !important;
   font-family: "Segoe UI" !important; }
 .reveal .asm, .reveal section[data-id^="asm"] .color, .reveal section[data-id^="asm"] h1 {
-  color: #00aa00 !important;
+  color: #0a0 !important;
   font-family: "Courier new" !important;
   font-variant: small-caps; }
 .reveal .orange {
@@ -183,6 +186,10 @@ body {
   font-size: 1.3em;
   line-height: 1.2em;
   font-family: 'Cray'; }
+.reveal section #sdk_js img {
+  max-height: 3em; }
+.reveal section #sdk_js .lo-dash {
+  font-size: 2.5em; }
 .reveal .code {
   text-align: left; }
 .reveal #footer {

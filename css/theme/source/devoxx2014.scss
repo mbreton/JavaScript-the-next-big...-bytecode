@@ -38,6 +38,11 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
 .reveal {
 
+  img {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
   .controls {
     bottom: 1em;
   }
@@ -106,6 +111,15 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
       font-size: 1.3em;
       line-height: 1.2em;
       font-family: 'Cray';
+    }
+
+    #sdk_js {
+      img {
+        max-height: 3em;
+      }
+      .lo-dash{
+        font-size: 2.5em;
+      }
     }
   }
 

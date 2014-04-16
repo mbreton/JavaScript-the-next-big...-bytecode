@@ -114,46 +114,39 @@
 </section>
 </section>
 
-<section data-id="bd5b6986b812922286fc64da80276853">
-    <h4 class="underline">JavaScript est partout</h4>
+<section>
+    <h4>JavaScript est partout</h4>
+
+    <div class="grid grid-pad">
+        <div class="col-1-2">
+            <p class="fragment" data-fragment-index="0"><img src="lib/img/backbone_logo.png" alt="backbonejs"/></p>
+
+            <p class="fragment" data-fragment-index="2"><img src="lib/img/bootstrap_logo.png" alt="bootstrap"></p>
+
+            <p class="fragment" data-fragment-index="4"><img src="lib/img/angularjs_logo.png" alt="angularjs"/></p>
+        </div>
+        <div class="col-1-2">
+            <p class="fragment" data-fragment-index="1"><img src="lib/img/nodejs_logo.png" alt="nodejs"/></p>
+
+            <p class="fragment" data-fragment-index="3"><img src="lib/img/emberjs_logo.jpg" alt="EmberJS"/></p>
+        </div>
+    </div>
 
     <div class="stretch">
-        <p class="fragment">NodeJS</p>
 
-        <p class="fragment">Bootstrap</p>
-
-        <p class="fragment">AngularJS</p>
-
-        <p class="fragment">Backbone</p>
-
-        <p class="fragment">EmberJS</p>
     </div>
 </section>
 
 <section data-id="d8ca0f2710354035a44740b909c1257a">
-    <h2>POURQUOI ?<br>
-    </h2>
+    <h3>POURQUOI ?</h3>
 </section>
 
 <section data-id="code-js-examples">
     <h4 class="underline">Serveur Web</h4>
-<pre><code data-trim>
-    var express = require('express');
-    var app = express();
-    app.get('/', function (req, res) {
-    res.send('Hello, DevoxxFR 2014');
-    });
-    app.listen(3000);
-</code></pre>
+    <pre><code data-trim id="webserver"></code></pre>
     <br/>
     <h4 class="underline">Programmation fonctionnelle</h4>
-<pre><code data-trim>
-    _.chain([1,2,3,200])
-    .filter(function(num) { return num % 2 === 0; })
-    .tap(alert) // (alerted [2, 200])
-    .map(function(num) { return num * num })
-    .value(); // [4,40000]
-</code></pre>
+    <pre><code data-trim id="func_js"></code></pre>
 </section>
 
 <section data-id="e58ee1625957e2a1388225f352a6ad66">
@@ -194,7 +187,7 @@
     </section>
     <section>
         <h4 class="underline">Le typage JS génère un outillage de mauvaise qualité</h4>
-        <iframe width="810" height="480" src="http://www.youtube.com/embed/oAuekVilLX0?autoplay=1" auto_play="1"
+        <iframe data-autoplay width="810" height="480" src="http://www.youtube.com/embed/oAuekVilLX0"
                 frameborder="0"></iframe>
     </section>
     <section data-id="ut-editor">
@@ -211,18 +204,25 @@
             * Montrer que les signatures du mock et de la source ne sont pas liées
         </aside>
     </section>
-    <section>
+    <section id="sdk_js">
         <h4 class="underline">Un JDK vous dites, humm ...</h4>
 
-        <div class="stretch">
-            <p>L'api de base est très pauvre. Votre SDK est constitué de libraitie externe :</p>
-            <ul>
-                <li class="fragment">MomentJS</li>
-                <li class="fragment">JQuery/Zepto</li>
-                <li class="fragment">Lo-Dash/Underscore</li>
-                <li class="fragment">RequireJS/Browserify</li>
-            </ul>
+        <p>Un SDK JS ressemble à :</p>
+
+        <div class="grid grid-pad">
+            <div class="col-1-2">
+                <p class="fragment"><img src="lib/img/moment-js.jpg" alt="MomentJS"/></p>
+                <p class="fragment"><img src="lib/img/logo-jquery.png" alt="JQuery"/></p>
+                <p class="fragment"><img src="lib/img/zepto_logo.png" alt="Zepto"/></p>
+            </div>
+            <div class="col-1-2">
+                <p class="fragment lo-dash">Lo-Dash</p>
+                <p class="fragment"><img src="lib/img/underscore.png" alt="Underscore"/></p>
+                <p class="fragment"><img src="lib/img/requirejs.png" alt="RequireJS"/></p>
+                <p class="fragment"><img src="lib/img/browserify.png" alt="Browserify"/></p>
+            </div>
         </div>
+
     </section>
 </section>
 
