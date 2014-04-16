@@ -42,9 +42,18 @@
 
 <div class="reveal">
 
+<div id="rotate45">
+    <div class="cyan">&nbsp;</div>
+    <div class="orange">&nbsp;</div>
+    <div class="white">&nbsp;</div>
+    <h2 class="color"></h2>
+</div>
+
+
 <div class="slides">
 
 <section data-id="cover"
+         data-state="no-title"
          data-background="lib/img/cover-bg.png"
          data-background-transition="slide"
          data-transition="linear">
@@ -53,9 +62,10 @@
     <div class="orange">&nbsp;</div>
 </section>
 
-<section data-id="52b5a3c95ef49db44a5cbf0758de26a2">
+<section data-state="no-title">
     <h3>About://me</h3>
     <br/>
+
     <div class="stretch grid grid-pad">
         <div class="col-5-12" style="padding-top: 0.1em">
             <div class="side avatar">
@@ -75,7 +85,7 @@
     </div>
 </section>
 
-<section data-id="agenda" class="slide">
+<section data-id="agenda" class="slide" data-state="no-title">
     <h3>De quoi allons nous parler ?</h3>
     <ul class="stretch summary">
         <li class="fragment">De JavaScript</li>
@@ -85,17 +95,11 @@
     </ul>
 </section>
 
-<section data-id="epogee"
+<section data-id="apogee"
          data-background="lib/img/title-bg.png"
          data-background-transition="slide"
          data-transition="linear"
-         class="header">
-    <div class="rotate45">
-        <div class="cyan">&nbsp;</div>
-        <div class="orange">&nbsp;</div>
-        <div class="white">&nbsp;</div>
-        <h2 class="text-white">L'apogée</h2>
-    </div>
+         data-state="header">
 </section>
 
 <section>
@@ -166,7 +170,7 @@
     <p id="wrong-fragment" class="fragment wrong"></p>
 </section>
 
-<section data-id="bad-js-and-editor">
+<section data-id="bad-js-and-editor" data-state="no-title">
     <section data-id="js-show">
         <h3>Le JS SHOW</h3>
 
@@ -220,6 +224,13 @@
             </ul>
         </div>
     </section>
+</section>
+
+<section data-id="avenir"
+         data-background="lib/img/title-bg.png"
+         data-background-transition="slide"
+         data-transition="linear"
+         data-state="header">
 </section>
 
 <section>
@@ -436,13 +447,7 @@
          data-background="lib/img/title2-bg.png"
          data-background-transition="slide"
          data-transition="linear"
-         class="header">
-    <div class="rotate45">
-        <div class="cyan">&nbsp;</div>
-        <div class="orange">&nbsp;</div>
-        <div class="white">&nbsp;</div>
-        <h2>TypeScript</h2>
-    </div>
+         data-state="header">
 </section>
 
 <section data-id="typescript-birth"
@@ -526,13 +531,7 @@
          data-background="lib/img/title2-bg.png"
          data-background-transition="slide"
          data-transition="linear"
-         class="header">
-    <div class="rotate45">
-        <div class="cyan">&nbsp;</div>
-        <div class="orange">&nbsp;</div>
-        <div class="white">&nbsp;</div>
-        <h2 class="coffee">CoffeeScript</h2>
-    </div>
+         data-state="header">
 </section>
 
 <section data-id="coffeescript-birth"
@@ -620,13 +619,7 @@
          data-background="lib/img/title2-bg.png"
          data-background-transition="slide"
          data-transition="linear"
-         class="header">
-    <div class="rotate45">
-        <div class="cyan">&nbsp;</div>
-        <div class="orange">&nbsp;</div>
-        <div class="white">&nbsp;</div>
-        <h2>Dart</h2>
-    </div>
+         data-state="header">
 </section>
 
 <section data-id="dart-birth"
@@ -802,18 +795,10 @@
          data-background="lib/img/title2-bg.png"
          data-background-transition="slide"
          data-transition="linear"
-         class="header">
-    <div class="rotate45">
-        <div class="cyan">&nbsp;</div>
-        <div class="orange">&nbsp;</div>
-        <div class="white">&nbsp;</div>
-        <h2>ASM.js</h2>
-    </div>
+         data-state="header">
 </section>
 
 <section data-id="asm-mozilla" data-state="asm">
-    <p style="text-align: left">Asm.js :</p>
-
     <p class="fragment">Ca vient de chez <span class="color">Mozilla</span></p>
 
     <p class="fragment">Sous license <span class="color">MIT</span></p>

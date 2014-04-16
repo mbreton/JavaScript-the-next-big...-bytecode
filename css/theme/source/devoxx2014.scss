@@ -42,6 +42,26 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     bottom: 1em;
   }
 
+  .dart {
+    font-family: "Montserrat" !important;
+    color: #0084c5 !important;
+  }
+  .coffee {
+    font-family: 'Lobster' !important;
+    color: #CC1487 !important;
+  }
+
+  .ts {
+    color: #afcd37 !important;
+    font-family: "Segoe UI" !important;
+  }
+
+  .asm {
+    color: #0a0 !important;
+    font-family: "Courier new" !important;
+    font-variant: small-caps;
+  }
+
   .orange {
     background-color: $orange;
   }
@@ -81,9 +101,9 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
       }
     }
 
-    ul.summary{
+    ul.summary {
       margin-top: 1em;
-      font-size:1.3em;
+      font-size: 1.3em;
       line-height: 1.2em;
       font-family: 'Cray';
     }
@@ -116,49 +136,6 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
     #twitter-author {
       right: $sideMargin;
-    }
-  }
-
-  section.header {
-
-    .rotate45 {
-      @include rotate(-45deg);
-      position: absolute;
-      top: -39em;
-      left: -4em;
-      width: 15em;
-
-      h2 {
-        font-size: 2.7em;
-        top: 0.1em;
-        text-align: left;
-        color: black;
-        text-shadow: none;
-        margin-top: 0.3em;
-
-        &.text-white {
-          color: white;
-        }
-      }
-
-      div {
-        height: 13em;
-        width: 13em;
-        position: relative;
-        &.white {
-          z-index: 3;
-          left: 7.5em;
-        }
-        &.orange {
-          z-index: 2;
-          left: 4em;
-          top: 12.5em;
-        }
-        &.cyan {
-          z-index: 1;
-          top: 24.9em;
-        }
-      }
     }
   }
 
@@ -265,34 +242,27 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
   }
 
   section[data-id^="dart"] {
-    .rotate45 h2, .color {
-      font-family: "Montserrat";
-      color: #0084c5;
+    .color {
+      @extend .dart;
     }
   }
 
   section[data-id^="coffeescript"] {
-    .color, .rotate45 h2, h1 {
-      font-family: 'Lobster';
-      color: #CC1487;
+    .color, h1 {
+      @extend .coffee
     }
   }
 
   section[data-id^="typescript"] {
-    .color, .rotate45 h2, h1 {
-      color: #afcd37;
-      font-family: "Segoe UI";
+    .color, h1 {
+      @extend .ts;
     }
   }
 
   section[data-id^="asm"] {
     color: white;
-    .rotate45 h2, .color, h1 {
-      color: #0a0;
-      font-family: "Courier new";
-    }
-    .rotate45 h2 {
-      font-variant: small-caps;
+    .color, h1 {
+      @extend .asm;
     }
     .color {
       font-size: 1.2em;
@@ -304,9 +274,76 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
   }
 }
 
+// global states
+
+.header {
+  div#rotate45 {
+    @include rotate(-45deg);
+    top: -30em;
+    left: 0em;
+    width: 15em;
+    h2 {
+      font-size: 2.7em;
+      margin-top: 0.1em;
+      &.color-black {
+        color: black;
+      }
+
+      &.text-white {
+        color: white;
+      }
+    }
+  }
+}
+
+.no-title {
+  div#rotate45 {
+    opacity: 0.0;
+  }
+}
+
+div#rotate45 {
+  $transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+  @include transition($transition);
+  position: absolute;
+  z-index: 2;
+  @include rotate(-12deg);
+  top: -38em;
+  left: -3em;
+  width: 15em;
+
+  h2 {
+    @include transition($transition);
+    text-align: left;
+    text-shadow: none;
+    margin-top: -0.1em;
+    font-size: 2em;
+    color: black;
+  }
+
+  div {
+    height: 13em;
+    width: 13em;
+    position: relative;
+    &.white {
+      z-index: 3;
+      left: 7.5em;
+    }
+    &.orange {
+      z-index: 2;
+      left: 4em;
+      top: 12.5em;
+    }
+    &.cyan {
+      z-index: 1;
+      top: 24.9em;
+    }
+  }
+}
+
 .asm {
   .backgrounds {
-    $color:#181818;
+    $color: #181818;
     @include radial-gradient($color, lighten($color, 10%));
     //background: url('/lib/img/slide-devoxx-bg-negative.png') no-repeat;
   }
@@ -315,7 +352,7 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     position: absolute;
     right: -5em;
     bottom: 0.7em;
-    font-size: 0.7em!important;
+    font-size: 0.7em !important;
   }
 }
 
