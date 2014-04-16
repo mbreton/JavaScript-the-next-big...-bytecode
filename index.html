@@ -577,7 +577,10 @@
          data-background-size="6% 85%"
          data-background-transition="slide"
          data-background-position="97.5% 5%">
-    Du sucre <span class="color">syntaxique</span>
+    <div class="candy-title">
+        <div class="candy strip-purple"></div>
+        Du sucre <span class="color">syntaxique</span>
+    </div>
     <pre><code data-trim class="language-coffeescript" id="sugar1"></code></pre>
 </section>
 
@@ -586,7 +589,11 @@
          data-background-size="6% 85%"
          data-background-transition="slide"
          data-background-position="97.5% 5%">
-    <span class="color">Encore</span> du sucre syntaxique
+    <div class="candy-title">
+        <div class="candy strip-purple"></div>
+        <span class="color">Encore</span> du sucre syntaxique
+        <div class="candy strip-red"></div>
+    </div>
     <pre><code data-trim class="language-coffeescript" id="sugar2"></code></pre>
 </section>
 
@@ -595,7 +602,12 @@
          data-background-size="6% 85%"
          data-background-transition="slide"
          data-background-position="97.5% 5%">
-    <span class="color">Beaucoup</span> de sucre syntaxique
+    <div class="candy-title">
+        <div class="candy strip-purple"></div>
+        <span class="color">Beaucoup</span> de sucre syntaxique
+        <div class="candy strip-red"></div>
+        <div class="candy strip-choco"></div>
+    </div>
     <pre><code data-trim class="language-coffeescript" id="sugar3"></code></pre>
 </section>
 
@@ -644,7 +656,7 @@
          data-background-size="6% 85%"
          data-background-transition="slide"
          data-background-position="97.5% 5%">
-    <h4>Dart est conçu pour :</h4>
+    <p>Conçu pour :</p>
     <ul>
         <li class="fragment">bâtir de larges applications web</li>
         <li class="fragment">créer des jeux vidéos</li>
@@ -712,9 +724,39 @@
          data-background-size="6% 85%"
          data-background-transition="slide"
          data-background-position="97.5% 5%">
+    <h4 class="underline">Performance</h4>
+
     <div class="stretch">
-        <iframe class="innerdiv" frameborder="none" src="https://www.dartlang.org/performance/"></iframe>
+        <div class="fragment current-display">
+            <h5>DeltaBlue</h5>
+            <iframe src="https://public-golem.storage.googleapis.com/public_golem.html#DeltaBlue"></iframe>
+        </div>
+        <div class="fragment current-display">
+            <h5>FluidMotion</h5>
+            <iframe src="https://public-golem.storage.googleapis.com/public_golem.html#FluidMotion"></iframe>
+        </div>
+        <div class="fragment current-display">
+            <h5>Richards</h5>
+            <iframe src="https://public-golem.storage.googleapis.com/public_golem.html#Richards"></iframe>
+        </div>
+        <div class="fragment current-display">
+            <h5>Tracer</h5>
+            <iframe src="https://public-golem.storage.googleapis.com/public_golem.html#Tracer"></iframe>
+        </div>
+        <div class="fragment current-display">
+            <h5>RequestPerSecond</h5>
+            <iframe src="https://public-golem.storage.googleapis.com/public_golem.html#RequestsPerSecond"></iframe>
+        </div>
+        <div class="fragment current-display">
+            <h5>Avg Latency</h5>
+            <iframe src="https://public-golem.storage.googleapis.com/public_golem.html#Avg latency"></iframe>
+        </div>
+        <div class="fragment current-display">
+            <h5>Max Latency</h5>
+            <iframe src="https://public-golem.storage.googleapis.com/public_golem.html#Max latency"></iframe>
+        </div>
     </div>
+
 </section>
 
 <section data-id="dart-type"
@@ -841,25 +883,19 @@
 <section data-id="asm-odin" data-state="asm">
     <h3>Ok, comment c'est possible ?</h3>
 
-    <div>
-        <p class="fragment">Suppression des types complexes (String, Object, Boolean)</p>
-
-        <p class="fragment">Manipulation uniquement de type numérique sur 32 bits</p>
-
-        <p class="fragment">Utilisation massive des opérateurs bitwise</p>
-
-        <p class="fragment">Unboxing en type primitif</p>
-
-        <p class="fragment">Statiquement typé</p>
-
-        <p class="fragment">Désactivation du garbage collector</p>
-
-        <p class="fragment">Disparition des vérifications runtime</p>
-    </div>
+    <ul>
+        <li class="fragment">Suppression des types complexes (String, Object, Boolean)</li>
+        <li class="fragment">Manipulation uniquement de type numérique sur 32 bits</li>
+        <li class="fragment">Utilisation massive des opérateurs bitwise</li>
+        <li class="fragment">Unboxing en type primitif</li>
+        <li class="fragment">Statiquement typé</li>
+        <li class="fragment">Désactivation du garbage collector</li>
+        <li class="fragment">Disparition des vérifications runtime</li>
+    </ul>
 </section>
 
 <section data-id="asm-odin" data-state="asm">
-    <h3>Un AOT compiler plutôt qu'un JIT compiler</h3>
+    <h4 class="underline">Un AOT compiler plutôt qu'un JIT compiler</h4>
     <img src="lib/img/asm_jit_vs_aot.png" style="background: none;border:none;"/>
 
     <div class="odinmonley-container fragment fade-in">
@@ -880,14 +916,41 @@
 </section>
 
 <section data-id="asm-editor" data-state="asm">
-    <h3>Chart sur les perfs ...</h3>
+    <h3>quelques chiffres</h3>
 
-    <div class="stretch"></div>
+    <div class="stretch" style="padding-left: 3em">
+        <img class="fragment current-display"
+             src="http://cdn.arstechnica.net/wp-content/uploads/2013/05/classic-native-v-emscripten-v-asmjs.png"/>
+        <img class="fragment current-display"
+             src="http://cdn.arstechnica.net/wp-content/uploads/2013/05/stream-native-v-emscripten-v-asmjs.png"/>
+        <img class="fragment current-display"
+             src="http://cdn.arstechnica.net/wp-content/uploads/2013/05/benchmark-game-native-v-emscripten-v-asmjs.png"/>
+        <img class="fragment current-display"
+             src="http://cdn.arstechnica.net/wp-content/uploads/2013/05/stream-native-v-firefox-v-ie.png"/>
+        <img class="fragment current-display"
+             src="http://cdn.arstechnica.net/wp-content/uploads/2013/05/benchmark-game-native-v-firefox-v-ie.png"/>
+    </div>
+    <aside class="notes" data-markdown>
+        * Source : arstechnica.com
+        * Fragment 1 : Pourquoi si peut de différence
+        * Dhrystone : Mesure le nombre d'instruction proc à la seconde, pas aimé car utilise des tests obsolètes
+        * Whetsone : Mesure aussi le npmbre d'instruction proc à la seconde MWIPS
+        * lINPAK : Mesure du FLOPS
+        * Whetsone et Linpack font beaucoup de calcul en utilisant la virgule flottante, FFx serait donc déjà dans ces
+        limites
+        * Fragement 4 :
+        * http://www.admin-magazine.com/HPC/Articles/Finding-Memory-Bottlenecks-with-Stream
+        * Le code ASM peut être contre performant sous d'autre plateforme que FFX car consome un peu plus de mémoire
+        (HEAP)
+        * Le SIMD n'est pas géré en ASM
+    </aside>
 </section>
 
 
 <section data-id="asm-port" data-state="asm">
-    Déjà plusieurs portages en C/C++
+    </p>Déjà plusieurs <span class="color">portages</span> en C/C++<p>
+    <br/>
+
     <p class="fragment">Moteur de jeux (Unreal Engine)</p>
 
     <p class="fragment">Base de données (SQLite)</p>
@@ -922,23 +985,35 @@
 
 <section data-id="shot-term" data-state="conclusion">
     <h4>CoffeeScript et TypeScript utilisables à court terme</h4>
+    <h4 class="fragment">Mais ne corrigent pas tous (this, perf)</h4>
 </section>
 
 <section data-id="long-term" data-state="conclusion">
-    <h4>Dart est plus complet</h4>
-</section>
-
-<section data-id="long-term" data-state="conclusion">
-    <h3>ASM.js est très prometeur</h3>
-    <h4 class="fragment">Nécessite de la gérer la mémoire, pour l'instant</h4>
-    <h4 class="fragment">Le JNI de JavaScript ?</h4>
+    <h4>Dart est le plus complet et de loin</h4>
+    <h4 class="fragment">Stratégique pour Google (Chrome & Android ?)</h4>
     <aside class="notes" data-markdown>
-        David Herman (Senior Researcher at Mozilla Research) ne cache pas ça volonté de faire d'asmjs
-        l'assembleur de web pour d'autre langage avec support du GC
+        * Brevet, Java
+        * Part de marché de chrome cumulé à Android
+        * Adoption de la part des autres ?
     </aside>
 </section>
 
-<section data-id="question" data-state="conclusion">
+<section data-id="long-term" data-state="conclusion">
+    <h4>ASM.js est très prometeur</h4>
+    <h4 class="fragment">Gestion mémoire manuel, pour l'instant</h4>
+    <h4 class="fragment">Le JNI de JavaScript ?</h4>
+    <aside class="notes" data-markdown>
+        * David Herman (Senior Researcher at Mozilla Research) ne cache pas ça volonté de faire d'asmjs
+        l'assembleur de web pour d'autre langage avec support du GC
+        * LLJS
+    </aside>
+</section>
+
+<section data-id="question" data-state="no-title">
+    <h4>Merci</h4>
+</section>
+
+<section data-id="question" data-state="no-title">
     <h4>Question ??</h4>
 </section>
 
