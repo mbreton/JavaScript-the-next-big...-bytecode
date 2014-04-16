@@ -76,9 +76,9 @@
             <div class="def">
                 <p class="title">Mathieu Breton : /[mathieu] bʀətɔ̃/ (n.m.)</p>
                 <ul>
-                    <li>Consultant Xebia, membre actif de la communauté web à Paris.</li>
-                    <li>Chevalier de l’ordre du mérite des Single Page Applications.</li>
-                    <li>Artisan web, instructeur Neo4J, docteur ès Grails et contributeur Ember.JS.</li>
+                    <li>Consultant Xebia, membre actif de la communauté web à Paris</li>
+                    <li>Chevalier de l’ordre du mérite des Single Page Applications</li>
+                    <li>Artisan web, instructeur Neo4J, docteur ès Grails et contributeur Ember.JS</li>
                 </ul>
             </div>
         </div>
@@ -91,7 +91,7 @@
          data-background-transition="slide"
          data-background-position="97.5% 5%"
          class="slide" data-state="no-title">
-    <h3>De quoi allons nous parler ?</h3>
+    <h3>De quoi allons-nous parler ?</h3>
     <ul class="stretch summary">
         <li class="fragment">De JavaScript</li>
         <li class="fragment">De son apogee</li>
@@ -114,12 +114,22 @@
     <section data-id="js-chart">
         <h4 class="underline"><span style="color:blue">JavaScript</span> sur Stackoverflow</h4>
         <img style="border:none" class="stretch" src="lib/img/js-stack.png"/>
+        <aside class="notes" data-markdown>
+            * Ce sont la popularité du tag JavaScript de stackoverflow de 2008 à 2013
+        </aside>
     </section>
     <section data-id="js-java-chart">
-        <h4 class="underline"><span style="color:red">Java</span>/<span style="color:blue">JavaScript</span> sur
-            Stackoverflow</h4>
-        <img style="border:none" class="stretch" src="lib/img/js+java-stack.png"/></section>
-</section>
+        <h4 class="underline">
+            <span style="color:red">Java</span>
+            /<span style="color:blue">JavaScript</span> sur
+            Stackoverflow
+        </h4>
+        <img style="border:none" class="stretch" src="lib/img/js+java-stack.png"/>
+        <aside class="notes" data-markdown>
+            * Ce sont la popularité du tag JavaScript et Java de stackoverflow de 2008 à 2013
+        </aside>
+    </section>
+
 </section>
 
 <section data-background="lib/img/slide-devoxx-bg.png"
@@ -164,6 +174,10 @@
     <br/>
     <h4 class="underline">Programmation fonctionnelle</h4>
     <pre><code data-trim id="func_js"></code></pre>
+    <aside class="notes" data-markdown>
+        * Notez la concision pour démarrer un serveur web
+        * Notez la simpliciter de chanaige d'api fonctionalié
+    </aside>
 </section>
 
 <section data-background="lib/img/slide-devoxx-bg.png"
@@ -175,6 +189,9 @@
     <h2>SIMPLE</h2>
 
     <h2>PRODUCTIF</h2>
+    <aside class="notes" data-markdown>
+        * Rapide : Grâce à V8 le JS c'est grandement accéléré (directement ou indirectement)
+    </aside>
 </section>
 
 <section data-background="lib/img/slide-devoxx-bg.png"
@@ -184,6 +201,11 @@
     <h2>Le JavaScript c'est bien tout le temps !</h2>
 
     <p id="wrong-fragment" class="fragment wrong"></p>
+    <aside class="notes" data-markdown>
+        * Au début le JS est super pour faire des POC
+        * Mais le langage garde de gros défauts, difficilement contournables
+    </aside>
+
 </section>
 
 <section data-id="bad-js-and-editor" data-state="no-title"
@@ -218,7 +240,7 @@
                 frameborder="0"></iframe>
     </section>
     <section data-id="ut-editor">
-        <h4 class="underline">Le typage JS rend moins pertinants les tests unitaires</h4>
+        <h4 class="underline">Le typage JS rend moins pertinent les tests unitaires</h4>
 
         <div class="stretch">
             <div class="side">
@@ -229,6 +251,16 @@
         <aside class="notes" data-markdown>
             * Expliquer d'abord les sources et le test
             * Montrer que les signatures du mock et de la source ne sont pas liées
+        </aside>
+    </section>
+    <section>
+        <h4 class="underline">Tout est une question de contexte</h4>
+
+        <div class="stretch">
+            <pre><code id="context-js" data-trim class="language-js"></code></pre>
+            <pre class="fragment"><code id="context-js-result" data-trim class="language-js"></code></pre>
+        </div>
+        <aside class="notes" data-markdown>
         </aside>
     </section>
     <section id="sdk_js">
@@ -270,10 +302,10 @@
     <ul>
         <li class="fragment">toujours aussi productif</li>
         <li class="fragment">moins WTF !</li>
-        <li class="fragment">typé plus fortement
+        <li class="fragment">typé plus fortement/explicitement
             <ul>
                 <li class="fragment">plus facile à maintenir</li>
-                <li class="fragment">doté d'outils plus puissant</li>
+                <li class="fragment">doté d'outils plus puissants</li>
             </ul>
         </li>
     </ul>
@@ -285,184 +317,7 @@
 
 <section>
     <section data-id="langs">
-        <canvas id="lang-cloud" class="stretch"></canvas>
-        <ul id="lang-list" style="display: none">
-            <li><a href="#">CoffeeScript</a></li>
-            <li><a href="#">LiveScript</a></li>
-            <li><a href="#">IcedCoffeeScript</a></li>
-            <li><a href="#">Parsec</a></li>
-            <li><a href="#">Contracts.coffee</a></li>
-            <li><a href="#">Uberscript</a></li>
-            <li><a href="#">ToffeeScript</a></li>
-            <li><a href="#">Caffeine</a></li>
-            <li><a href="#">heap.coffee</a></li>
-            <li><a href="#">JS11</a></li>
-            <li><a href="#">Kaffeine</a></li>
-            <li><a href="#">Jack</a></li>
-            <li><a href="#">Moescript</a></li>
-            <li><a href="#">pogoscript</a></li>
-            <li><a href="#">LispyScript</a></li>
-            <li><a href="#">GorillaScript</a></li>
-            <li><a href="#">RedScript</a></li>
-            <li><a href="#">Daonode</a></li>
-            <li><a href="#">Caja</a></li>
-            <li><a href="#">ADsafe</a></li>
-            <li><a href="#">FBJS</a></li>
-            <li><a href="#">Jacaranda</a></li>
-            <li><a href="#">Dojo</a></li>
-            <li><a href="#">Local.js</a></li>
-            <li><a href="#">Dart</a></li>
-            <li><a href="#">TypeScript</a></li>
-            <li><a href="#">asm.js</a></li>
-            <li><a href="#">JavaScript++</a></li>
-            <li><a href="#">MileScript</a></li>
-            <li><a href="#">Elm</a></li>
-            <li><a href="#">JSX</a></li>
-            <li><a href="#">Este.js</a></li>
-            <li><a href="#">Swym</a></li>
-            <li><a href="#">Typecast.js</a></li>
-            <li><a href="#">ContextJS</a></li>
-            <li><a href="#">Objective-J</a></li>
-            <li><a href="#">Mochiscript</a></li>
-            <li><a href="#">jangaroo</a></li>
-            <li><a href="#">Flapjax</a></li>
-            <li><a href="#">jLang</a></li>
-            <li><a href="#">TIScript</a></li>
-            <li><a href="#">js--</a></li>
-            <li><a href="#">Opal</a></li>
-            <li><a href="#">HotRuby</a></li>
-            <li><a href="#">ColdRuby</a></li>
-            <li><a href="#">rb2js</a></li>
-            <li><a href="#">RubyJS</a></li>
-            <li><a href="#">Red</a></li>
-            <li><a href="#">Quby</a></li>
-            <li><a href="#">8ball</a></li>
-            <li><a href="#">PYXC-PJ</a></li>
-            <li><a href="#">Pyjamas</a></li>
-            <li><a href="#">Pyjaco</a></li>
-            <li><a href="#">Pyjs</a></li>
-            <li><a href="#">Skulpt</a></li>
-            <li><a href="#">PyCow</a></li>
-            <li><a href="#">PyvaScript</a></li>
-            <li><a href="#">RapydScript</a></li>
-            <li><a href="#">Brython</a></li>
-            <li><a href="#">PythonScript</a></li>
-            <li><a href="#">Perlito</a></li>
-            <li><a href="#">GWT</a></li>
-            <li><a href="#">Java2Script</a></li>
-            <li><a href="#">j2js</a></li>
-            <li><a href="#">BicaJVM</a></li>
-            <li><a href="#">Doppio</a></li>
-            <li><a href="#">Kotlin</a></li>
-            <li><a href="#">Ceylon</a></li>
-            <li><a href="#">GrooScript</a></li>
-            <li><a href="#">Scala.js</a></li>
-            <li><a href="#">js-scala</a></li>
-            <li><a href="#">scalagwt</a></li>
-            <li><a href="#">JScala</a></li>
-            <li><a href="#">jsc</a></li>
-            <li><a href="#">JSIL</a></li>
-            <li><a href="#">Script#</a></li>
-            <li><a href="#">SharpKit</a></li>
-            <li><a href="#">Saltarelle</a></li>
-            <li><a href="#">FunScript</a></li>
-            <li><a href="#">Pit</a></li>
-            <li><a href="#">WebSharper</a></li>
-            <li><a href="#">NemerleWeb</a></li>
-            <li><a href="#">JScriptSuite</a></li>
-            <li><a href="#">BiwaScheme</a></li>
-            <li><a href="#">ClojureScript</a></li>
-            <li><a href="#">clojurejs</a></li>
-            <li><a href="#">Chlorinejs</a></li>
-            <li><a href="#">wisp</a></li>
-            <li><a href="#">EdgeLisp</a></li>
-            <li><a href="#">nconc</a></li>
-            <li><a href="#">Parenscript</a></li>
-            <li><a href="#">Ralph</a></li>
-            <li><a href="#">scheme2js</a></li>
-            <li><a href="#">Scriptjure</a></li>
-            <li><a href="#">Spock</a></li>
-            <li><a href="#">Whalesong</a></li>
-            <li><a href="#">Ocamljs</a></li>
-            <li><a href="#">O'Browser</a></li>
-            <li><a href="#">Js_of_ocaml</a></li>
-            <li><a href="#">UHC</a></li>
-            <li><a href="#">ghcjs</a></li>
-            <li><a href="#">jmacro</a></li>
-            <li><a href="#">shakespeare-js</a></li>
-            <li><a href="#">YHC</a></li>
-            <li><a href="#">jshaskell</a></li>
-            <li><a href="#">Smallscript</a></li>
-            <li><a href="#">Emscripten</a></li>
-            <li><a href="#">LLJS</a></li>
-            <li><a href="#">Mandreel</a></li>
-            <li><a href="#">qb.js</a></li>
-            <li><a href="#">Go2js</a></li>
-            <li><a href="#">Haxe</a></li>
-            <li><a href="#">Fantom</a></li>
-            <li><a href="#">LZX</a></li>
-            <li><a href="#">OpenLaszlo's</a></li>
-            <li><a href="#">Scratch</a></li>
-            <li><a href="#">ScriptBlocks</a></li>
-            <li><a href="#">JsMaker</a></li>
-            <li><a href="#">Meemoo</a></li>
-            <li><a href="#">NoFlo</a></li>
-            <li><a href="#">sqld3</a></li>
-            <li><a href="#">Oia</a></li>
-            <li><a href="#">Plaid</a></li>
-            <li><a href="#">Quixe</a></li>
-            <li><a href="#">Gnusto</a></li>
-            <li><a href="#">Logo</a></li>
-            <li><a href="#">Interpreter</a></li>
-            <li><a href="#">p2js</a></li>
-            <li><a href="#">Reb2Static</a></li>
-            <li><a href="#">RPN</a></li>
-            <li><a href="#">phype</a></li>
-            <li><a href="#">jsForth</a></li>
-            <li><a href="#">wForth</a></li>
-            <li><a href="#">Agda</a></li>
-            <li><a href="#">XLCC</a></li>
-            <li><a href="#">SMLtoJs</a></li>
-            <li><a href="#">lua.js</a></li>
-            <li><a href="#">Brozula</a></li>
-            <li><a href="#">Pygmy</a></li>
-            <li><a href="#">browserl</a></li>
-            <li><a href="#">ErlyJS</a></li>
-            <li><a href="#">Topaz</a></li>
-            <li><a href="#">NGN</a></li>
-            <li><a href="#">APL</a></li>
-            <li><a href="#">CobolScript</a></li>
-            <li><a href="#">Idris</a></li>
-            <li><a href="#">Narcissus</a></li>
-            <li><a href="#">DoctorJS</a></li>
-            <li><a href="#">Jasy</a></li>
-            <li><a href="#">PyNarcissus</a></li>
-            <li><a href="#">pyjon</a></li>
-            <li><a href="#">rbnarcissus</a></li>
-            <li><a href="#">reflect.js</a></li>
-            <li><a href="#">bdParse</a></li>
-            <li><a href="#">parse-js</a></li>
-            <li><a href="#">ZeParser</a></li>
-            <li><a href="#">Esprima</a></li>
-            <li><a href="#">js.js</a></li>
-            <li><a href="#">jison</a></li>
-            <li><a href="#">OMeta/JS</a></li>
-            <li><a href="#">PEG.js</a></li>
-            <li><a href="#">Canopy</a></li>
-            <li><a href="#">JS/CC</a></li>
-            <li><a href="#">jsparse</a></li>
-            <li><a href="#">ReParse</a></li>
-            <li><a href="#">p4js</a></li>
-            <li><a href="#">JSGLR</a></li>
-            <li><a href="#">antlr</a></li>
-            <li><a href="#">Cruiser.Parse</a></li>
-            <li><a href="#">JsonML</a></li>
-            <li><a href="#">treehugger</a></li>
-            <li><a href="#">burrito</a></li>
-            <li><a href="#">js-traverse</a></li>
-            <li><a href="#">altJS</a></li>
-            <li><a href="#">PureScript</a></li>
-        </ul>
+        <img src="lib/img/js-cloud.svg" />
     </section>
     <section data-id="nb-langs"><h3>Plus de 170 langages/transpileurs génèrent du JavaScript</h3></section>
 </section>
@@ -488,9 +343,9 @@
          data-background-transition="slide"
          data-background-position="97.5% 5%">
     Créé en février <span class="color">2012</span> par Microsoft
-    <p class="fragment fade-in">Passé récement en V1.0</p>
+    <p class="fragment fade-in">Passé récemment en V1.0</p>
 
-    <p class="fragment">Sous license <span class="color">Apache 2 License</span></p>
+    <p class="fragment">Sous licence <span class="color">Apache 2</span></p>
 </section>
 
 <section data-id="typescript-vs"
@@ -513,7 +368,7 @@
          data-background-size="6% 85%"
          data-background-transition="slide"
          data-background-position="97.5% 5%">
-    Typage explicite <span class="color">statique</span> faible, optionel
+    Typage explicite <span class="color">statique</span> faible, optionnel
     <aside class="notes" data-markdown>
         * Préciser qu'il fait de l'inférence de type quand le type n'est pas définie se qui garantie le statiquement
         typé
@@ -578,7 +433,7 @@
          data-background-size="6% 85%"
          data-background-transition="slide"
          data-background-position="97.5% 5%">
-    Peut être utilisé dés à présent avec le <span class="color">transpileur</span>
+    Peut être utilisé dès à présent avec le <span class="color">transpileur</span>
 </section>
 
 <section data-id="coffeescript-keywords"
@@ -671,9 +526,9 @@
          data-background-position="97.5% 5%">
     <p>Propulsé par Google en <span class="color">2011</span></p>
 
-    <p class="fragment">Récement sortie en <span class="color">version 1.3</span></p>
+    <p class="fragment">Récemment sorti en <span class="color">version 1.3</span></p>
 
-    <p class="fragment">Sous license <span class="color">BSD</span></p>
+    <p class="fragment">Sous licence <span class="color">BSD</span></p>
 
     <p class="fragment">standardisation ECMA par le comité <span class="color">TC52</span></p>
 </section>
@@ -705,7 +560,7 @@
     <p>Peut être executé dans une <span class="color">machine virtuelle</span></p>
 
     <p class="fragment">
-        Ou sur <span class="color">Dartium</span>, une version de Chromium
+        ou sur <span class="color">Dartium</span>, une version de Chromium
     </p>
 </section>
 
@@ -734,7 +589,7 @@
          data-background-size="6% 85%"
          data-background-transition="slide"
          data-background-position="97.5% 5%">
-    <p>Nativement, Dart est plus rapide <span class="color">rapide</span> que JavaScript</p>
+    <p>Nativement, Dart est plus <span class="color">rapide</span> que JavaScript</p>
 
     <p>Et...</p>
 
@@ -807,7 +662,7 @@
          data-background-size="6% 85%"
          data-background-transition="slide"
          data-background-position="97.5% 5%">
-    <span class="color">Typage</span> "fort" explicite statique, mais optionel
+    <span class="color">Typage</span> "fort" explicite statique, mais optionnel
     <pre><code data-trim class="language-dart" id="dart-type"></code></pre>
     <pre class="fragment"><code data-trim class="language-dart " id="dart-type-string"></code></pre>
     <aside class="notes" data-markdown>
@@ -887,15 +742,15 @@
 </section>
 
 <section data-id="asm-mozilla" data-state="asm">
-    <p class="fragment">Ca vient de chez <span class="color">Mozilla</span></p>
+    <p>Ca vient de chez <span class="color">Mozilla</span></p>
 
-    <p class="fragment">Sous license <span class="color">MIT</span></p>
+    <p class="fragment">Sous licence <span class="color">MIT</span></p>
 
-    <p class="fragment">N'est pas pas un langage</p>
+    <p class="fragment">N'est pas un langage</p>
 </section>
 
 <section data-id="asm-sub" data-state="asm">
-    Est un <span class="color">sous-ensemble</span> de JavaScript très restristif
+    Est un <span class="color">sous-ensemble</span> de JavaScript très restrictif
     <p><span class="color">"use asm"</span></p>
     <aside class="notes" data-markdown>
         Comparé à use strict
@@ -928,7 +783,7 @@
 
     <ul>
         <li class="fragment">Suppression des types complexes (String, Object, Boolean)</li>
-        <li class="fragment">Manipulation uniquement de type numérique sur 32 bits</li>
+        <li class="fragment">Manipulation uniquement de types numériques sur 32 bits</li>
         <li class="fragment">Utilisation massive des opérateurs bitwise</li>
         <li class="fragment">Unboxing en type primitif</li>
         <li class="fragment">Statiquement typé</li>
@@ -955,6 +810,11 @@
         * a standard library object, providing access to a limited subset of the JavaScript standard libraries;
         * a foreign function interface (FFI), providing access to custom external JavaScript functions; and
         * a heap buffer, providing a single ArrayBuffer to act as the asm.js heap.
+        * Expliquer que la coercition systématique sert à la fois à garantir le typage statique et à protéger lors de
+        l'exposition de la function
+        * x:Identifier=x:Identifier|0;
+        * x:Identifier=+x:Identifier;
+
     </aside>
 </section>
 
@@ -1005,7 +865,7 @@
 </section>
 
 <section data-id="asm-editor" data-state="asm">
-    <h3>Demo</h3>
+    <h3>Démo</h3>
 
     <div class="stretch">
         <div class="side">
@@ -1024,20 +884,20 @@
 </section>
 
 <section data-id="type-is-good" data-state="conclusion">
-    <h4>Un projet évolue, au début le typage est superflux à terme il est vital</h4>
+    <h4>Un projet évolue, au début le typage est superflux, à terme il est vital</h4>
 </section>
 
 <section data-id="type-is-good" data-state="conclusion">
-    <h4>Les grands du web on compris que JavaScript ne suffisait pas.</h4>
+    <h4>Les grands du web ont compris que JavaScript ne suffisait pas</h4>
 </section>
 
 <section data-id="shot-term" data-state="conclusion">
     <h4>CoffeeScript et TypeScript utilisables à court terme</h4>
-    <h4 class="fragment">Mais ne corrigent pas tous (this, perf)</h4>
+    <h4 class="fragment">Mais ne corrigent pas tout (this, perf)</h4>
 </section>
 
 <section data-id="long-term" data-state="conclusion">
-    <h4>Dart est le plus complet et de loin</h4>
+    <h4>Dart est le plus complet, et de loin</h4>
     <h4 class="fragment">Stratégique pour Google (Chrome & Android ?)</h4>
     <aside class="notes" data-markdown>
         * Brevet, Java
@@ -1047,8 +907,8 @@
 </section>
 
 <section data-id="long-term" data-state="conclusion">
-    <h4>ASM.js est très prometeur</h4>
-    <h4 class="fragment">Gestion mémoire manuel, pour l'instant</h4>
+    <h4>ASM.js est très prometteur</h4>
+    <h4 class="fragment">Gestion mémoire manuelle, pour l'instant</h4>
     <h4 class="fragment">Le JNI de JavaScript ?</h4>
     <aside class="notes" data-markdown>
         * David Herman (Senior Researcher at Mozilla Research) ne cache pas ça volonté de faire d'asmjs
@@ -1062,7 +922,7 @@
 </section>
 
 <section data-id="question" data-state="no-title">
-    <h4>Question ??</h4>
+    <h4>Questions ??</h4>
 </section>
 
 </div>
