@@ -317,7 +317,7 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 }
 
 div#rotate45 {
-  $transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
+  $transition: all 600ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
   @include transition($transition);
   position: absolute;
   z-index: 2;
