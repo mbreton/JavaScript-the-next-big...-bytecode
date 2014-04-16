@@ -298,6 +298,8 @@ body {
   color: white; }
   .reveal section[data-id^="asm"] .color {
     font-size: 1.2em; }
+  .reveal section[data-id^="asm"] img {
+    max-height: 74%; }
 .reveal p.editor-links {
   font-size: 0.6em; }
 

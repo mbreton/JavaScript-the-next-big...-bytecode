@@ -220,7 +220,7 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
   .candy-title {
     $padV: 104px;
-    $padH : 100px;
+    $padH: 100px;
     .candy {
       width: $padV;
       height: $padH;
@@ -229,13 +229,13 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
       left: 0.2em;
       z-index: 1;
       display: inline-block;
-      &.strip-purple{
+      &.strip-purple {
         background: url('/lib/img/candies.png') 0 0 no-repeat;
       }
-      &.strip-red{
+      &.strip-red {
         background: url('/lib/img/candies.png') -1*$padV -2*$padH no-repeat;
       }
-      &.strip-choco{
+      &.strip-choco {
         background: url('/lib/img/candies.png') -0*$padV -1*$padH no-repeat;
       }
     }
@@ -298,6 +298,9 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
     }
     .color {
       font-size: 1.2em;
+    }
+    img {
+      max-height: 74%;
     }
   }
 
