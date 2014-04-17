@@ -45,8 +45,9 @@ app.post('/dart', function (req, res) {
     });
 });
 app.post('/asm', function (req, res) {
-    console.dir('Try do compile : ');
     var code =req.body.code.replace(/\n/g,'\r\n');
+    console.dir('Try do compile : ');
+    console.dir(code);
     fs.writeFile("current.cpp", code, function(err) {
         if(err) {
             res.send(err);
