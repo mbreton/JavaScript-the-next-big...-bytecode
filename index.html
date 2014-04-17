@@ -510,6 +510,18 @@
             <div id="coffee-dest" class="editor" data-lang="javascript"></div>
         </div>
     </div>
+    <aside class="notes" data-markdown>
+        func 5, {
+            event: -> 45,
+            val: 10}
+        func 5, {
+            event: (e) ->
+                if e.something
+                    36
+                else
+                    45,
+            val: 10}
+    </aside>
 </section>
 
 <section data-id="dart"
@@ -769,6 +781,9 @@
 
 <section data-id="asm-pipeline" data-state="asm">
     <img src="lib/img/asm_pipeline.png" style="background: none;box-shadow: none;border:none;"/>
+    <aside class="notes" data-markdown>
+        * Low Level Virtual Machine : Permet de créer un bytecode avec optimisation, c'est langage agnostique mais le support existe surtout pour C/C++
+    </aside>
 </section>
 
 <section data-id="asm-odin" data-state="asm">
@@ -944,6 +959,7 @@
 <script src="lib/js/coffee-script.js"></script>
 <script src="lib/js/typescript.min.js"></script>
 <script src="lib/js/typescript.compile.min.js"></script>
+<script src="lib/js/lodash.min.js" type="text/javascript"></script>
 <script src="plugin/ace/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="lib/js/main.js"></script>
 
