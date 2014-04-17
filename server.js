@@ -44,4 +44,34 @@ app.post('/dart', function (req, res) {
         }
     });
 });
+app.post('/asm', function (req, res) {
+    console.dir('Try do compile : ');
+    var code =req.body.code.replace(/\n/g,'\r\n');
+    fs.writeFile("current.cpp", code, function(err) {
+        if(err) {
+            res.send(err);
+            return;
+        } else {
+            var child = exec("python /opt/emsdk_portable/emscripten/1.13.0/emcc current.cpp -O2 -o current.js", function (error, stdout, stderr) {
+                if (error !== null) {
+                    fs.unlinkSync('current.cpp');
+                    res.send(err);
+                    return;
+                }
+                fs.readFile('current.js', 'utf8', function (err,outFile) {
+                    if (err) {
+                        res.send(err);
+                        return;
+                    }
+                    fs.unlinkSync('current.cpp');
+                    fs.unlinkSync('current.js');
+                    res.send(outFile);
+                    return;
+                });
+
+            });
+        }
+    });
+});
+
 app.listen(8000);
