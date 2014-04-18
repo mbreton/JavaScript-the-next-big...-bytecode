@@ -1,4 +1,4 @@
-function Greeter(greeting:string) {
+function Greeter(greeting) {
     this.greeting = greeting;
 }
 

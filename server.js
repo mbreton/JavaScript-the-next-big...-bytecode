@@ -31,10 +31,6 @@ app.post('/dart', function (req, res) {
                         res.send(err);
                         return;
                     }
-                    fs.unlinkSync('out.js');
-                    fs.unlinkSync('out.js.map');
-                    fs.unlinkSync('out.js.deps');
-                    fs.unlinkSync('out.precompiled.js');
                     fs.unlinkSync('current.dart');
                     res.send(outFile);
                     return;
@@ -55,7 +51,6 @@ app.post('/asm', function (req, res) {
         } else {
             var child = exec("python /opt/emsdk_portable/emscripten/1.13.0/emcc current.cpp -O2 -o current.js", function (error, stdout, stderr) {
                 if (error !== null) {
-                    fs.unlinkSync('current.cpp');
                     res.send(err);
                     return;
                 }
@@ -64,8 +59,6 @@ app.post('/asm', function (req, res) {
                         res.send(err);
                         return;
                     }
-                    fs.unlinkSync('current.cpp');
-                    fs.unlinkSync('current.js');
                     res.send(outFile);
                     return;
                 });

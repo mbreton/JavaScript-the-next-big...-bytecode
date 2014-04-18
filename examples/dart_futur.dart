@@ -1,7 +1,8 @@
-import 'dart:io';
-import 'dart:async';
+import 'dart:html';
 
-void printDailyNewsDigest() {
-  File file = new File("dailyNewsDigest.txt");
-  file.readAsString().then((content) => print(content)).catchError((error) => print("Sorry, no news today. Here's why:\n$error"));
+main() {
+  HttpRequest.getString('/bunnies.json')//
+    .then((response) => parse(response)) // returns a Future
+    .then((object) => storeObject(object)) // returns a Future
+    .catchError((e) => recover(e));
 }

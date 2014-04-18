@@ -317,7 +317,7 @@
 
 <section>
     <section data-id="langs">
-        <img src="lib/img/js-cloud.svg" />
+        <img src="lib/img/js-cloud.svg"/>
     </section>
     <section data-id="nb-langs"><h3>Plus de 170 langages/transpileurs génèrent du JavaScript</h3></section>
 </section>
@@ -393,6 +393,25 @@
                 <div id="typescript-dest" class="editor" data-lang="javascript"></div>
             </div>
         </div>
+        <aside class="notes" data-markdown>
+            class Animal{
+            name:String;
+
+            constructor(name){
+            this.name = name;
+            }
+
+            methodWithLoooooooooooooooongName(){
+            return this.name;
+            }
+            }
+
+            var rex = new Anima('rex');
+
+            var alias = rex.methodWithLoooooooooooooooongName;
+
+            alias();
+        </aside>
         <p class="editor-links">
             <a id="tsc-js" href="#" class="fragment highlight-current-blue">JavaScript</a> -
             <a id="tsc-oo" href="#" class="fragment highlight-current-blue"> Orienté Objet</a> -
@@ -512,15 +531,15 @@
     </div>
     <aside class="notes" data-markdown>
         func 5, {
-            event: -> 45,
-            val: 10}
+        event: -> 45,
+        val: 10}
         func 5, {
-            event: (e) ->
-                if e.something
-                    36
-                else
-                    45,
-            val: 10}
+        event: (e) ->
+        if e.something
+        36
+        else
+        45,
+        val: 10}
     </aside>
 </section>
 
@@ -699,8 +718,12 @@
          data-background-size="6% 85%"
          data-background-transition="slide"
          data-background-position="97.5% 5%">
-    Asynchronisme basé sur des <span class="color">futurs</span>
+    Asynchronisme basé sur des <span class="color">Futures</span>
     <pre><code data-trim class="language-dart" id="dart-futur"></code></code></pre>
+    <div class="fragment">
+        Gestion des flux avec les <span class="color">Streams</span>
+        <pre><code data-trim class="language-dart" id="dart-stream"></code></code></pre>
+    </div>
 </section>
 
 <section data-id="dart-polymer"
@@ -708,11 +731,8 @@
          data-background-size="6% 85%"
          data-background-transition="slide"
          data-background-position="97.5% 5%">
-    Bien intégré à <span class="color">polymer</span>
-    <pre><code data-trim class="language-dart" id="dart-polymer"></code></pre>
-    <aside class="notes" data-markdown>
-        Shadow DOM ? (c’est pas encore assez mainstream pour en parler sans un petit mot sur ce que c’est)
-    </aside>
+    Des <span class="color">Thread</span> !
+    <pre><code data-trim class="language-dart" id="dart-isolate"></code></pre>
 </section>
 
 <section data-id="dart-env"
@@ -734,16 +754,26 @@
          data-background-size="6% 85%"
          data-background-transition="slide"
          data-background-position="97.5% 5%">
-    <div class="stretch">
-        <div class="side">
-            Dart
-            <div id="dart-src" class="editor source" data-lang="dart"></div>
+    <section data-id="dart2-editor">
+        <div class="stretch">
+            <div class="side">
+                Dart
+                <div id="dart-src" class="editor source" data-lang="dart"></div>
+            </div>
+            <div class="side">
+                JavaScript
+                <div id="dart-dest" class="editor" data-lang="javascript"></div>
+            </div>
         </div>
-        <div class="side">
-            JavaScript
-            <div id="dart-dest" class="editor" data-lang="javascript"></div>
-        </div>
-    </div>
+    </section>
+    <section>
+        <h4>Des defauts ?</h4>
+        <ul>
+            <li>Encore des bugs</li>
+            <li>Interropérabilité avec JS</li>
+            <li>Manque de sucre syntaxique</li>
+        </ul>
+    </section>
 </section>
 
 <section data-id="asm-title"
@@ -782,7 +812,8 @@
 <section data-id="asm-pipeline" data-state="asm">
     <img src="lib/img/asm_pipeline.png" style="background: none;box-shadow: none;border:none;"/>
     <aside class="notes" data-markdown>
-        * Low Level Virtual Machine : Permet de créer un bytecode avec optimisation, c'est langage agnostique mais le support existe surtout pour C/C++
+        * Low Level Virtual Machine : Permet de créer un bytecode avec optimisation, c'est langage agnostique mais le
+        support existe surtout pour C/C++
     </aside>
 </section>
 
@@ -818,8 +849,9 @@
 </section>
 
 <section data-id="asm-odin" data-state="asm">
-    <h3>Show me the code</h3>
+    <h4 class="underline">Show me the code</h4>
     <pre><code data-trim class="language-javascript" id="asm-simple"></code></pre>
+    <pre class="fragment"><code data-trim class="language-javascript" id="asm-call"></code></pre>
 
     <aside class="notes" data-markdown>
         * a standard library object, providing access to a limited subset of the JavaScript standard libraries;
@@ -835,20 +867,20 @@
 
 <section data-id="asm-editor" data-state="asm">
     <section>
-        <img src="http://cdn.arstechnica.net/wp-content/uploads/2013/05/classic-native-v-emscripten-v-asmjs.png"/>
+        <img src="lib/img/classic-native-v-emscripten-v-asmjs.png"/>
     </section>
 
     <section>
-        <img src="http://cdn.arstechnica.net/wp-content/uploads/2013/05/stream-native-v-emscripten-v-asmjs.png"/>
+        <img src="lib/img/stream-native-v-emscripten-v-asmjs.png"/>
     </section>
     <section>
-        <img src="http://cdn.arstechnica.net/wp-content/uploads/2013/05/benchmark-game-native-v-emscripten-v-asmjs.png"/>
+        <img src="lib/img/benchmark-game-native-v-emscripten-v-asmjs.png"/>
     </section>
     <section>
-        <img src="http://cdn.arstechnica.net/wp-content/uploads/2013/05/stream-native-v-firefox-v-ie.png"/>
+        <img src="lib/img/stream-native-v-firefox-v-ie.png"/>
     </section>
     <section>
-        <img src="http://cdn.arstechnica.net/wp-content/uploads/2013/05/benchmark-game-native-v-firefox-v-ie.png"/>
+        <img src="lib/img/benchmark-game-native-v-firefox-v-ie.png"/>
     </section>
 
     <aside class="notes" data-markdown>
@@ -893,12 +925,13 @@
         </div>
     </div>
     <aside class="notes" data-markdown>
-    #include<stdio.h>
+        #include
+        <stdio.h>
 
-    int main() {
-    printf("hello, world!");
-    return 1;
-    }
+            int main() {
+            printf("hello, world!");
+            return 1;
+            }
     </aside>
 </section>
 
@@ -944,8 +977,7 @@
     <h4>Merci</h4>
 </section>
 
-<section data-id="question" data-state="no-title">
-    <h4>Questions ??</h4>
+<section data-id="question" data-state="no-title" data-background="/lib/img/question.png" data-background-transition="slide">
 </section>
 
 </div>

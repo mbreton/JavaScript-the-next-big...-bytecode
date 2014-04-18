@@ -1,11 +1,14 @@
-function MyAsmModule(stdlib, foreign, heap) {
+function DiagModule(stdlib, foreign, heap) {
     "use asm";
-
-    // module body...
-
-    return {
-        export1: f1,
-        export2: f2
-        // ...
-    };
+    var sqrt = stdlib.Math.sqrt;
+    function square(x) {
+        x = +x;
+        return +(x * x);
+    }
+    function diag(x, y) {
+        x = +x;
+        y = +y;
+        return +sqrt(square(x) + square(y));
+    }
+    return { diag: diag };
 }
